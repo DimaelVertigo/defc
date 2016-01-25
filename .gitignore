@@ -1,4 +1,6 @@
 defc.sublime-project
 defc.sublime-workspace
 node_modules
+config.codekit
+.DS_Store
 /node_modules/
