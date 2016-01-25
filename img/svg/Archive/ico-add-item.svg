@@ -1,0 +1,9 @@
+<svg class="ico-drag-and-drop" width="34px" height="44px" viewBox="0 0 34 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="ico-add-file">
+        <path d="M0,2.00492334 C0,0.897634756 0.892151625,0 1.99792589,0 L23.9997559,0 C23.9997559,0.0747558594 33.9997559,8.94975586 34,8.88725586 L34,42.0008811 C34,43.104964 33.1080589,44 32.0000796,44 L1.9999204,44 C0.895394863,44 0,43.1011449 0,41.9950767 L0,2.00492334 Z" id="Rectangle-1026" fill="#FFFFFF"></path>
+        <path d="M24,1.42108547e-14 C23.9997559,2.66453526e-14 34.0622559,9.1875 34.0622559,9.05024414 L25.9975701,9.05024414 C24.8943426,9.05024414 24,8.14709193 24,7.04627025 L24,1.42108547e-14 Z" id="Rectangle-1026-Copy" fill="#FFFFFF"></path>
+        <circle fill="#47C5A2" cx="14" cy="30" r="10"></circle>
+        <rect id="Rectangle-84" fill="#FFFFFF" x="9" y="29" width="10" height="2" rx="3"></rect>
+        <rect fill="#FFFFFF" transform="translate(14.000000, 30.000000) rotate(-270.000000) translate(-14.000000, -30.000000) " x="9" y="29" width="10" height="2" rx="3"></rect>
+    </g>
+</svg>

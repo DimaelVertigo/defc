@@ -1,0 +1,20 @@
+.block1 {
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+}
+.dev {
+  color: green;
+  font-size: 20px;
+}
+.svg-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: red;
+}
+.header-icon-mag {
+  width: 2em;
+  height: 2em;
+}
