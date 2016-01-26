@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="119px" height="37px" viewBox="0 0 119 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>src-top-logoscr-top-logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#5C698C" offset="0%"></stop>
+            <stop stop-color="#D1A9A9" offset="100%"></stop>
+        </linearGradient>
+        <path d="M35,17.5 C35,7.83501688 27.1649831,0 17.5,0 L17.5,13.4722199 C17.521971,13.4718725 17.543984,13.4716981 17.5660377,13.4716981 C19.8052253,13.4716981 21.6245805,15.2692146 21.6598556,17.5 L35,17.5 Z M17.5,35 C7.83501688,35 0,27.1649831 0,17.5 L13.4722199,17.5 C13.4718725,17.521971 13.4716981,17.543984 13.4716981,17.5660377 C13.4716981,19.8052253 15.2692146,21.6245805 17.5,21.6598556 L17.5,35 Z" id="path-2"></path>
+        <circle id="path-3" cx="17.5330189" cy="17.5330189" r="1.75"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="main" sketch:type="MSArtboardGroup" transform="translate(-35.000000, -15.000000)">
+            <g id="src-top-logo" sketch:type="MSLayerGroup" transform="translate(36.000000, 16.000000)">
+                <text id="DEF-C" opacity="0.8" sketch:type="MSTextLayer" font-family="Optotypo" font-size="14" font-weight="normal" letter-spacing="2.68000007" fill="#716373">
+                    <tspan x="53" y="24">DEF-</tspan>
+                    <tspan x="106.854" y="24">C</tspan>
+                </text>
+                <g id="Oval-2-+-Oval-4">
+                    <g id="Oval-2">
+                        <use stroke="none" sketch:type="MSShapeGroup" xlink:href="#path-2"></use>
+                        <use stroke="url(#linearGradient-1)" stroke-width="1.5" xlink:href="#path-2"></use>
+                        <use stroke="none" xlink:href="#path-2"></use>
+                    </g>
+                    <g id="Oval-4">
+                        <use stroke="none" sketch:type="MSShapeGroup" xlink:href="#path-3"></use>
+                        <use stroke="url(#linearGradient-1)" stroke-width="1.5" xlink:href="#path-3"></use>
+                        <use stroke="none" xlink:href="#path-3"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,44 @@
+/*=====================================
+=            Custom styles            =
+=====================================*/
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
+.clear {
+	clear: both;
+}
+html, body {
+	height: 100%;
+	user-select: text;
+	color: #7B7F8B;
+	::selection {
+		color: #fff;
+	}
+}
+* {
+	box-sizing: border-box;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="url"],
+textarea {
+}
+input, textarea, button, select {
+	color: inherit;
+	font: inherit;
+}
+.inject-svg {
+	display: none;
+}
+
+
+/*-----  End of Custom styles  ------*/

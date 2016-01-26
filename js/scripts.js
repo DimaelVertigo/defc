@@ -1,1 +1,4 @@
-console.log('Hello');
+/*====================================
+=            SVG injector            =
+====================================*/
+SVGInjector(document.getElementById('inject-me'));
