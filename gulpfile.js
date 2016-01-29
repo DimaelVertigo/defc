@@ -4,27 +4,36 @@ var gulp          = require('gulp');
 		minifyCss     = require('gulp-minify-css'),
 		browserSync   = require('browser-sync'),
 		gutil         = require('gulp-util'),
-		prefix        = require('gulp-autoprefixer'),
+		autoprefixer  = require('gulp-autoprefixer'),
 		svgsprites    = require('gulp-svg-sprite');
 
-	// Static Server + watching scss/html files
-	gulp.task('watch', ['less'], function() {
-	  browserSync.init({ server: "./" });
-	  gulp.watch("./less/**/*.less", ['less']);
-	  gulp.watch("./js/**/*.js", ['js']);
-	  gulp.watch("./img/svg/**/*.svg", ['svgsprites']);
-	  gulp.watch("*.html").on('change', browserSync.reload);
-	});
+/*==============================
+=           Watcher            =
+==============================*/
+gulp.task('watch', ['less'], function() {
+  browserSync.init({ server: "./" });
+  gulp.watch("./less/**/*.less", ['less']);
+  gulp.watch("./js/**/*.js", ['js']);
+  gulp.watch("img/svg/**/*.svg", ['svgsprites']);
+  gulp.watch("*.html").on('change', browserSync.reload);
+});
 
+/*=============================================
+=            LESS and autoprefixer            =
+=============================================*/
 gulp.task('less', function () {
-  return gulp.src('./less/**/*.less')
+  return gulp.src('./less/**/style.less')
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
+    .pipe(autoprefixer())
     .pipe(gulp.dest('./css'))
     .pipe(browserSync.stream());
 });
 
+/*==================================
+=            JavaScript            =
+==================================*/
 gulp.task('js', function() {
   return gulp.src('./js/**/*.js')
 	  .pipe(gulp.dest('./js'))
@@ -35,7 +44,18 @@ gulp.task('minify', ['less'], function() {
     .pipe(minifyCss({compatibility: 'ie8'}))
     .pipe(gulp.dest('./css/min/'));
 });
+gulp.task('gulp-autoprefixer', ['less'], function () {
+  return gulp.src('css/style.css')
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(gulp.dest('dist'));
+});
 
+/*===========================
+=            SVG            =
+===========================*/
 gulp.task('svgsprites', function() {
 	gulp.src('./img/svg/**/*.svg')
 		.pipe(svgsprites({
@@ -87,5 +107,7 @@ gulp.task('svgspriteless', function() {
     }))
     .pipe(gulp.dest('./img/'));
 });
+
+
 
 gulp.task('default', ['watch']);

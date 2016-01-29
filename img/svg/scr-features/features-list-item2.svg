@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="31px" height="31px" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>features-list-item2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="main" sketch:type="MSArtboardGroup" transform="translate(-618.000000, -2043.000000)">
+            <g id="features-list-item2" sketch:type="MSLayerGroup" transform="translate(619.000000, 2044.000000)">
+                <path d="M29,14.5 C29,22.5084615 22.5084615,29 14.5,29 C6.49153846,29 0,22.5084615 0,14.5 C0,6.49153846 6.49153846,0 14.5,0 C22.5084615,0 29,6.49153846 29,14.5 L29,14.5 L29,14.5 Z M14.5,4.46153846 L14.5,14.5 L21.1923077,14.5" id="Stroke-6442" stroke="#B4B5B0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M15.6153846,24.5384615 C15.6153846,25.1519231 15.1156923,25.6538462 14.5,25.6538462 C13.8843077,25.6538462 13.3846154,25.1519231 13.3846154,24.5384615 C13.3846154,23.925 13.8843077,23.4230769 14.5,23.4230769 C15.1156923,23.4230769 15.6153846,23.925 15.6153846,24.5384615" id="Fill-6444" fill="#B4B5B0" sketch:type="MSShapeGroup"></path>
+                <path d="M5.57692308,14.5 C5.57692308,15.1134615 5.07723077,15.6153846 4.46153846,15.6153846 C3.84584615,15.6153846 3.34615385,15.1134615 3.34615385,14.5 C3.34615385,13.8865385 3.84584615,13.3846154 4.46153846,13.3846154 C5.07723077,13.3846154 5.57692308,13.8865385 5.57692308,14.5" id="Fill-6445" fill="#B4B5B0" sketch:type="MSShapeGroup"></path>
+                <path d="M26.7692308,14.5 C26.7692308,15.1134615 26.2695385,15.6153846 25.6538462,15.6153846 C25.0381538,15.6153846 24.5384615,15.1134615 24.5384615,14.5 C24.5384615,13.8865385 25.0381538,13.3846154 25.6538462,13.3846154 C26.2695385,13.3846154 26.7692308,13.8865385 26.7692308,14.5" id="Fill-6446" fill="#B4B5B0" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

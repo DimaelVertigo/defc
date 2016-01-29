@@ -1,1 +1,222 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 119 37" id="scr-top--src-top-logo"><title>src-top-logoscr-top-logo</title><defs><linearGradient x1="0%" y1="0%" y2="100%" id="ab"><stop stop-color="#5C698C" offset="0%"/><stop stop-color="#D1A9A9" offset="100%"/></linearGradient><path d="M35 17.5C35 7.835 27.165 0 17.5 0v13.472h.066c2.24 0 4.06 1.797 4.094 4.028H35zM17.5 35C7.835 35 0 27.165 0 17.5h13.472v.066c0 2.24 1.797 4.06 4.028 4.094V35z" id="aa"/><circle id="ac" cx="17.533" cy="17.533" r="1.75"/></defs><g transform="translate(1 1)" fill="none" fill-rule="evenodd"><text opacity=".8" font-family="Optotypo" font-size="14" letter-spacing="2.68" fill="#716373"><tspan x="53" y="24">DEF-</tspan> <tspan x="106.854" y="24">C</tspan></text><use xlink:href="#aa"/><use stroke="url(#ab)" stroke-width="1.5" xlink:href="#aa"/><use xlink:href="#aa"/><g><use xlink:href="#ac"/><use stroke="url(#ab)" stroke-width="1.5" xlink:href="#ac"/><use xlink:href="#ac"/></g></g></symbol></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<symbol viewBox="0 0 11 5" id="header--language-dropdown--lang-drop-arrow">
+		<title>arrow</title>
+		<g transform="translate(1)" stroke-linecap="square" stroke="#000" fill="none" fill-rule="evenodd">
+			<path d="M.41.417l3.47 3.535M8.59.417L4.54 4.54"/>
+		</g>
+	</symbol>
+	<symbol viewBox="0 0 19 14" id="header--language-dropdown--ru">
+		<title>languages</title>
+		<g transform="translate(1 1)" fill="none" fill-rule="evenodd">
+			<path stroke="#E2E2E2" d="M0 0h17v12H0z"/>
+			<path fill="#0433FF" d="M0 4h17v4H0z"/>
+			<path fill="#FFF" d="M0 0h17v4H0z"/>
+			<path fill="#FF2500" d="M0 8h17v4H0z"/>
+		</g>
+	</symbol>
+	<symbol viewBox="0 0 9 17" id="header--social--facebook">
+		<title>Page 1</title>
+		<path d="M6.64.474c-2.29 0-3.77 1.518-3.77 3.87v1.783H.82a.32.32 0 0 0-.32.32v2.585c0 .177.144.32.32.32h2.05v6.523c0 .177.144.32.32.32h2.676a.32.32 0 0 0 .32-.32V9.353h2.397a.32.32 0 0 0 .32-.32V6.447a.32.32 0 0 0-.32-.32H6.187V4.614c0-.727.173-1.096 1.12-1.096l1.374-.002a.32.32 0 0 0 .32-.32v-2.4a.32.32 0 0 0-.32-.32L6.64.473z" fill="#4A70CF" fill-rule="evenodd"/>
+	</symbol>
+	<symbol viewBox="0 0 17 15" id="header--social--twitter">
+		<title>Page 1</title>
+		<path d="M14.998 2.494A3.502 3.502 0 0 0 16.53.566c-.675.4-1.42.69-2.216.846a3.488 3.488 0 0 0-5.943 3.18A9.9 9.9 0 0 1 1.184.948 3.46 3.46 0 0 0 .714 2.7c0 1.21.615 2.278 1.55 2.903a3.488 3.488 0 0 1-1.58-.438v.044A3.49 3.49 0 0 0 3.48 8.627c-.29.08-.6.123-.918.123-.225 0-.443-.022-.656-.064a3.49 3.49 0 0 0 3.257 2.422 6.997 6.997 0 0 1-4.33 1.49c-.283 0-.56-.017-.833-.048a9.858 9.858 0 0 0 5.346 1.57c6.415 0 9.92-5.314 9.92-9.922l-.01-.452A6.964 6.964 0 0 0 17 1.944a6.964 6.964 0 0 1-2.002.55z" fill="#5BD4FF" fill-rule="evenodd"/>
+	</symbol>
+	<symbol viewBox="0 0 17 13" id="header--social--youtube">
+		<title>Page 1</title>
+		<path d="M6.8 9.642V2.647l4.855 3.497L6.8 9.642zM17 2.777C17 1.243 15.863 0 14.46 0H2.54C1.138 0 0 1.243 0 2.777v7.446C0 11.757 1.137 13 2.54 13h11.92c1.403 0 2.54-1.243 2.54-2.777V2.777z" fill="#F44" fill-rule="evenodd"/>
+	</symbol>
+	<symbol viewBox="0 0 119 37" id="header--src-top-logo">
+		<title>src-top-logoscr-top-logo</title>
+		<defs>
+			<linearGradient x1="0%" y1="0%" y2="100%" id="fb">
+				<stop stop-color="#5C698C" offset="0%"/>
+				<stop stop-color="#D1A9A9" offset="100%"/>
+			</linearGradient>
+			<path d="M35 17.5C35 7.835 27.165 0 17.5 0v13.472h.066c2.24 0 4.06 1.797 4.094 4.028H35zM17.5 35C7.835 35 0 27.165 0 17.5h13.472v.066c0 2.24 1.797 4.06 4.028 4.094V35z" id="fa"/>
+			<circle id="fc" cx="17.533" cy="17.533" r="1.75"/>
+		</defs>
+		<g transform="translate(1 1)" fill="none" fill-rule="evenodd">
+			<text opacity=".8" font-family="Optotypo" font-size="14" letter-spacing="2.68" fill="#716373">
+				<tspan x="53" y="24">DEF-</tspan>
+				<tspan x="106.854" y="24">C</tspan>
+			</text>
+			<use xlink:href="#fa"/>
+			<use stroke="url(#fb)" stroke-width="1.5" xlink:href="#fa"/>
+			<use xlink:href="#fa"/>
+			<g>
+				<use xlink:href="#fc"/>
+				<use stroke="url(#fb)" stroke-width="1.5" xlink:href="#fc"/>
+				<use xlink:href="#fc"/>
+			</g>
+		</g>
+	</symbol>
+	<symbol viewBox="0 0 18 18" id="scr-aerodynamics--point">
+		<title>Oval 50</title>
+		<defs>
+			<linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="ga">
+				<stop stop-color="#45C7FF" offset="0%"/>
+				<stop stop-color="#3EFF6E" offset="100%"/>
+			</linearGradient>
+		</defs>
+		<circle cx="1094" cy="3010" r="8" transform="translate(-1085 -3001)" stroke="url(#ga)" stroke-width="2" fill="none" fill-rule="evenodd"/>
+	</symbol>
+	<symbol viewBox="0 0 726 363" id="scr-aerodynamics--waves">
+		<title>Group</title>
+		<defs>
+			<linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="ha">
+				<stop stop-color="#45C7FF" offset="0%"/>
+				<stop stop-color="#3EFF6E" offset="100%"/>
+			</linearGradient>
+		</defs>
+		<g transform="rotate(-2 470.935 1440.38)" stroke="url(#ha)" fill="none" fill-rule="evenodd">
+			<path d="M40.55 311.908s53.985-172.896 190.67-159.946c136.684 12.95 187.68-54.528 203.125-85.794C449.79 34.9 456.148 16.986 482.93.478"/>
+			<path d="M59.55 314.908s53.985-172.896 190.67-159.946c136.684 12.95 187.68-54.528 203.125-85.794C468.79 37.9 475.148 19.986 501.93 3.478"/>
+			<path d="M79.55 317.908s53.985-172.896 190.67-159.946c136.684 12.95 187.68-54.528 203.125-85.794C488.79 40.9 495.148 22.986 521.93 6.478"/>
+			<path d="M98.55 320.908s53.985-172.896 190.67-159.946c136.684 12.95 187.68-54.528 203.125-85.794C507.79 43.9 514.148 25.986 540.93 9.478"/>
+			<path d="M117.55 323.908s53.985-172.896 190.67-159.946c136.684 12.95 187.68-54.528 203.125-85.794 15.446-31.267 21.803-49.182 48.585-65.69"/>
+			<path d="M137.55 326.908s53.985-172.896 190.67-159.946c136.684 12.95 187.68-54.528 203.125-85.794 15.446-31.267 21.803-49.182 48.585-65.69"/>
+			<path d="M157.55 329.908s53.985-172.896 190.67-159.946c136.684 12.95 187.68-54.528 203.125-85.794 15.446-31.267 21.803-49.182 48.585-65.69"/>
+			<path d="M176.55 332.908s53.985-172.896 190.67-159.946c136.684 12.95 187.68-54.528 203.125-85.794 15.446-31.267 21.803-49.182 48.585-65.69"/>
+			<path d="M195.55 335.908s53.985-172.896 190.67-159.946c136.684 12.95 187.68-54.528 203.125-85.794 15.446-31.267 21.803-49.182 48.585-65.69"/>
+			<path d="M214.55 338.908s53.985-172.896 190.67-159.946c136.684 12.95 187.68-54.528 203.125-85.794 15.446-31.267 21.803-49.182 48.585-65.69"/>
+			<path d="M234.55 341.908s53.985-172.896 190.67-159.946c136.684 12.95 187.68-54.528 203.125-85.794 15.446-31.267 21.803-49.182 48.585-65.69"/>
+			<path d="M253.55 344.908s53.985-172.896 190.67-159.946c136.684 12.95 187.68-54.528 203.125-85.794 15.446-31.267 21.803-49.182 48.585-65.69"/>
+			<path d="M272.55 347.908s53.985-172.896 190.67-159.946c136.684 12.95 187.68-54.528 203.125-85.794 15.446-31.267 21.803-49.182 48.585-65.69"/>
+			<path d="M292.55 350.908s53.985-172.896 190.67-159.946c136.684 12.95 187.68-54.528 203.125-85.794 15.446-31.267 21.803-49.182 48.585-65.69"/>
+			<path d="M312.55 353.908s53.985-172.896 190.67-159.946c136.684 12.95 187.68-54.528 203.125-85.794 15.446-31.267 21.803-49.182 48.585-65.69"/>
+			<path d="M331.55 356.908s53.985-172.896 190.67-159.946c136.684 12.95 187.68-54.528 203.125-85.794 15.446-31.267 21.803-49.182 48.585-65.69"/>
+		</g>
+	</symbol>
+	<symbol viewBox="0 0 34 40" id="scr-features--features-list-item1">
+		<title>features-list-item1</title>
+		<g transform="translate(1 1)" stroke="#B7B8B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" fill-rule="evenodd">
+			<path d="M22 38s10-7.97 10-16c0-5.52-4.477-10-10-10s-10 4.48-10 10c0 8.03 10 16 10 16zm4-16a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM6.538 17s6.54-5.21 6.54-10.462A6.54 6.54 0 0 0 0 6.538C0 11.788 6.538 17 6.538 17zM9.154 6.538a2.615 2.615 0 1 1-5.23 0 2.615 2.615 0 0 1 5.23 0z"/>
+		</g>
+	</symbol>
+	<symbol viewBox="0 0 31 31" id="scr-features--features-list-item2">
+		<title>features-list-item2</title>
+		<g transform="translate(1 1)" fill="none" fill-rule="evenodd">
+			<path d="M29 14.5C29 22.508 22.508 29 14.5 29S0 22.508 0 14.5 6.492 0 14.5 0 29 6.492 29 14.5zM14.5 4.462V14.5h6.692" stroke="#B4B5B0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			<path d="M15.615 24.538c0 .614-.5 1.116-1.115 1.116a1.117 1.117 0 0 1-1.115-1.116c0-.613.5-1.115 1.115-1.115.616 0 1.115.502 1.115 1.115M5.577 14.5c0 .613-.5 1.115-1.115 1.115A1.117 1.117 0 0 1 3.346 14.5c0-.613.5-1.115 1.116-1.115.615 0 1.115.502 1.115 1.115M26.77 14.5c0 .613-.5 1.115-1.116 1.115a1.117 1.117 0 0 1-1.116-1.115c0-.613.5-1.115 1.116-1.115.616 0 1.115.502 1.115 1.115" fill="#B4B5B0"/>
+		</g>
+	</symbol>
+	<symbol viewBox="0 0 18 39" id="scr-features--features-list-item3">
+		<title>features-list-item3</title>
+		<g fill="#B4B5B1" fill-rule="evenodd">
+			<path d="M4.565 15.76c.308.16.693.05.86-.25a.603.603 0 0 0-.258-.83c-2.405-1.254-3.9-3.668-3.9-6.3 0-3.944 3.32-7.154 7.4-7.154s7.398 3.21 7.398 7.155c0 2.632-1.494 5.046-3.9 6.3a.603.603 0 0 0-.256.832.648.648 0 0 0 .86.248c2.814-1.47 4.563-4.297 4.563-7.38 0-4.62-3.887-8.38-8.666-8.38C3.887 0 0 3.76 0 8.38c0 3.083 1.75 5.91 4.565 7.38z"/>
+			<path d="M10.98 11.553a.6.6 0 0 0-.152.855.646.646 0 0 0 .884.147c1.402-.96 2.24-2.52 2.24-4.174 0-2.817-2.37-5.11-5.285-5.11-2.914 0-5.285 2.293-5.285 5.11 0 1.655.837 3.215 2.24 4.174.285.196.68.13.883-.146a.6.6 0 0 0-.15-.855C5.286 10.823 4.65 9.637 4.65 8.38c0-2.14 1.802-3.883 4.017-3.883 2.214 0 4.016 1.742 4.016 3.884 0 1.257-.637 2.443-1.703 3.173z"/>
+			<path d="M16.07 31.072c0-.002 0-.004-.002-.006L9.3 11.958v-1.843c.74-.253 1.27-.935 1.27-1.734 0-1.014-.854-1.84-1.903-1.84-1.05 0-1.903.826-1.903 1.84 0 .8.53 1.482 1.27 1.735v1.843L5.587 18.86l-.006.016-2.106 5.948-.008.023-3.312 9.35a.61.61 0 0 0 .394.78.655.655 0 0 0 .206.033c.264 0 .51-.16.6-.415l.86-2.426 5.817 3.26v2.957c0 .338.283.613.634.613.35 0 .634-.275.634-.613V35.43l5.818-3.26.86 2.423a.64.64 0 0 0 .804.382.61.61 0 0 0 .395-.78l-1.107-3.123zM6.487 20.107l1.546 1.27v5.54L4.83 24.783l1.657-4.676zm2.814 1.27l1.546-1.27 1.657 4.676L9.3 26.917v-5.54zm1.105-2.517l-1.104.908v-4.025l1.105 3.117zM8.667 7.767c.35 0 .634.275.634.614a.625.625 0 0 1-.633.614.625.625 0 0 1-.634-.613c0-.338.284-.613.634-.613zm-.634 12L6.93 18.86l1.103-3.117v4.025zm-5.4 11.22l1.77-5 3.63 2.42v5.604l-5.4-3.024zm6.668 3.024v-5.603l3.63-2.42 1.77 5-5.4 3.024z"/>
+		</g>
+	</symbol>
+	<symbol viewBox="0 0 30 30" id="scr-features--features-list-item4">
+		<title>features-list-item4</title>
+		<path d="M28.363 10.848l.028-.024-.06-.07C26.53 5.104 21.235 1 14.996 1 7.278 1 1 7.278 1 14.995S7.278 28.99 14.995 28.99 28.99 22.712 28.99 14.995c0-1.443-.22-2.836-.627-4.147zm-1.05-.29l-6.91 5.906L23.848 5.36a13.125 13.125 0 0 1 3.464 5.2zm-4.214-5.833L20.4 13.42 17.126 2.08c2.23.366 4.272 1.3 5.973 2.645zm-4.066 7.39l.077.05.024.066c-.032-.038-.067-.076-.1-.114zm.025 2.88a4.066 4.066 0 0 1-3.442 4.01l-.636.052a4.02 4.02 0 0 1-1.535-.308l-1.093-.674a4.096 4.096 0 0 1-.632-.685l-.573-1.097a4.034 4.034 0 0 1 .595-3.724l.95-.92a4.04 4.04 0 0 1 2.3-.72 4.07 4.07 0 0 1 4.064 4.065zM14.994 1.903c.39 0 .774.02 1.156.054l2.53 8.76L8.983 3.37a13.004 13.004 0 0 1 6.013-1.467zm-6.87 1.953l8.545 6.47a4.933 4.933 0 0 0-1.675-.297H2.885a13.17 13.17 0 0 1 5.24-6.174zm-6.222 11.14c0-1.42.23-2.784.65-4.064h9.596c-.41.288-.774.637-1.08 1.034L2.86 19.9a13.018 13.018 0 0 1-.957-4.905zm1.35 5.78l6.76-6.534-.66 12.558a13.18 13.18 0 0 1-6.1-6.023zm11.742 7.31c-1.68 0-3.282-.322-4.757-.9l.506-9.657c.067.112.13.228.206.334l5.3 10.162c-.414.04-.832.06-1.255.06zm2.207-.19l-4.413-8.46c.078.04.156.08.237.116l9.713 5.99a13.03 13.03 0 0 1-5.538 2.355zm6.288-2.95l-8.11-5.004c.108-.01.216-.022.323-.037l11.777-.968a13.127 13.127 0 0 1-3.99 6.008zm4.243-6.936l-8.572.705 8.448-7.22a13.034 13.034 0 0 1 .125 6.515z" stroke="#B4B5B1" fill="none" fill-rule="evenodd"/>
+	</symbol>
+	<symbol viewBox="0 0 402 52" id="scr-specs--border">
+		<title>Rectangle 48</title>
+		<defs>
+			<linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="ma">
+				<stop stop-color="#45C7FF" offset="0%"/>
+				<stop stop-color="#3EFF6E" offset="100%"/>
+			</linearGradient>
+			<path id="mb" d="M471 4949h390.26l10.088 25-10.087 25H471v-50z"/>
+		</defs>
+		<g transform="translate(-470 -4948)" fill="none" fill-rule="evenodd">
+			<use stroke="url(#ma)" xlink:href="#mb"/>
+			<use  xlink:href="#mb"/>
+		</g>
+	</symbol>
+	<symbol viewBox="0 0 500 500" id="scr-top--interactive-menu--item1">
+		<title>item1</title>
+		<g fill="none" fill-rule="evenodd">
+			<path d="M500 250C500 111.93 388.07 0 250 0h-16.13V212.56l16.385-.26c.313-.005.313-.005.628-.005 21.078 0 38.25 16.917 38.583 37.96l.25 15.874h210.285V250zm-32.258 0l16.13-16.13H305.59l16.128 15.875c-.612-38.65-32.135-69.708-70.837-69.708-.57 0-.57 0-1.138.01l.255 16.126h16.13V16.13L250 32.257c120.256 0 217.742 97.486 217.742 217.742zM250 467.742c-120.256 0-217.742-97.486-217.742-217.742l-16.13 16.13h180.045V250l-16.127-.255c-.008.568-.008.568-.01 1.138 0 38.702 31.058 70.225 69.71 70.837l-15.875-16.127V483.87L250 467.743zM250 500h16.13V289.717l-15.875-.25c-21.043-.334-37.96-17.506-37.96-38.584 0-.315 0-.315.005-.628l.26-16.384H-.002V250c0 138.07 111.93 250 250 250z" fill="#fff"/>
+			<path d="M483.87 250c0-129.163-104.707-233.87-233.87-233.87v180.043c.294-.005.588-.007.883-.007 29.924 0 54.238 24.022 54.71 53.834H483.87zM250 483.87C120.837 483.87 16.13 379.164 16.13 250h180.043c-.005.294-.007.588-.007.883 0 29.924 24.022 54.238 53.834 54.71V483.87z"/>
+			<path d="M483.87 250c0-129.163-104.707-233.87-233.87-233.87v180.043c.294-.005.588-.007.883-.007 29.924 0 54.238 24.022 54.71 53.834H483.87zM250 483.87C120.837 483.87 16.13 379.164 16.13 250h180.043c-.005.294-.007.588-.007.883 0 29.924 24.022 54.238 53.834 54.71V483.87z"/>
+			<circle cx="250.441" cy="250.441" r="23.387"/>
+			<circle cx="250.441" cy="250.441" r="23.387"/>
+			<circle cx="250.441" cy="250.441" r="23.387"/>
+		</g>
+	</symbol>
+	<symbol viewBox="0 0 28 28" id="scr-top--interactive-menu--item2">
+		<title>interactive-menu-item2</title>
+		<g transform="translate(1 1)" fill="none" fill-rule="evenodd">
+			<path d="M4 15l5-7 5 7 4-4 4 4" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			<path d="M17 8c0 1.1-.895 2-2 2s-2-.9-2-2 .895-2 2-2 2 .9 2 2" fill="#FFF"/>
+			<path d="M24 26H2c-1.1 0-2-.9-2-2V2C0 .9.9 0 2 0h22c1.1 0 2 .9 2 2v22c0 1.1-.9 2-2 2zM0 22h26H0zM4 4h18v14H4V4z" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+		</g>
+	</symbol>
+	<symbol viewBox="0 0 30 30" id="scr-top--interactive-menu--item3">
+		<title>interactive-menu-item3</title>
+		<g transform="translate(1 1)" stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd">
+			<path d="M18.308 14l-6.462-4.308v8.616L18.308 14z" stroke-linecap="round" stroke-linejoin="round"/>
+			<path d="M28 14c0 7.732-6.268 14-14 14S0 21.732 0 14 6.268 0 14 0s14 6.268 14 14z"/>
+		</g>
+	</symbol>
+	<symbol viewBox="0 0 23 29" id="scr-top--interactive-menu--item4">
+		<title>interactive-menu-item4</title>
+		<g transform="translate(1 1)" stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd">
+			<path d="M18.853 26.738H2.56a2.043 2.043 0 0 1-2.036-2.036V2.298c0-1.12.916-2.036 2.036-2.036h16.293c1.12 0 2.037.916 2.037 2.036v22.404c0 1.12-.916 2.036-2.037 2.036z"/>
+			<path d="M4.597 8.408H8.67m-4.073 4.074h12.22m-12.22 4.073h7.128m3.055 0h2.037m-12.22 4.073h2.037" stroke-linecap="round"/>
+		</g>
+	</symbol>
+	<symbol viewBox="0 0 16 16" id="scr-top--interactive-menu--point">
+		<title>Oval 70</title>
+		<circle cx="19" cy="19" r="7" transform="translate(-11 -11)" stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd"/>
+	</symbol>
+	<symbol viewBox="0 0 40 40" id="scr-top--interactive-menu--point-active">
+		<title>Group 2</title>
+		<g transform="translate(1 1)" stroke="#FFF" fill="none" fill-rule="evenodd">
+			<circle stroke-width="2" cx="19" cy="19" r="7"/>
+			<path d="M0 19c0 10.493 8.507 19 19 19m19-19C38 8.507 29.493 0 19 0" stroke-linecap="round" stroke-linejoin="round" opacity=".2"/>
+		</g>
+	</symbol>
+	<symbol viewBox="0 0 10 10" id="scr-top--magnet-navigation--magnet-navigation-link">
+		<title>Shape</title>
+		<path d="M5 9.5a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9zm0-1a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z"/>
+	</symbol>
+	<symbol viewBox="0 0 18 18" id="scr-top--magnet-navigation--magnet-navigation-link--active">
+		<title>Group 3</title>
+		<g fill="none" fill-rule="evenodd">
+			<circle cx="9" cy="9" r="4"/>
+			<path d="M.5 9A8.5 8.5 0 0 0 9 17.5a.5.5 0 0 0 0-1A7.5 7.5 0 0 1 1.5 9a.5.5 0 0 0-1 0zm17 0A8.5 8.5 0 0 0 9 .5a.5.5 0 0 0 0 1A7.5 7.5 0 0 1 16.5 9a.5.5 0 0 0 1 0z"/>
+		</g>
+	</symbol>
+	<symbol viewBox="0 0 18 18" id="scr-top--magnet-navigation--magnet-navigation-link--active-grad">
+		<title>Group 4</title>
+		<defs>
+			<linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="va">
+				<stop stop-color="#45C7FF" offset="0%"/>
+				<stop stop-color="#3EFF6E" offset="100%"/>
+			</linearGradient>
+		</defs>
+		<g fill="none" fill-rule="evenodd">
+			<path d="M.5 9A8.5 8.5 0 0 0 9 17.5v-1A7.5 7.5 0 0 1 1.5 9h-1zm17 0A8.5 8.5 0 0 0 9 .5v1A7.5 7.5 0 0 1 16.5 9h1z" fill="url(#va)"/>
+			<circle stroke="url(#va)" cx="9" cy="9" r="4"/>
+		</g>
+	</symbol>
+	<symbol viewBox="0 0 10 10" id="scr-top--magnet-navigation--magnet-navigation-link-grad">
+		<title>Shape</title>
+		<defs>
+			<linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="wa">
+				<stop stop-color="#45C7FF" offset="0%"/>
+				<stop stop-color="#3EFF6E" offset="100%"/>
+			</linearGradient>
+		</defs>
+		<path d="M8 8.5a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9zm0-1a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z" transform="translate(-3 1)" fill="url(#wa)" fill-rule="evenodd"/>
+	</symbol>
+	<symbol viewBox="0 0 637 32" id="scr-top--main-logo">
+		<title>OBSERVER-S + OBSERVER-S Copy 2</title>
+		<text transform="translate(-65 -24)" font-family="Optotypo" letter-spacing="33.62" font-size="42" fill="#FFF" fill-rule="evenodd">
+			<tspan x="63.929" y="55">OBSERVER-</tspan>
+			<tspan x="671.849" y="55">S</tspan>
+		</text>
+	</symbol>
+	<symbol viewBox="0 0 486 24" id="scr-transporting--logo">
+		<title>OBSERVER-S + OBSERVER-S Copy 2</title>
+		<text transform="translate(-1 -10)" font-family="Optotypo" letter-spacing="25.615" font-size="32" fill="#FFF" fill-rule="evenodd">
+			<tspan x=".448" y="32.687">OBSERVER-S</tspan>
+		</text>
+	</symbol>
+</svg>

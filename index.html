@@ -6,12 +6,731 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<img id="inject-me" class="inject-svg" src="img/sprite/symbol/inline-sprite.svg">
+	
+	<header class="site-header">
 
-	<p class="dev">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit repellat commodi, quis laboriosam ad. Excepturi similique, id expedita tenetur molestiae repellat doloribus. Recusandae accusantium ea praesentium optio aliquam magnam asperiores, ullam, iste corporis velit voluptatem dignissimos totam, consequuntur voluptatibus neque sequi laudantium eaque. Aut nam repellendus non quis quod odit magni quibusdam. Repellat minima sint temporibus id accusamus beatae, veritatis, qui exercitationem numquam alias. Vitae molestias non, placeat minima, dicta quas nam praesentium a perspiciatis modi repudiandae dolores iure delectus cum quae reprehenderit est dolorum odio totam consequatur in culpa pariatur minus, accusantium. Perspiciatis ipsum beatae quam ea fugit, sapiente!</p>
-	<svg class="svg-icon header-icon-mag">
-	  <use xlink:href="#Archive--ico-arrow"></use>
-  </svg>
+		<div class="site-header__left">
+			<a href="index.html" class="header-logo">
+				<svg class="header-logo__icon">
+					<use xlink:href="#header--src-top-logo"/>
+				</svg>
+			</a>
+		</div>
+
+		<div class="site-header__center">
+			<nav class="header-navigation">
+				<ul class="header-navigation__list">
+					<li class="header-navigation__item">
+						<a href="#" class="header-navigation__link">о компании</a>
+					</li>
+					<li class="header-navigation__item">
+						<a href="#" class="header-navigation__link">observer s</a>
+					</li>
+					<li class="header-navigation__item">
+						<a href="#" class="header-navigation__link">услуги</a>
+					</li>
+					<li class="header-navigation__item">
+						<a href="#" class="header-navigation__link">контакты</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="site-header__right">
+			<div class="language-dropdown">
+				<svg class="language-dropdown__current-lang">
+					<use xlink:href="#header--language-dropdown--ru"/>
+				</svg>
+				<svg class="language-dropdown__trigger">
+					<use xlink:href="#header--language-dropdown--lang-drop-arrow"/>
+				</svg>
+				<ul class="language-dropdown__list">
+					<li class="language-dropdown__item">
+						<a href="#" class="language-dropdown__link"></a>
+					</li>
+					<li class="language-dropdown__item">
+						<a href="#" class="language-dropdown__link"></a>
+					</li>
+				</ul>
+			</div>
+			<div class="social">
+				<ul class="social__list">
+					<li class="social__item">
+						<a href="#" class="social__link">
+							<svg class="social__icon social__icon--facebook">
+								<use xlink:href="#header--social--facebook"/>
+							</svg>
+						</a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link">
+							<svg class="social__icon social__icon--twitter">
+								<use xlink:href="#header--social--twitter"/>
+							</svg>
+						</a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link">
+							<svg class="social__icon social__icon--youtube">
+								<use xlink:href="#header--social--youtube"/>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header><!-- site-header -->
+
+
+	<div class="scr-top">
+		<ul class="magnet-navigation">
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon magnet-navigation__icon-active magnet-navigation__icon-active">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link--active"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link"/>
+					</svg>
+				</a>
+			</li>
+		</ul>
+		<!-- magnet-navigation -->
+
+		<div class="main-logo">
+			<svg class="main-logo__icon">
+				<use xlink:href="#scr-top--main-logo"/>		
+			</svg>
+		</div>
+		<!-- main-logo -->
+
+		<div class="interactive-menu">
+			<div class="interactive-point interactive-menu__point">
+				<svg class="interactive-point__icon">
+					<use xlink:href="#scr-top--interactive-menu--point"/>		
+				</svg>
+				<svg class="interactive-point__icon--active interactive-menu__point--active">
+					<use xlink:href="#scr-top--interactive-menu--point-active"/>		
+				</svg>
+				<div class="interactive-menu__description">
+					<svg class="interactive-menu__description-icon interactive-menu__description-icon--1">
+						<use xlink:href="#scr-top--interactive-menu--item1"/>		
+					</svg>
+					<div class="interactive-menu__name">что это такое</div>
+				</div>
+			</div>
+
+			<div class="interactive-menu__line"></div>
+
+			<div class="interactive-point interactive-menu__point">
+				<svg class="interactive-point__icon">
+					<use xlink:href="#scr-top--interactive-menu--point"/>		
+				</svg>
+				<svg class="interactive-point__icon--active interactive-menu__point--active">
+					<use xlink:href="#scr-top--interactive-menu--point-active"/>		
+				</svg>
+				<div class="interactive-menu__description">
+					<svg class="interactive-menu__description-icon interactive-menu__description-icon--2">
+						<use xlink:href="#scr-top--interactive-menu--item2"/>		
+					</svg>
+					<div class="interactive-menu__name">фотогалерея</div>
+				</div>
+			</div>
+
+			<div class="interactive-menu__line"></div>
+
+			<div class="interactive-point interactive-menu__point">
+				<svg class="interactive-point__icon">
+					<use xlink:href="#scr-top--interactive-menu--point"/>		
+				</svg>
+				<svg class="interactive-point__icon--active interactive-menu__point--active">
+					<use xlink:href="#scr-top--interactive-menu--point-active"/>		
+				</svg>
+				<div class="interactive-menu__description">
+					<svg class="interactive-menu__description-icon interactive-menu__description-icon--3">
+						<use xlink:href="#scr-top--interactive-menu--item3"/>		
+					</svg>
+					<div class="interactive-menu__name">видеоролик</div>
+				</div>
+			</div>
+
+			<div class="interactive-menu__line"></div>
+
+			<div class="interactive-point interactive-menu__point">
+				<svg class="interactive-point__icon">
+					<use xlink:href="#scr-top--interactive-menu--point"/>		
+				</svg>
+				<svg class="interactive-point__icon--active interactive-menu__point--active">
+					<use xlink:href="#scr-top--interactive-menu--point-active"/>		
+				</svg>
+				<div class="interactive-menu__description">
+					<svg class="interactive-menu__description-icon interactive-menu__description-icon--4">
+						<use xlink:href="#scr-top--interactive-menu--item4"/>		
+					</svg>
+					<div class="interactive-menu__name">сертификаты</div>
+				</div>
+			</div>
+		</div>
+		<!-- interactive-menu -->
+
+		<div class="src-top-slide src-top-slide-1">
+			<div class="src-top-slide-1-popup">
+				<div class="src-top-slide-1-popup__point-wrap interactive-point">
+					<svg class="interactive-point__icon">
+						<use xlink:href="#scr-top--interactive-menu--point"/>		
+					</svg>
+					<svg class="interactive-point__icon--active">
+						<use xlink:href="#scr-top--interactive-menu--point-active"/>
+					</svg>
+				</div>
+				<p class="src-top-slide-1-popup__text">
+					Беспилотный летательный апарат (БпЛА) созданный<br>
+					для выполнения аэрофотосъемки местности<br>
+					и воздушной разведки. 
+				</p>
+			</div>
+		</div><!-- src-top-slide-1 -->
+	</div>
+	<!-- /.scr-top -->
+
+	
+	<div class="scr-consctructions">
+		<ul class="magnet-navigation">
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon  magnet-navigation__icon-active magnet-navigation__icon-active--dark">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link--active"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon magnet-navigation__icon--dark">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon magnet-navigation__icon--dark">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon magnet-navigation__icon--dark">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon magnet-navigation__icon--dark">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon magnet-navigation__icon--dark">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link"/>
+					</svg>
+				</a>
+			</li>
+		</ul>
+		<div class="scr-consctructions-left">
+			<div class="cons-info">
+				<h2 class="title cons-info__title">Конструкция</h2>
+				<p class="basic-text cons-info__text1">Овserver-S представляет собой летательный аппарат самолетного типа (моноплан) с двухлопастным винтом тянущего типа, относится к класссу тактических БпЛА.</p>
+			</div>
+			<div class="cons-plane cons-plane--1">
+				<div class="cons-sphere cons-sphere--1"></div>
+			</div>
+		</div>
+		<!-- /.scr-consctructions__left -->
+
+		<div class="scr-consctructions-right">
+			<div class="scr-consctructions-right__top">
+				<p class="cons-info__text2">
+					Конструкция БпЛА выполнена с учетом различных условий эксплуатации, крыло большого удлинения имеет углепластиковый композитный лонжерон и позволяет эксплуатировать БпЛА в широком диапазоне скоростей. Благодоря модульной конструкции, при повреждении аппарата в условиях боевых действий, его ремонт произодится в короткое время путем замены вышедших из строя элементов.
+				</p>
+				<div class="cons-plane cons-plane--2">
+					<div class="cons-sphere cons-sphere--2"></div>
+				</div>
+			</div>
+			<div class="scr-consctructions-right__bottom">
+				<p class="cons-info__text3">
+					Привод — бесколлекторный синхронный электродвигатель.
+					Питание электродвигателя и бортового оборудования осуществляется от литий-полимерных аккумуляторов большой емкости (16 А/Ч).
+				</p>
+				<div class="cons-plane cons-plane--3">
+					<div class="cons-sphere cons-sphere--3"></div>
+				</div>
+			</div>
+		</div>
+		<!-- /.scr-consctructions__right -->
+	</div>
+	<!-- /.scr-consctructions -->
+
+
+	<div class="scr-features">
+		<ul class="magnet-navigation">
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon magnet-navigation__icon-active magnet-navigation__icon-active">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link--active"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link"/>
+					</svg>
+				</a>
+			</li>
+		</ul>
+		<div class="scr-features-plane"></div>
+		<ul class="scr-features-list">
+			<li class="scr-features-list__item">
+				<div class="scr-features-list__info">
+					<svg class="scr-features-list__icon scr-features-list__icon--1">
+						<use xlink:href="#scr-features--features-list-item1"/>
+					</svg>
+					<div class="scr-features-list__name">дальность полета</div>
+					<div class="scr-features-list__text">до</div>
+					<div class="scr-features-list__value">120</div>
+					<div class="scr-features-list__units">Километров</div>
+				</div>
+			</li>
+			<li class="scr-features-list__item">
+				<div class="scr-features-list__info">
+					<svg class="scr-features-list__icon scr-features-list__icon--2">
+						<use xlink:href="#scr-features--features-list-item2"/>
+					</svg>
+					<div class="scr-features-list__name">продолжительность<br>полета</div>
+					<div class="scr-features-list__text">до</div>
+					<div class="scr-features-list__value">140</div>
+					<div class="scr-features-list__units">минут</div>
+				</div>
+			</li>
+			<li class="scr-features-list__item">
+				<div class="scr-features-list__info">
+					<svg class="scr-features-list__icon scr-features-list__icon--3">
+						<use xlink:href="#scr-features--features-list-item3"/>
+					</svg>
+					<div class="scr-features-list__name">дальность<br> видеоканала</div>
+					<div class="scr-features-list__text">до</div>
+					<div class="scr-features-list__value">30</div>
+					<div class="scr-features-list__units">Километров</div>
+				</div>
+			</li>
+			<li class="scr-features-list__item">
+				<div class="scr-features-list__info">
+					<svg class="scr-features-list__icon scr-features-list__icon--4">
+						<use xlink:href="#scr-features--features-list-item4"/>
+					</svg>
+					<div class="scr-features-list__name">оптическое<br> увеличение</div>
+					<div class="scr-features-list__text">до</div>
+					<div class="scr-features-list__value">30</div>
+					<div class="scr-features-list__units">х</div>
+				</div>
+			</li>
+		</ul>
+		<ul class="scr-features-points">
+			<li class="scr-features-points__point scr-features-points__point--1"></li>
+			<li class="scr-features-points__point scr-features-points__point--2"></li>
+			<li class="scr-features-points__point scr-features-points__point--3"></li>
+			<li class="scr-features-points__point scr-features-points__point--4"></li>
+		</ul>
+	</div>
+	<!-- /.scr-features -->
+
+
+	<div class="scr-aerodynamics">
+		<ul class="magnet-navigation">
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon magnet-navigation__icon--gradient">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link-grad"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon magnet-navigation__icon--gradient">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link-grad"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon magnet-navigation__icon--gradient">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link-grad"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon magnet-navigation__icon-active magnet-navigation__icon-active--gradient">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link--active-grad"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon magnet-navigation__icon--gradient">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link-grad"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon magnet-navigation__icon--gradient">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link-grad"/>
+					</svg>
+				</a>
+			</li>
+		</ul>
+
+		<div class="aerodynamics-plane">
+			<svg class="aerodynamics-waves">
+				<use xlink:href="#scr-aerodynamics--waves"/>
+			</svg>
+		</div>
+
+		<div class="aerodynamics-point aerodynamics-point--1">
+			<svg class="aerodynamics-point__icon aerodynamics-point__icon--big">
+				<use xlink:href="#scr-aerodynamics--point"/>		
+			</svg>
+			<div class="aerodynamics-point__info aerodynamics-point__info--1">
+				<h3 class="aerodynamics-point__title title">Аэродинамичность</h3>
+			</div>
+		</div>
+		<div class="aerodynamics-point aerodynamics-point--2">
+			<svg class="aerodynamics-point__icon aerodynamics-point__icon--medium">
+				<use xlink:href="#scr-aerodynamics--point"/>		
+			</svg>
+			<div class="aerodynamics-point__info aerodynamics-point__info--2">
+				<p>Дальность полета:</p>
+			</div>
+		</div>
+		<div class="aerodynamics-point aerodynamics-point--3">
+			<svg class="aerodynamics-point__icon aerodynamics-point__icon--small">
+				<use xlink:href="#scr-aerodynamics--point"/>		
+			</svg>
+			<div class="aerodynamics-point__info aerodynamics-point__info--3">
+				<p>
+					Аэродинамическое качество 20;<br> Способен находится в воздухе до 3 часов;
+				</p>
+			</div>
+		</div>
+		<div class="aerodynamics-point aerodynamics-point--4">
+			<svg class="aerodynamics-point__icon aerodynamics-point__icon--small">
+				<use xlink:href="#scr-aerodynamics--point"/>		
+			</svg>
+			<div class="aerodynamics-point__info aerodynamics-point__info--4">
+				<p>
+					До 30 км с учетом сохранения канала передачи данных и управления
+				</p>
+			</div>
+		</div>
+		<div class="aerodynamics-point aerodynamics-point--5">
+			<svg class="aerodynamics-point__icon aerodynamics-point__icon--small">
+				<use xlink:href="#scr-aerodynamics--point"/>		
+			</svg>
+			<div class="aerodynamics-point__info aerodynamics-point__info--5">
+				<p>
+					До 100 км в автономном режиме (по заданному маршруту, с прекращением после 30 км канала управления с наземной станции).
+				</p>
+			</div>
+		</div>
+		</div>
+	<!-- /.scr-aerodynamics -->
+
+
+	<div class="scr-transporting">
+		<ul class="magnet-navigation">
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon magnet-navigation__icon-active magnet-navigation__icon-active">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link--active"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link"/>
+					</svg>
+				</a>
+			</li>
+			<li class="magnet-navigation__item">
+				<a href="#" class="magnet-navigation__link">
+					<svg class="magnet-navigation__icon">
+						<use xlink:href="#scr-top--magnet-navigation--magnet-navigation-link"/>
+					</svg>
+				</a>
+			</li>
+		</ul>
+		
+		<div class="transporting__plane">
+			<svg class="transporting__logo">
+				<use xlink:href="#scr-transporting--logo"/>
+			</svg>
+		</div>
+
+		<div class="transporting-info">
+			<h2 class="title transporting-info__title">Испытания</h2>
+			<p class="transporting-info__description">БпЛА Observer-S прошел испытания на Государственном научно-испытательном центре Вооруженных Сил Украины и получил заключение о соответствии уточненным требованиям к БпЛА класса - мини (тактического звена).
+				В рамках испытаний БпЛА Observer-S также подтвердил способность выполнять полетное задание в условиях применения комплекса радиопомех (подавления сигналов GSM, GPS, ГЛОНАСС).</p>
+			</div>
+			<div class="transporting-info">
+				<h2 class="title transporting-info__title">Транспортировка</h2>
+				<p class="transporting-info__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum </p>
+			</div>
+	</div>
+	<!-- /.scr-transporting -->
+
+
+	<div class="scr-specs">
+		<div class="spec-tabs">
+			<div class="spec-tabs__name"><h2 class="title">Характеристики</h2></div>
+			<ul class="spec-tabs__list">
+				<li class="spec-tabs__item">
+					<svg class="spec-tabs__border">
+						<use xlink:href="#scr-specs--border"/>			
+					</svg>
+					Технологии и автоматизация управления
+				</li>
+				<li class="spec-tabs__item">
+					Технические характеристики
+					<svg class="spec-tabs__border">
+						<use xlink:href="#scr-specs--border"/>			
+					</svg>
+				</li>
+				<li class="spec-tabs__item">
+					<svg class="spec-tabs__border">
+						<use xlink:href="#scr-specs--border"/>			
+					</svg>
+					Комплектация
+				</li>
+				<li class="spec-tabs__item">
+					<svg class="spec-tabs__border">
+						<use xlink:href="#scr-specs--border"/>			
+					</svg>
+					Используется для
+				</li>
+				<li class="spec-tabs__item">
+					<svg class="spec-tabs__border">
+						<use xlink:href="#scr-specs--border"/>			
+					</svg>
+					Транспортировка
+				</li>
+				<li class="spec-tabs__item">
+					<svg class="spec-tabs__border">
+						<use xlink:href="#scr-specs--border"/>			
+					</svg>
+					Испытания
+				</li>
+				<li class="spec-tabs__item">
+					<svg class="spec-tabs__border">
+						<use xlink:href="#scr-specs--border"/>			
+					</svg>
+					Часто задаваемые вопросы
+				</li>
+			</ul>
+		</div>
+
+		<div class="spec-details">
+			<div class="spec-details__item">
+				<div class="spec-details__name">Зліт</div>
+				<div class="spec-details__value">
+					З шасі на рівній ділянці поверхні (керування оператором ), можливий запуск «з руки»; зліт і набір висоти відбувається в автоматичному режимі.
+				</div>
+			</div>
+
+			<div class="spec-details__item">
+				<div class="spec-details__name">Посадка</div>
+				<div class="spec-details__value">На шасі на рівній ділянці (автоматично).</div>
+			</div>
+
+			<div class="spec-details__item">
+				<div class="spec-details__name">Тривалість польоту</div>
+				<div class="spec-details__value">
+					90-140 хв. в залежності від корисного навантаження і комплектації.
+				</div>
+			</div>
+
+			<div class="spec-details__item">
+				<div class="spec-details__name">Дальність маршрута</div>
+				<div class="spec-details__value">
+					60-90км в залежності від корисного навантаження і комплектації.
+				</div>
+			</div>
+
+			<div class="spec-details__item">
+				<div class="spec-details__name">Віддаленість  від базової точки</div>
+				<div class="spec-details__value">15-30 км.</div>
+			</div>
+
+			<div class="spec-details__item">
+				<div class="spec-details__name">Дальність каналу даних</div>
+				<div class="spec-details__value">15-30 км.</div>
+			</div>
+			<div class="spec-details__item">
+				<div class="spec-details__name">Канал даних</div>
+				<div class="spec-details__value">Цифровий канал несучої частоти 930-945 МГц, застосоване ППРЧ</div>
+			</div>
+
+			<div class="spec-details__item">
+				<div class="spec-details__name">Відеоканал</div>
+				<div class="spec-details__value">Високочастотний AV канал</div>
+			</div>
+
+			<div class="spec-details__item">
+				<div class="spec-details__name">Дальність відеоканалу</div>
+				<div class="spec-details__value">
+					До 30 км. Залежно від висоти виконання польоту, радіо-частотної
+					обстановки і висоти установки наземного антенного комплексу.
+				</div>
+			</div>
+
+			<div class="spec-details__item">
+				<div class="spec-details__name">Силова установка</div>
+				<div class="spec-details__value">Безколекторний синхроний електродвигун.</div>
+			</div>
+
+			<div class="spec-details__item">
+				<div class="spec-details__name">Система управління</div>
+				<div class="spec-details__value">
+					Комплексна система автоматичного пілотування з GPS приймачем, двох- 
+					осьовим гіроскопом, трьох-осьовим акселерометром, датчиком повітряної швидкості, датчиком повітряного тиску в режимі реального 
+					часу БпЛАObserver - S передає всю необхідну польотну інформацію, 
+					можлива зміна маршруту польоту в режимі реального часу, 
+					підтримується режим обльоту встановленої точки по колу із заданим 
+					радіусом, при втраті зв'язку БпЛА автоматично повернеться на місце 
+					старту.
+				</div>
+			</div>
+
+			<div class="spec-details__item">
+				<div class="spec-details__name">Корисне навантаження</div>
+				<div class="spec-details__value">1 - 1,5 кг.</div>
+			</div>
+
+			<div class="spec-details__item">
+				<div class="spec-details__value">5 – 5,8 кг</div>
+				<div class="spec-details__name">Злітна вага</div>
+			</div>
+
+			<div class="spec-details__item">
+				<div class="spec-details__name">Довжина</div>
+				<div class="spec-details__value">1650 мм.</div>
+			</div>
+
+			<div class="spec-details__item">
+				<div class="spec-details__name">Розмах крила</div>
+				<div class="spec-details__value">3400 мм.</div>
+			</div>
+
+			<div class="spec-details__item">
+				<div class="spec-details__name">Тягооснащеність</div>
+				<div class="spec-details__value">1</div>
+			</div>
+
+			<div class="spec-details__item">
+				<div class="spec-details__name">Аеродинамічна якість</div>
+				<div class="spec-details__value">20</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- /.scr-specs -->
+
+	<img id="inject-me" class="inject-svg" src="img/sprite/symbol/inline-sprite.svg">
 	
 	<script src="js/svg-injector.min.js"></script>
 	<script src="js/scripts.js"></script>

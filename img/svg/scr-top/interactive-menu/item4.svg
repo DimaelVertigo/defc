@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="23px" height="29px" viewBox="0 0 23 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>interactive-menu-item4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="main" sketch:type="MSArtboardGroup" transform="translate(-1452.000000, -800.000000)" stroke="#FFFFFF" stroke-width="2">
+            <g id="interactive-menu-item4" sketch:type="MSLayerGroup" transform="translate(1453.000000, 801.000000)">
+                <path d="M18.8534483,26.7381466 L2.56034483,26.7381466 C1.44019397,26.7381466 0.523706897,25.8216595 0.523706897,24.7015086 L0.523706897,2.29849138 C0.523706897,1.17834052 1.44019397,0.261853448 2.56034483,0.261853448 L18.8534483,0.261853448 C19.9735991,0.261853448 20.8900862,1.17834052 20.8900862,2.29849138 L20.8900862,24.7015086 C20.8900862,25.8216595 19.9735991,26.7381466 18.8534483,26.7381466 L18.8534483,26.7381466 Z" id="Stroke-3507" sketch:type="MSShapeGroup"></path>
+                <path d="M4.59698276,8.40840517 L8.67025862,8.40840517 M4.59698276,12.481681 L16.8168103,12.481681 M4.59698276,16.5549569 L11.7252155,16.5549569 M14.7801724,16.5549569 L16.8168103,16.5549569 M4.59698276,20.6282328 L6.63362069,20.6282328" id="Stroke-3509" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

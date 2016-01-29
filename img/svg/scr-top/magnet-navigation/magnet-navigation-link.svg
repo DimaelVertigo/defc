@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5 (25232) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="linearGrad">
+            <stop stop-color="#45C7FF" offset="0%"/>
+            <stop stop-color="#3EFF6E" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1"   sketch:type="MSPage">
+        <g id="main" sketch:type="MSArtboardGroup" transform="translate(-1556.000000, -168.000000)" >
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(1553.000000, 105.000000)">
+                <path d="M8,72.5 C10.4852814,72.5 12.5,70.4852814 12.5,68 C12.5,65.5147186 10.4852814,63.5 8,63.5 C5.51471863,63.5 3.5,65.5147186 3.5,68 C3.5,70.4852814 5.51471863,72.5 8,72.5 L8,72.5 Z M8,71.5 C6.06700338,71.5 4.5,69.9329966 4.5,68 C4.5,66.0670034 6.06700338,64.5 8,64.5 C9.93299662,64.5 11.5,66.0670034 11.5,68 C11.5,69.9329966 9.93299662,71.5 8,71.5 L8,71.5 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

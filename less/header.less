@@ -1,6 +1,99 @@
 /*==============================
 =            HEADER            =
 ==============================*/
+.site-header {
+	background-color: #fff;
+	width: 100%;
+	height: 69px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2%;
+	&__left {
+	}
+	&__center {
+	}
+	&__right {
+		display: flex;
+		align-items: center;
+	}
+}
+.header-logo {
+	&__icon {
+		width: 119px;
+		height: 35px;
+	}
+}
+.header-navigation {
+	&__list {
+		display: flex;
+	}
+	&__item {
+	}
+	&__link {
+		color: #000;
+		font-size: 1rem;
+		padding: 0 20px;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+}
+
+.language-dropdown {
+	align-items: center;
+	border: 1px solid #E2E2E2;
+	display: flex;
+	height: 33px;
+	justify-content: space-between;
+	padding: 0 11px;
+	width: 57px;
+
+	&__current-lang {
+		width: 17px;
+		height: 12px;
+	}
+	&__trigger {
+		width: 9px;
+		height: 5px;
+	}
+	&__list {
+		display: none;
+	}
+	&__item {
+	}
+	&__link {
+	}
+}
+.social {
+	margin-left: 9px;
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+	&__item {
+		&:not(:last-child) {
+			border-right: 1px solid #b2b2b2; 
+		}
+	}
+	&__link {
+		padding: 0 11px;
+	}
+	&__icon {
+		&--facebook {
+			width: 9px;
+			height: 16px;
+		}
+		&--twitter {
+			width: 17px;
+			height: 14px;
+		}
+		&--youtube {
+			width: 17px;
+			height: 13px;
+		}
+	}
+}
+
 
 /*-----  End of HEADER  ------*/
 
