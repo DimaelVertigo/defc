@@ -134,13 +134,15 @@ p {
 		left: calc(~"50% - 8px");
 		z-index: 2;
 		&:hover, &:focus {
-		  & + .interactive-point__icon--active {
+		  & + .interactive-point__icon--hidden {
 		  	opacity: 1;
 		  	transform: rotate(0);
 		  }
 		}
-		&--active {
+		&--hidden {
 			opacity: 0;
+		}
+		&--active {
 			width: 38px;
 			height: 38px;
 			position: absolute;
