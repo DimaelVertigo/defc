@@ -313,7 +313,7 @@ p {
 /*===================================================
 =            Interactive point template            =
 ===================================================*/
-.interactive-point {
+.ip {
   width: 38px;
   height: 38px;
   display: -webkit-box;
@@ -329,32 +329,36 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+  z-index: 2;
 }
-.interactive-point__icon {
+.ip__trigger:hover,
+.ip__trigger:focus {
+  cursor: pointer;
+}
+.ip__icon {
   width: 16px;
   height: 16px;
   position: absolute;
   top: calc(50% - 8px);
   left: calc(50% - 8px);
   z-index: 2;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
-.interactive-point__icon:hover + .interactive-point__icon--hidden,
-.interactive-point__icon:focus + .interactive-point__icon--hidden {
-  opacity: 1;
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
-}
-.interactive-point__icon--hidden {
+.ip__icon--hidden {
   opacity: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
-.interactive-point__icon--active {
+.ip__icon--active {
+  opacity: 1;
   width: 38px;
   height: 38px;
   position: absolute;
   top: calc(50% - 19px);
   left: calc(50% - 19px);
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   z-index: 1;
@@ -610,7 +614,17 @@ p {
   height: 100%;
   position: relative;
 }
+.src-top-slide-1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .src-top-slide-1-popup {
+  opacity: 0;
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
   position: absolute;
   top: 30%;
   right: 28%;
@@ -646,6 +660,26 @@ p {
 }
 .scr-top-line1__path {
   z-index: 50;
+}
+.src-top-slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.src-top-slide-1 {
+  display: block;
+}
+.src-top-slide-2 {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.src-top-slide-3 {
+  background-color: rgba(255, 244, 68, 0.7);
+}
+.src-top-slide-4 {
+  background-color: rgba(0, 0, 255, 0.7);
 }
 .scr-consctructions {
   width: 100%;
@@ -897,6 +931,13 @@ p {
 }
 .scr-features-points__point--4 {
   margin-top: 100px;
+}
+.scr-features-line1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .scr-aerodynamics {
   width: 100%;

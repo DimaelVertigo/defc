@@ -147,14 +147,14 @@
 		<!-- main-logo -->
 
 		<div class="interactive-menu">
-			<div class="interactive-point interactive-menu__point interactive-menu__point--1">
-				<svg class="interactive-point__icon">
+			<div class="ip interactive-menu__point interactive-menu__point--1">
+				<svg class="ip__icon ip__trigger">
 					<use xlink:href="#scr-top--interactive-menu--point"/>		
 				</svg>
-				<svg class="interactive-point__icon--active interactive-menu__point--active">
+				<svg class="ip__icon--active ip__trigger">
 					<use xlink:href="#scr-top--interactive-menu--point-active"/>		
 				</svg>
-				<div class="interactive-menu__description">
+				<div class="interactive-menu__description ip__trigger">
 					<svg class="interactive-menu__description-icon interactive-menu__description-icon--1">
 						<use xlink:href="#scr-top--interactive-menu--item1"/>		
 					</svg>
@@ -164,14 +164,14 @@
 
 			<div class="interactive-menu__line"></div>
 
-			<div class="interactive-point interactive-menu__point interactive-menu__point--2">
-				<svg class="interactive-point__icon">
+			<div class="ip interactive-menu__point interactive-menu__point--2">
+				<svg class="ip__icon ip__trigger">
 					<use xlink:href="#scr-top--interactive-menu--point"/>		
 				</svg>
-				<svg class="interactive-point__icon--active interactive-menu__point--active interactive-menu__point--hidden">
+				<svg class="ip__icon--hidden ip__trigger">
 					<use xlink:href="#scr-top--interactive-menu--point-active"/>		
 				</svg>
-				<div class="interactive-menu__description">
+				<div class="interactive-menu__description ip__trigger">
 					<svg class="interactive-menu__description-icon interactive-menu__description-icon--2">
 						<use xlink:href="#scr-top--interactive-menu--item2"/>		
 					</svg>
@@ -181,14 +181,14 @@
 
 			<div class="interactive-menu__line"></div>
 
-			<div class="interactive-point interactive-menu__point interactive-menu__point--3">
-				<svg class="interactive-point__icon">
+			<div class="ip interactive-menu__point interactive-menu__point--3">
+				<svg class="ip__icon ip__trigger">
 					<use xlink:href="#scr-top--interactive-menu--point"/>		
 				</svg>
-				<svg class="interactive-point__icon--active interactive-menu__point--active">
+				<svg class="ip__icon--hidden ip__trigger">
 					<use xlink:href="#scr-top--interactive-menu--point-active"/>		
 				</svg>
-				<div class="interactive-menu__description">
+				<div class="interactive-menu__description ip__trigger">
 					<svg class="interactive-menu__description-icon interactive-menu__description-icon--3">
 						<use xlink:href="#scr-top--interactive-menu--item3"/>		
 					</svg>
@@ -198,14 +198,14 @@
 
 			<div class="interactive-menu__line"></div>
 
-			<div class="interactive-point interactive-menu__point interactive-menu__point--4">
-				<svg class="interactive-point__icon">
+			<div class="ip interactive-menu__point interactive-menu__point--4">
+				<svg class="ip__icon ip__trigger">
 					<use xlink:href="#scr-top--interactive-menu--point"/>		
 				</svg>
-				<svg class="interactive-point__icon--active interactive-menu__point--active">
+				<svg class="ip__icon--hidden ip__trigger">
 					<use xlink:href="#scr-top--interactive-menu--point-active"/>		
 				</svg>
-				<div class="interactive-menu__description">
+				<div class="interactive-menu__description ip__trigger">
 					<svg class="interactive-menu__description-icon interactive-menu__description-icon--4">
 						<use xlink:href="#scr-top--interactive-menu--item4"/>		
 					</svg>
@@ -216,24 +216,6 @@
 		<!-- interactive-menu -->
 
 		<div class="src-top-slide src-top-slide-1">
-			<div class="src-top-slide-1-popup">
-				<div class="src-top-slide-1-popup__point-wrap interactive-point">
-					<svg class="interactive-point__icon">
-						<use xlink:href="#scr-top--interactive-menu--point"/>		
-					</svg>
-					<svg class="interactive-point__icon--active">
-						<use xlink:href="#scr-top--interactive-menu--point-active"/>
-					</svg>
-				</div>
-				<p class="src-top-slide-1-popup__text">
-					Беспилотный летательный апарат (БпЛА) созданный<br>
-					для выполнения аэрофотосъемки местности<br>
-					и воздушной разведки. 
-				</p>
-			</div>
-		</div><!-- src-top-slide-1 -->
-
-		<div class="svg-animation-elements">
 
 			<svg class="scr-top-line1">
 				<line class="scr-top-line1__path" 
@@ -241,11 +223,36 @@
 				x2="95%" y2="37%"  
 				stroke-width="1" 
 				stroke="#fff" 
-				stroke-dasharray="0" 
-				stroke-dashoffset= "0"/>
+				stroke-dasharray="4000" 
+				stroke-dashoffset= "1450"/>		
 			</svg>
 
+			<div class="src-top-slide-1-popup">
+				<div class="src-top-slide-1-popup__point-wrap ip">
+					<svg class="ip__icon--active">
+						<use xlink:href="#scr-top--interactive-menu--point-active"/>		
+					</svg>
+				</div>
+				<p class="src-top-slide-1-popup__text">
+					Беспилотный летательный апарат (БпЛА) созданный
+					<br>		
+					для выполнения аэрофотосъемки местности
+					<br>и воздушной разведки.</p>
+			</div>
 		</div>
+		<!-- src-top-slide-1 -->		
+		<div class="src-top-slide src-top-slide--fake"></div>
+		<div class="src-top-slide src-top-slide-2">
+			
+		</div>
+		<!-- /.src-top-slide src-top-slide-2 -->		
+		<div class="src-top-slide src-top-slide--fake"></div>
+		<div class="src-top-slide src-top-slide-3"></div>
+		<!-- /.src-top-slide src-top-slide-3 -->		
+		<div class="src-top-slide src-top-slide--fake"></div>
+		<div class="src-top-slide src-top-slide-4"></div>
+		<!-- /.src-top-slide src-top-slide-4 -->		
+
 	</div>
 	<!-- /.scr-top -->
 
@@ -375,9 +382,21 @@
 				</a>
 			</li>
 		</ul>
+
 		<div class="scr-features-plane"></div>
+		<svg class="scr-features-line1">
+			<line class="scr-features-line1__path" 
+			x1="7%" y1="95%" 
+			x2="95%" y2="37%"  
+			stroke-width="10" 
+			stroke="#f00" 
+			stroke-dasharray="0" 
+			stroke-dashoffset= "0"/>		
+		</svg>
+		
+
 		<ul class="scr-features-list">
-			<li class="scr-features-list__item">
+			<li class="scr-features-list__item scr-features-list__item--1">
 				<div class="scr-features-list__info">
 					<svg class="scr-features-list__icon scr-features-list__icon--1">
 						<use xlink:href="#scr-features--features-list-item1"/>
@@ -388,7 +407,7 @@
 					<div class="scr-features-list__units">Километров</div>
 				</div>
 			</li>
-			<li class="scr-features-list__item">
+			<li class="scr-features-list__item scr-features-list__item--2">
 				<div class="scr-features-list__info">
 					<svg class="scr-features-list__icon scr-features-list__icon--2">
 						<use xlink:href="#scr-features--features-list-item2"/>
@@ -399,7 +418,7 @@
 					<div class="scr-features-list__units">минут</div>
 				</div>
 			</li>
-			<li class="scr-features-list__item">
+			<li class="scr-features-list__item scr-features-list__item--3">
 				<div class="scr-features-list__info">
 					<svg class="scr-features-list__icon scr-features-list__icon--3">
 						<use xlink:href="#scr-features--features-list-item3"/>
@@ -410,7 +429,7 @@
 					<div class="scr-features-list__units">Километров</div>
 				</div>
 			</li>
-			<li class="scr-features-list__item">
+			<li class="scr-features-list__item scr-features-list__item--4">
 				<div class="scr-features-list__info">
 					<svg class="scr-features-list__icon scr-features-list__icon--4">
 						<use xlink:href="#scr-features--features-list-item4"/>
@@ -1541,6 +1560,7 @@
 	<script src="js/TweenMax.min.js"></script>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<!-- <script src="js/jquery-2.2.0.js"></script> -->
 	<script src="js/svg-injector.min.js"></script>
 	<script src="js/modernizr.custom.js"></script>
 	<script src="js/imagesloaded.pkgd.min.js"></script>
