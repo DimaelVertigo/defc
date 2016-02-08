@@ -83,6 +83,30 @@
 		this._initMasonry();
 		// init events
 		this._initEvents();
+		// init swipe
+		this._initSwipe();
+	};
+
+	CBPGridGallery.prototype._initSwipe = function() {
+		var nNext = this.ctrlNext,
+		    nPrev = this.ctrlPrev,
+		    field = this.slideshow,
+		    my_image = document.querySelectorAll(".not-draggable");
+		    
+		for (var i=0; i<my_image.length; i++) {
+			my_image[i].setAttribute("draggable", false);
+		}
+
+		var hammertime = new Hammer(field);
+
+		hammertime.on('swipeleft', function(ev) {
+		    nNext.click();
+		    ev.preventDefault();
+		});
+		hammertime.on('swiperight', function(ev) {
+		    nPrev.click();
+		    ev.preventDefault();
+		});
 	};
 
 	CBPGridGallery.prototype._initMasonry = function() {
