@@ -27,7 +27,7 @@ body {
 	color: #7b7f8b;
 	font-family: @ff-r;
 	::selection {
-		color: #fff;
+		background-color: #000;
 	}
 }
 * {
@@ -51,6 +51,16 @@ input, textarea, button, select {
 }
 svg {
 	display: inline-block;
+	line {
+		opacity: .2;
+	}
+}
+.scr-line {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 h2.title {
 	font-size: 3.2rem;
@@ -64,6 +74,7 @@ p {
 	font-size: 1.4rem;
 	line-height: 2.2rem;
 }
+
 /*=========================================
 =            Magnet navigation            =
 =========================================*/
@@ -79,12 +90,12 @@ p {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		height: 18px;
+		margin: 6px 0;
 	}
 	&__icon {
-		margin: 10px 0;
 		width: 9px;
 		height: 9px;
-		.transition();
 		fill: #fff;
 		stroke: #fff;
 		&--dark {
@@ -93,9 +104,6 @@ p {
 		}
 		&--gradient {
 			stroke: none;
-		}
-		&:hover, &:focus {
-		  transform: rotate(180deg);
 		}
 	}
 	&__icon-active {
@@ -159,5 +167,62 @@ p {
 	}
 }
 
+/*=========================================================
+=            FIXED BACKGROUND SCROLLING LAYOUT            =
+=========================================================*/
+/* Set all parents to full height */
+html, body, 
+.container,
+.cbp-fbscroller { 
+	height: 100%; 
+}
 
+/* The nav is fixed on the right side  and we center it by translating it 50% 
+(we don't know it's height so we can't use the negative margin trick) */
+.cbp-fbscroller > nav {
+	position: fixed;
+	z-index: 3;
+	right: 2%;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
+	top: 20.125%;
+}
+
+.cbp-fbscroller > nav a {
+	display: block;
+	position: relative;
+	color: transparent;
+}
+
+.cbp-fbscroller > nav a:after {
+	// content: '';
+	// position: absolute;
+	// width: 24px;
+	// height: 24px;
+	// border-radius: 50%;
+	// border: 4px solid #fff;
+}
+
+.cbp-fbscroller > nav a:hover:after {
+	// background: rgba(255,255,255,0.6);
+}
+
+.cbp-fbscroller > nav a.cbp-fbcurrent:after {
+	// background: #fff;
+}
+
+/* background-attachment does the trick */
+.cbp-fbscroller section {
+	position: relative;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}

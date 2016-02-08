@@ -5,7 +5,9 @@ var gulp          = require('gulp');
 		browserSync   = require('browser-sync'),
 		gutil         = require('gulp-util'),
 		autoprefixer  = require('gulp-autoprefixer'),
-		svgsprites    = require('gulp-svg-sprite');
+		svgsprites    = require('gulp-svg-sprite'),
+    sourcemaps    = require('gulp-sourcemaps');
+
 
 /*==============================
 =           Watcher            =
@@ -23,10 +25,10 @@ gulp.task('watch', ['less'], function() {
 =============================================*/
 gulp.task('less', function () {
   return gulp.src('./less/**/style.less')
-    .pipe(less({
-      paths: [ path.join(__dirname, 'less', 'includes') ]
-    }))
+    .pipe(sourcemaps.init())
+    .pipe(less())
     .pipe(autoprefixer())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('./css'))
     .pipe(browserSync.stream());
 });
