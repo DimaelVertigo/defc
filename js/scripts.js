@@ -178,7 +178,7 @@ lineLength(consctructionsLine3);
 
 consctructionsLine(1, 30, 20, 0, 234);
 consctructionsLine(2, 8, 29, 43, 0);
-consctructionsLine(3, 21, 31, 629, 64);
+consctructionsLine(3, 21, 31, 629, 0);
 
 function consctructionsLine(target, y1Skew, x1Skew, y2Skew, x2Skew) {
 var y1 = $('.cons-sphere--start').position().top + y1Skew,

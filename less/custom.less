@@ -65,6 +65,9 @@ svg {
 h2.title {
 	font-size: 3.2rem;
 	line-height: 38px;
+	@media @mobile {
+		font-size: 1.8rem;
+	}
 }
 h3.title {
 	font-size: 3.8rem;
@@ -73,6 +76,9 @@ h3.title {
 p {
 	font-size: 1.4rem;
 	line-height: 2.2rem;
+	@media @mobile {
+		font-size: 1.3rem;
+	}
 }
 
 /*=========================================
@@ -83,6 +89,9 @@ p {
 	top: 25px;
 	right: 2%;
 	z-index: 5;
+	@media @mobile {
+		display: none !important;
+	}
 	&__item {
 		
 	}
