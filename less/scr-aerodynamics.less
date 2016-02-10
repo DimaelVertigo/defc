@@ -12,14 +12,25 @@
 	left: calc(~"50% - 759.5px");
 	width: 1519px;
 	height: 517px;
+	@media @mobile {
+		background: url(../img/background/aerodynamics-plane-sm.png) no-repeat center bottom;
+		width: 100%;
+		height: 301px;
+		position: absolute;
+		bottom: -30px;
+		z-index: 100;
+		left: 0;
+	}
 }
 .aerodynamics-waves {
-	width: 814px;
-	height: 357px;
-	position: absolute;
-	top: 68px;
-	left: 17.941032%;
-	z-index: 500;
+	@media @desktop {
+		width: 814px;
+		height: 357px;
+		position: absolute;
+		top: 68px;
+		left: 17.941032%;
+		z-index: 500;
+	}
 }
 
 .aerodynamics-point {

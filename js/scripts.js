@@ -60,11 +60,9 @@ $('.ip__trigger').on('click', function() {
 	
 });
 
-
-/*=========================================================
-=            SCR TOP LINE AND POINTS ANIMATION            =
-=========================================================*/
-/*----------  Lines  ----------*/
+/*=============================
+=            LINES            =
+=============================*/
 var topLine = $('.scr-top-line1__path'),
 		consctructionsLine1 = $('.scr-consctructions-line1__path'),
 		consctructionsLine2 = $('.scr-consctructions-line2__path'),
@@ -77,12 +75,91 @@ var topLine = $('.scr-top-line1__path'),
 		aerodynamicsLine2 = $('.scr-aerodynamics2__path');
 		aerodynamicsLine3 = $('.scr-aerodynamics3__path');
 		aerodynamicsLine4 = $('.scr-aerodynamics4__path');
+		consctructionsMarker = true,
+		featuresMarker = true,
+		aeroMarker = true,
+		mq = window.matchMedia('(min-width: 1200px)');
 
+if(mq.matches) {
 
-lineLength(topLine);
-scrTopLine();
-scrTopLineAnimate();
+	lineLength(topLine);
+	scrTopLine();
+	scrTopLineAnimate();
 
+  lineLength(consctructionsLine1);
+  lineLength(consctructionsLine2);
+  lineLength(consctructionsLine3);
+
+  consctructionsLine(1, 30, 20, 0, 234);
+  consctructionsLine(2, 8, 29, 43, 0);
+  consctructionsLine(3, 21, 31, 629, 0);
+
+  lineLength(featuresLine1);
+  lineLength(featuresLine2);
+  lineLength(featuresLine3);
+  lineLength(featuresLine4);
+
+  scrFeaturesLine(1, 101, -5, 14, 17);
+  scrFeaturesLine(2, -2, -1, 21, 15);
+  scrFeaturesLine(3, -3, 21, 17, 1);
+  scrFeaturesLine(4, 101, 26, 13, -2);
+
+  lineLength(aerodynamicsLine1);
+  lineLength(aerodynamicsLine2);
+  lineLength(aerodynamicsLine3);
+  lineLength(aerodynamicsLine4);
+
+  aerodynamicsLine(1, 1, 3, 17, -6, 3, 16);
+  aerodynamicsLine(2, 1, 2, 13, 24, 1, -9);
+  aerodynamicsLine(3, 2, 4, 13, -9, 7, 18);
+  aerodynamicsLine(4, 2, 5, 22, 11, 0, 0);
+
+  /*----------  resize  ----------*/
+  $( window ).resize(function() {
+    scrTopLine();
+
+    consctructionsLine(1, 30, 20, 0, 234);
+    consctructionsLine(2, 8, 29, 43, 0);
+    consctructionsLine(3, 21, 31, 629, 64);
+
+    scrFeaturesLine(1, 101, -5, 14, 17);
+    scrFeaturesLine(2, -2, -1, 21, 15);
+    scrFeaturesLine(3, -3, 21, 17, 1);
+    scrFeaturesLine(4, 101, 26, 13, -2);
+
+    aerodynamicsLine(1, 1, 3, 17, -6, 3, 16);
+    aerodynamicsLine(2, 1, 2, 13, 24, 1, -9);
+    aerodynamicsLine(3, 2, 4, 13, -9, 7, 18);
+    aerodynamicsLine(4, 2, 5, 22, 11, 0, 0);
+  });
+
+  /*----------  on scroll  ----------*/
+  $(window).on('scroll', function() {
+  	var scrTop = $(window).scrollTop() + 500,
+  			scrConsctructionsPosition = $('.scr-consctructions').offset().top;
+  			scrFeaturesPosition = $('.scr-features').offset().top;
+  			scrAerodynamicsPosition = $('.scr-aerodynamics').offset().top;
+
+  	if (scrTop >= scrConsctructionsPosition && consctructionsMarker) {
+  		scrConsctructionsAnimation();
+  		consctructionsMarker = false;
+  	};
+  	if (scrTop >= scrFeaturesPosition && featuresMarker) {
+  		scrFeaturesAnimation();
+  		featuresMarker = false;
+  	};
+  	if (scrTop >= scrAerodynamicsPosition && aeroMarker) {
+  		aerodynamicsAnimation();
+  		aeroMarker = false;
+  	};
+  });
+} else {
+    // the width of browser is less then 700px
+}
+
+/*=========================================================
+=            SCR TOP LINE AND POINTS ANIMATION            =
+=========================================================*/
 function lineLength(path) {
 	var line = path.get(0);
 	var len = dist(line.x1.baseVal.value, line.x2.baseVal.value,
@@ -122,63 +199,9 @@ function scrTopLineAnimate() {
  	}, '-=0.30');
 };
 
-/*==============================
-=            RESIZE            =
-==============================*/
-$( window ).resize(function() {
-  scrTopLine();
-
-  consctructionsLine(1, 30, 20, 0, 234);
-  consctructionsLine(2, 8, 29, 43, 0);
-  consctructionsLine(3, 21, 31, 629, 64);
-
-  scrFeaturesLine(1, 101, -5, 14, 17);
-  scrFeaturesLine(2, -2, -1, 21, 15);
-  scrFeaturesLine(3, -3, 21, 17, 1);
-  scrFeaturesLine(4, 101, 26, 13, -2);
-
-  aerodynamicsLine(1, 1, 3, 17, -6, 3, 16);
-  aerodynamicsLine(2, 1, 2, 13, 24, 1, -9);
-  aerodynamicsLine(3, 2, 4, 13, -9, 7, 18);
-  aerodynamicsLine(4, 2, 5, 22, 11, 0, 0);
-});
-
-/*=================================
-=            ON SCROLL            =
-=================================*/
-var consctructionsMarker = true,
-		featuresMarker = true,
-		aeroMarker = true;
-
-$(window).on('scroll', function() {
-	var scrTop = $(window).scrollTop() + 500,
-			scrConsctructionsPosition = $('.scr-consctructions').offset().top;
-			scrFeaturesPosition = $('.scr-features').offset().top;
-			scrAerodynamicsPosition = $('.scr-aerodynamics').offset().top;
-
-	if (scrTop >= scrConsctructionsPosition && consctructionsMarker) {
-		scrConsctructionsAnimation();
-		consctructionsMarker = false;
-	};
-	if (scrTop >= scrFeaturesPosition && featuresMarker) {
-		scrFeaturesAnimation();
-		featuresMarker = false;
-	};
-	if (scrTop >= scrAerodynamicsPosition && aeroMarker) {
-		aerodynamicsAnimation();
-		aeroMarker = false;
-	};
-});
 /*===============================================
 =            CONSTRUCTIONS ANIMATION            =
 ===============================================*/
-lineLength(consctructionsLine1);
-lineLength(consctructionsLine2);
-lineLength(consctructionsLine3);
-
-consctructionsLine(1, 30, 20, 0, 234);
-consctructionsLine(2, 8, 29, 43, 0);
-consctructionsLine(3, 21, 31, 629, 0);
 
 function consctructionsLine(target, y1Skew, x1Skew, y2Skew, x2Skew) {
 var y1 = $('.cons-sphere--start').position().top + y1Skew,
@@ -210,15 +233,7 @@ function scrConsctructionsAnimation() {
 /*==========================================
 =            SCR FEATURES LINES            =
 ==========================================*/
-lineLength(featuresLine1);
-lineLength(featuresLine2);
-lineLength(featuresLine3);
-lineLength(featuresLine4);
 
-scrFeaturesLine(1, 101, -5, 14, 17);
-scrFeaturesLine(2, -2, -1, 21, 15);
-scrFeaturesLine(3, -3, 21, 17, 1);
-scrFeaturesLine(4, 101, 26, 13, -2);
 
 function scrFeaturesLine(target, y1Skew, x1Skew, y2Skew, x2Skew) {
 var y1 = $('.scr-features-points').position().top + y1Skew,
@@ -275,18 +290,6 @@ function scrFeaturesAnimation() {
 /*==============================================
 =            AERODYNAMICS ANIMATION            =
 ==============================================*/
-lineLength(aerodynamicsLine1);
-lineLength(aerodynamicsLine2);
-lineLength(aerodynamicsLine3);
-lineLength(aerodynamicsLine4);
-
-aerodynamicsLine(1, 1, 3, 17, -6, 3, 16);
-aerodynamicsLine(2, 1, 2, 13, 24, 1, -9);
-aerodynamicsLine(3, 2, 4, 13, -9, 7, 18);
-aerodynamicsLine(4, 2, 5, 22, 11, 0, 0);
-
-
-
 function aerodynamicsAnimation() {
  	tlAerodynamics
  	.to('.aerodynamics-point__info--1', 0.5, {
