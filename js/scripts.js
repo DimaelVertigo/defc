@@ -3,27 +3,26 @@
 ====================================*/
 SVGInjector(document.getElementById('inject-me'));
 
-/*==================================
-=            SPECS TABS            =
-==================================*/
+/*=====================================
+=            Tab-accordion            =
+=====================================*/
+
+/*----------  tabs  ----------*/
 $('.spec-tabs__item').on('click', function() {
   var tabIndex = $(this).index();
 
-  $('.spec-details').eq(tabIndex).fadeIn(2000).siblings('.spec-details').fadeOut();
+  $('.spec-details').eq(tabIndex).siblings('.spec-details').hide();
+  $('.spec-details').eq(tabIndex).fadeIn();
 
+  $(this).addClass('spec-tabs__item--active');
+  $(this).siblings('.selector').removeClass('spec-tabs__item--active');
 });
+
 
 /*===============================
 =            GALLERY            =
 ===============================*/
 new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
-
-// $("#grid-gallery").swiperight(function() {
-//   $(".nav-prev").click();
-// });
-// $("#grid-gallery").swipeleft(function() {
-//   $(".nav-next").click();
-// });
 
 /*=========================================
 =            PLAY VIDEO BUTTON            =
@@ -412,4 +411,7 @@ var cbpFixedScrollLayout = (function() {
 $(function() {
 	cbpFixedScrollLayout.init();
 });
+
+
+
 
