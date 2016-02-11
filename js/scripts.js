@@ -55,8 +55,31 @@ $(document).ready(function() {
 	/*===============================
 	=            GALLERY            =
 	===============================*/
-	new CBPGridGallery(document.getElementById('grid-gallery'));
+	
 
+	if (mq.matches) {
+		new CBPGridGallery(document.getElementById('grid-gallery'));
+	} else {
+		$('.owl-carousel-gallery').owlCarousel({
+		    loop:true,
+		    margin:0,
+		    nav:false,
+		    dots:true,
+		    responsive:{
+		        320:{
+		            items:1
+		        },
+		        600:{
+		            items:1
+		        },
+		        1000:{
+		            items:1
+		        }
+		    }
+		})
+	};
+
+	
 	/*=========================================
 	=            PLAY VIDEO BUTTON            =
 	=========================================*/

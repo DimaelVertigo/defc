@@ -139,7 +139,56 @@ and (-webkit-device-pixel-ratio: 2)";
 	}
 	)";
 }
-
+.round-sphere() {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &::before {
+    display: block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-shrink: 0;
+  }
+  &::after {
+    opacity: 0;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-style: solid;
+    border-top-color: transparent;
+    border-right-color: #fff;
+    border-left-color: #fff;
+    border-bottom-color: transparent;
+    border-width: 1px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .transition();
+  }
+  &:hover, &:focus {
+    &::after {
+      opacity: 1;
+      transform: rotate(45deg);
+    }
+  }
+  &.active {
+    &::after {
+      opacity: 1;
+      transform: rotate(225deg);
+    }
+  }
+}
 /*======================================================
 =            Turn Off Number Input Spinners            =
 ======================================================*/
