@@ -69,12 +69,13 @@ $(document).ready(function() {
 	});
 
 
-
+	new CBPGridGallery(document.getElementById('grid-gallery-top'));
 	/*===============================
 	=            GALLERY            =
 	===============================*/
 	if (mq.matches) {
 		new CBPGridGallery(document.getElementById('grid-gallery'));
+		
 	} else {
 		$('.owl-carousel-gallery').owlCarousel({
 		    loop:true,
@@ -206,8 +207,30 @@ $(document).ready(function() {
 			};
 		});
 	} else {
-		// the width of browser is less then 700px
-	}
+		scrFeaturesAnimation();
+		
+		lineLength(featuresLine1);
+		lineLength(featuresLine2);
+		lineLength(featuresLine3);
+		lineLength(featuresLine4);
+
+		scrFeaturesMobileLine(1, 0, 9, 8, 2);
+		scrFeaturesMobileLine(2, 4, 12, 4, -1);
+		scrFeaturesMobileLine(3, 5, 12, 2, -1);
+		scrFeaturesMobileLine(4, 10, 11, 0, -1);
+
+		aerodynamicsAnimation();
+
+		lineLength(aerodynamicsLine1);
+		lineLength(aerodynamicsLine2);
+		lineLength(aerodynamicsLine3);
+		lineLength(aerodynamicsLine4);
+
+		aerodynamicsLine(1, 1, 3, 17, 0, 3, 9);
+		aerodynamicsLine(2, 1, 2, 17, 16, -1, 0);
+		aerodynamicsLine(3, 2, 4, 52, -44, 6, 15);
+		aerodynamicsLine(4, 2, 5, 52, 0, -1, 5);
+	};
 
 	/*=========================================================
 	=            SCR TOP LINE AND POINTS ANIMATION            =
@@ -290,15 +313,25 @@ $(document).ready(function() {
 				ease: Power0.easeIn
 			})
 	};
+	
 	/*==========================================
 	=            SCR FEATURES LINES            =
 	==========================================*/
-
-
 	function scrFeaturesLine(target, y1Skew, x1Skew, y2Skew, x2Skew) {
 		var y1 = $('.scr-features-points').position().top + y1Skew,
 			x1 = $('.scr-features-points__point--' + target).offset().left + x1Skew,
 			y2 = $('.scr-features-list').position().top + y2Skew,
+			x2 = $('.scr-features-list__item--' + target).offset().left + x2Skew,
+			line = $('.scr-features-line' + target + '__path');
+		line.attr('x1', x1);
+		line.attr('y1', y1);
+		line.attr('x2', x2);
+		line.attr('y2', y2);
+	};
+	function scrFeaturesMobileLine(target, y1Skew, x1Skew, y2Skew, x2Skew) {
+		var y1 = $('.scr-features-points__point--' + target).position().top + y1Skew,
+			x1 = $('.scr-features-points__point--' + target).offset().left + x1Skew,
+			y2 = $('.scr-features-list__item--' + target).position().top + y2Skew,
 			x2 = $('.scr-features-list__item--' + target).offset().left + x2Skew,
 			line = $('.scr-features-line' + target + '__path');
 		line.attr('x1', x1);
