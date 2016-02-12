@@ -7,6 +7,9 @@
 	@media @mobile {
 		flex-direction: column;
 	}
+	@media @tablet {
+		padding: 8.5% 5%;  
+	}
 	@media @desktop {
 		padding: 8.5% 9.4%;  
 	}
@@ -16,6 +19,9 @@
 	flex-shrink: 0;
 	@media @mobile {
 		width: 100%;
+	}
+	@media @tablet {
+		width: 250px;
 	}
 	@media @desktop {
 		padding-left: 16px;
@@ -32,6 +38,12 @@
 		@media @mobile {
 			display: flex;
 			flex-direction: column;
+		}
+		@media @tablet {
+			padding-top: 4%;
+			margin-top: 11.75%;
+			width: 100%;
+			border-top: 1px solid rgba(151,151,151,.3);
 		}
 		@media @desktop {
 			padding-top: 4%;
@@ -55,6 +67,9 @@
 				border-bottom: 1px solid @border;
 			}
 		}
+		@media @tablet {
+			height: 54px;
+		}
 		@media @desktop {
 			height: 54px;
 		}
@@ -74,10 +89,15 @@
 		}
 	}	
 	&__head {
-		@media @mobile {
-			display: flex;
-			align-items: center;
-			position: relative;
+		display: flex;
+		align-items: center;
+		position: relative;
+		@media @tablet {
+			height: 50px;
+
+		}
+		@media @desktop {
+			height: 50px;
 		}
 	}
 	&__border {
@@ -95,6 +115,9 @@
 		@media @mobile {
 			display: none;
 		}
+		@media @tablet {
+			display: none;
+		}
 	}	
 	&__text {
 		font-size: 1.4rem;
@@ -105,12 +128,19 @@
 		@media @mobile {
 			padding: 20px 6.25%;
 		}
+		@media @tablet {
+			font-size: 1.2rem;
+			line-height: 1;
+		}
 	}
 	&__arrow {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
 		right: 20px;
+		@media @tablet {
+			display: none;
+		}
 		@media @desktop {
 			display: none;
 		}
@@ -130,12 +160,17 @@
 	&__wrapper {
 		padding-left: 2.666666667%;
 		border-left: 1px solid rgba(151,151,151,.3);
-		min-width: 75%;
+		
+		@media @tablet {
+			width: 75%;
+		}
+		@media @desktop {
+			min-width: 75%;
+		}
 	}
 	&--active {
-		@media @mobile {
-			display: none;
-
+		@media @tablet {
+			display: block;
 		}
 		@media @desktop {
 			display: block;
@@ -155,6 +190,12 @@
 	}
 	&__name {
 		font-size: 1.4rem;
+		@media @tablet {
+			width: 22.5%;
+		}
+		@media @tablet {
+			font-size: 1.2rem
+		}
 		@media @desktop {
 			width: 22.5%;
 		}
@@ -162,6 +203,10 @@
 	&__value {
 		@media @mobile {
 			margin-top: 10px;
+		}
+		@media @tablet {
+			width: 77.5%;
+			font-size: 1.2rem;
 		}
 		@media @desktop {
 			width: 77.5%;

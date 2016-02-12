@@ -1,17 +1,48 @@
 .scr-top {
 	background: url(../img/background/scr-top.jpg) no-repeat;
 	width: 100%;
-	height: calc(~"100% - 69px");
 	background-size: cover;
 	position: relative;
+	@media @mobile {
+		height: 568px;
+		background: url(../img/background/scr-top-sm.jpg) no-repeat center top;
+		background-size: cover;
+	}
+	@media @tablet {
+		height: calc(~"100% - 69px");
+	}
+	@media @desktop {
+		height: calc(~"100% - 69px");
+	}
 }
 .main-logo {
 	position: absolute;
-	top: 43%;
-	left: calc(~"50% - 321px");
+	@media @mobile {
+		top: 20.2%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	@media @tablet {
+		top: 43%;
+		left: calc(~"50% - 321px");
+	}
+	@media @desktop {
+		top: 43%;
+		left: calc(~"50% - 321px");
+	}
 	&__icon {
-		width: 642px;
-		height: 50px;
+		@media @mobile {
+			width: 274px;
+			height: 10px;
+		}
+		@media @tablet {
+			width: 642px;
+			height: 50px;
+		}
+		@media @desktop {
+			width: 642px;
+			height: 50px;
+		}
 	}
 	&::before,
 	&::after {
@@ -22,14 +53,38 @@
 		position: absolute;
 	}
 	&::before {
-		top: -30px;
-    right: 196px;
-    width: 101px;
+		@media @mobile {
+			top: -14px;
+			right: 17.1875%;
+			width: 45px;
+		}
+		@media @tablet {
+			top: -30px;
+	    right: 196px;
+	    width: 101px;
+		}
+		@media @desktop {
+			top: -30px;
+	    right: 196px;
+	    width: 101px;
+		}
 	}
 	&::after {
-	  bottom: -24px;
-    left: 69px;
-    width: 94px;
+		@media @mobile {
+			width: 45px;
+			bottom: -14px;
+			left: 17.1875%;
+		}
+		@media @tablet {
+			bottom: -24px;
+	    left: 69px;
+	    width: 94px;
+		}
+	  @media @desktop {
+		  bottom: -24px;
+	    left: 69px;
+	    width: 94px;
+	  }
 	}
 }
 /*========================================
@@ -43,6 +98,9 @@
 	width: 100%;
 	position: absolute;
 	bottom: 5.9847661%;
+	@media @mobile {
+		display: none;
+	}
 	&__point {
 		width: 38px;
 		height: 38px;
@@ -57,6 +115,9 @@
 		width: 20px;
 		flex: 1;
 		opacity: 0.2;
+		@media @mobile {
+			display: none;
+		}
 	}
 	&__description {
 		position: absolute;
@@ -113,19 +174,58 @@
 	left: 0;
 }
 .src-top-slide-1-popup {
-	opacity: 0;
-	position: absolute;
-	top: 30%;
-	right: 28%;
-	&__text {
-		text-align: center;
+	
+	@media @mobile {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: flex-end;
+		flex-direction: column;
+		align-items: center;
+	}
+	@media @tablet {
+		opacity: 0;
 		position: absolute;
-		top: -97px;
-		left: -193px;
-    width: 388px;
+		top: 30%;
+		right: 28%;
+	}
+	@media @desktop {
+		opacity: 0;
+		position: absolute;
+		top: 30%;
+		right: 28%;
+	}
+	&__text {
 		font-size: 1.4rem;
 		color: #fff;
 		line-height: 22px;
+		text-align: center;
+		@media @mobile {
+			margin: 48px 0;
+			position: relative;
+			&::before {
+			  content: '';
+			  display: block;
+			  width: 1px;
+			  height: 26px;
+			  background-color: @border;
+			  position: relative;
+			  top: -16px;
+			  left: 50%;
+			}
+		}
+		@media @tablet {
+			position: absolute;
+			top: -97px;
+			left: -193px;
+	    width: 388px;
+		}
+		@media @desktop {
+			position: absolute;
+			top: -97px;
+			left: -193px;
+	    width: 388px;
+		}
 	}
 }
 .src-top-slide1 {
@@ -149,6 +249,9 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+	@media @mobile {
+		display: none;
+	}
 	&__path {
 		z-index: 50;
 	}

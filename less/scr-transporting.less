@@ -6,6 +6,9 @@
 	@media @mobile {
 		padding: 23.7% 6.25%;
 	}
+	@media @tablet {
+		height: 100%;
+	}
 	@media @desktop {
 		height: 100%;
 	}
@@ -20,6 +23,14 @@
 			top: 0;
 			left: 0;
 			background-size: contain;
+		}
+		@media @tablet {
+			background: url(../img/background/transporting-plane.png) no-repeat;
+			position: absolute;
+			top: 17.9875%;
+			left: -10%;
+			width: 1040px;
+			height: 598px;
 		}
 		@media @desktop {
 			background: url(../img/background/transporting-plane.png) no-repeat;
@@ -38,6 +49,10 @@
     height: 37px;
     @media @mobile {
     	display: none;
+    }
+    @media @tablet {
+    	width: 350px;
+    	left: 45%;
     }
 	}
 }

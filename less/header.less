@@ -9,6 +9,9 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 2%;
+	@media @mobile {
+		display: none;
+	}
 	&__left {
 	}
 	&__center {
@@ -94,6 +97,90 @@
 	}
 }
 
+/*================================================
+=            Mobile header navigation            =
+================================================*/
+.header-navigation-mobile {
+	
+	position: relative;
+	@media @tablet {
+		display: none;
+	}
+	@media @desktop {
+		display: none;
+	}
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		position: absolute;
+		background-color: rgba(0,0,0,.4);
+		top: -100px;
+		left: 0;
+		width: 100%;
+		height: 100px;
+		.transition();
+		&.active {
+			top: 0;
+		}
+	}
+	&__item {
+		width: 50%;
+	}
+	&__link {
+		display: block;
+		margin: 10px 0;
+		width: 100%;
+		color: #fff;
+		font-size: 1rem;
+		padding: 0 20px;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+}
+.burger {
+	width: 28px;
+	height: 17px;
+	position: absolute;
+	top: 48px;
+	left: calc(~"50% - 14px");
+	z-index: 2;
+	align-items: center;
+	display: flex;
+	&__line {
+		width: 28px;
+		height: 3px;
+		opacity: 0.9;
+		background: #D8D8D8;
+	}
+	&::before,
+	&::after {
+	  content: '';
+	  width: 28px;
+	  height: 3px;
+	  opacity: 0.9;
+	  background: #D8D8D8;
+	  position: absolute;
+	  left: 0;
+	  .transition();
+	}
+	&::before {
+		top: 0px;
+	}
+	&::after {
+		bottom: 0px;
+	}
+	&:hover, &:focus {
+	  cursor: pointer;
+	}
+	&.active {
+		&::before {
+		  top: 7px;
+		}
+		&::after {
+			bottom: 7px;
+		}
+	}
+}
 
-/*-----  End of HEADER  ------*/
+
 

@@ -1,33 +1,55 @@
 .scr-aerodynamics {
 	width: 100%;
-	height: 100%;
 	position: relative;
 	background: rgba(1,5,24,.8);
 	overflow: hidden;
 	@media @mobile {
 		height: 1160px;
 	}
+	@media @tablet {
+		height: 130%;
+	}
+	@media @desktop {
+		height: 100%;
+	}
 }
 .aerodynamics-plane {
-	background: url(../img/background/aerodynamics-plane.png) no-repeat;
-	position: absolute;
-	bottom: -20px;
-	left: calc(~"50% - 759.5px");
-	width: 1519px;
-	height: 517px;
+	
 	@media @mobile {
-		background: url(../img/background/aerodynamics-plane-sm.png) no-repeat center bottom;
+		background: url(../img/background/aerodynamics-plane-sm.png)  center bottom no-repeat;
+		background-size: cover;
 		width: 100%;
-		height: 301px;
+		height: 370px;
 		position: absolute;
 		bottom: 0;
 		z-index: 100;
 		left: 0;
 	}
+	@media @tablet {
+		background: url(../img/background/aerodynamics-plane.png) center no-repeat;
+		position: absolute;
+		bottom: -20px;
+		width: 100%;
+		height: 517px;
+	}
+	@media @desktop {
+		background: url(../img/background/aerodynamics-plane.png) no-repeat;
+		position: absolute;
+		bottom: -20px;
+		left: calc(~"50% - 759.5px");
+		width: 1519px;
+		height: 517px;
+	}
 }
 .aerodynamics-waves {
 	position: absolute;
 	
+	@media @tablet {
+		width: 814px;
+		height: 357px;
+		top: 68px;
+		left: 3%;
+	}
 	@media @desktop {
 		width: 814px;
 		height: 357px;
@@ -42,6 +64,9 @@
 			left: 50%;
 			transform: translateX(-50%);
 		}
+		@media @tablet {
+			display: none;
+		}
 		@media @desktop {
 			display: none;
 		}
@@ -55,6 +80,10 @@
 			top: 125px;
 			left: 43.1875%;
 		}
+		@media @tablet {
+			top: 175px;
+			left: 49.3125%;
+		}
 		@media @desktop {
 			top: 175px;
 			left: 49.3125%;
@@ -64,6 +93,10 @@
 		@media @mobile {
 			top: 377px;
 			left: 79.5625%;
+		}
+		@media @tablet {
+			top: 259px;
+			left: 65.125%;
 		}
 		@media @desktop {
 			top: 259px;
@@ -75,6 +108,10 @@
 			top: 206px;
 			left: 29.260%;
 		}
+		@media @tablet {
+			top: 408px;
+	    left: 16.6875%;
+		}
 		@media @desktop {
 			top: 408px;
 	    left: 16.6875%;
@@ -84,6 +121,10 @@
 		@media @mobile {
 			top: 448px;
 	    left: 28.0125%;       
+		}
+		@media @tablet {
+			top: 333px;
+			left: 44.0625%;
 		}
 		@media @desktop {
 			top: 333px;
@@ -95,6 +136,10 @@
 			top: 651px;
 			left: 59.6%;
 		}
+		@media @tablet {
+			top: 401px;
+	    left: 68.625%;
+		}
 		@media @desktop {
 			top: 401px;
 	    left: 68.625%;
@@ -105,6 +150,10 @@
 			@media @mobile {
 				width: 14px;
 				height: 14px;
+			}
+			@media @tablet {
+				width: 18px;
+				height: 19px;
 			}
 			@media @desktop {
 				width: 18px;
@@ -130,6 +179,9 @@
 	}
 	&__info {
 		position: absolute;
+		@media @tablet {
+			opacity: 0;
+		}
 		@media @desktop {
 			opacity: 0;
 		}

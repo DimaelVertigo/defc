@@ -15,8 +15,8 @@ $(document).ready(function() {
 		consctructionsMarker = true,
 		featuresMarker = true,
 		aeroMarker = true,
-		mq = window.matchMedia('(min-width: 1200px)');
-
+		mq = window.matchMedia('(min-width: 767px)');
+		
 	/*====================================
 	=            SVG injector            =
 	====================================*/
@@ -27,6 +27,15 @@ $(document).ready(function() {
 	=====================================*/
 
 	/*----------  tabs  ----------*/
+	if (mq.matches) {
+
+	} else {
+
+		$('.spec-tabs__item').each(function(index, el) {
+			$(el).append($('.spec-details').eq(index));
+		});
+	}
+
 	$('.spec-tabs__item').on('click', function() {
 		var tabIndex = $(this).index();
 
@@ -37,26 +46,33 @@ $(document).ready(function() {
 
 		} else {
 			/*----------  accordeon  ----------*/
-			$(this).siblings('.spec-tabs__item').removeClass('spec-tabs__item--active');
 
 			if ($(this).hasClass('spec-tabs__item--active')) {
 				$(this).toggleClass('spec-tabs__item--active');
 				$(this).find('.spec-details').hide();
 				$(this).siblings('.spec-tabs__item').find('.spec-details').hide();
 			} else {
-				$(this).append($('.spec-details').eq(tabIndex));
+				// $(this).append($('.spec-details').eq(tabIndex));
 				$(this).toggleClass('spec-tabs__item--active');
+				
 			}
 		};
 
 	});
 
+	/*==============================
+	=            BURGER            =
+	==============================*/
+	$('.burger').on('click', function() {
+		$(this).toggleClass('active');
+		$('.header-navigation-mobile__list').toggleClass('active');
+	});
+
+
 
 	/*===============================
 	=            GALLERY            =
 	===============================*/
-	
-
 	if (mq.matches) {
 		new CBPGridGallery(document.getElementById('grid-gallery'));
 	} else {
@@ -94,9 +110,9 @@ $(document).ready(function() {
 	=            INTERACTIVE MENU            =
 	========================================*/
 	var tl = new TimelineLite(),
-		tlFeatures = new TimelineLite(),
-		tlAerodynamics = new TimelineLite();
-	tlConstructions = new TimelineLite();
+			tlFeatures = new TimelineLite(),
+			tlAerodynamics = new TimelineLite();
+			tlConstructions = new TimelineLite();
 
 	$('.ip__trigger').on('click', function() {
 		var $target = $(this).closest('.ip'),
@@ -484,5 +500,15 @@ $(document).ready(function() {
 	$(function() {
 		cbpFixedScrollLayout.init();
 	});
+
+	/*================================
+	=            CONTACTS TAB         =
+	================================*/
+	
+	$('.contacts__head').on('click', function() {
+		$('.contacts__list').toggleClass('active');
+		$('.contacts__arrow').toggleClass('active');
+	});
+	
 
 });

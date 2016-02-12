@@ -4,14 +4,14 @@
 	background: rgba(118,126,127,.8);
 	position: relative;
 	@media @mobile {
-		// padding-top: 56.5625%;
-		// padding-top: 140px;
-		// padding-bottom: 41.25%;
 		padding-right: 50%;
 		display: flex;
-		// justify-content: flex-end;
 		align-items: center;
 		height: 940px;
+		justify-content: flex-end;
+	}
+	@media @tablet {
+		height: 100%;
 	}
 	@media @desktop {
 		height: 100%;
@@ -40,6 +40,13 @@
 		order: 2;
 		// margin-top: 180px;
 	}
+	@media @tablet {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		position: absolute;
+		top: 26.3125em;
+	}
 	@media @desktop {
 		display: flex;
 		justify-content: center;
@@ -55,6 +62,10 @@
 			flex-shrink: 0;
 			width: 7px;
 			height: 7px;
+		}
+		@media @tablet {
+			width: 14px;
+			height: 14px;
 		}
 		@media @desktop {
 			width: 14px;
@@ -83,6 +94,9 @@
 				margin-left: 34px;
 			}
 		}
+		@media @tablet {
+			margin: 0 10.46875%;
+		}
 		@media @desktop {
 			margin: 0 10.46875%;
 		}
@@ -96,6 +110,19 @@
 			text-align: center;
 			top: 0;
 			left: 0;
+		}
+		@media @tablet {
+			opacity: 0;
+			position: absolute;
+			top: -242px;
+			left: calc(~"50% - 83px");
+			width: 166px;
+			height: 220px;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
 		}
 		@media @desktop {
 			opacity: 0;
@@ -157,6 +184,10 @@
 		font-size: 1.2rem;
 		text-transform: uppercase;
 		margin-top: 5px;
+		@media @tablet {
+			margin-top: 32px;
+			height: 45px;
+		}
 		@media @desktop {
 			margin-top: 32px;
 			height: 45px;
@@ -196,6 +227,14 @@
 		flex-direction: column;
 		order: 1;
 		margin-left: 70px;
+		margin-left: 41.875%;
+	}
+	@media @tablet {
+		display: flex;
+		justify-content: center;
+		position: absolute;
+		top: 54.5%;
+		width: 100%;
 	}
 	@media @desktop {
 		display: flex;
@@ -212,13 +251,18 @@
 			width: 11px;
 			height: 11px;
 		}
+		@media @tablet {
+			width: 21px;
+			height: 21px;
+		}
 		@media @desktop {
 			width: 21px;
 			height: 21px;
 		}
 		&--1 {
-			@media @mobile {
-				// margin-top: 64px;
+			@media @tablet {
+				margin-right: 2.1%;
+				margin-top: 100px;
 			}
 			@media @desktop {
 				margin-right: 2.1%;
@@ -230,6 +274,9 @@
 				margin-top: 129px;
 				margin-left: 10px;
 			}
+			@media @tablet {
+				margin-right: 8.4%;
+			}
 			@media @desktop {
 				margin-right: 8.4%;
 			}
@@ -239,6 +286,9 @@
 				margin-top: 222px;
 				margin-left: 10px;
 			}
+			@media @tablet {
+				margin-right: 2.1%;
+			}
 			@media @desktop {
 				margin-right: 2.1%;
 			}
@@ -246,6 +296,9 @@
 		&--4 {
 			@media @mobile {
 				margin-top: 139px;
+			}
+			@media @tablet {
+				margin-top: 100px;
 			}
 			@media @desktop {
 				margin-top: 100px;

@@ -7,6 +7,20 @@
 		width: 100%;
 		height: auto;
 	}
+	@media @iphone5 {
+		flex-direction: column;
+		width: 100%;
+		height: auto;
+	}
+	@media @iphone6 {
+		flex-direction: column;
+		width: 100%;
+		height: auto;
+	}
+	@media @tablet {
+		width: 100%;
+		height: 100%;
+	}
 	@media @desktop {
 		width: 100%;
 		height: 100%;
@@ -24,6 +38,11 @@
 		min-height: 100%;
 		padding: 21.875% 6.25% 94.5% 6.25%;
 	}
+	@media @tablet {
+		width: 50%;
+		padding: 9% 7%;
+		height: 100%;
+	}
 	@media @desktop {
 		width: 50%;
 		padding: 9% 7%;
@@ -32,6 +51,9 @@
 }
 .cons-info {
 	color: #fff;
+	@media @tablet {
+		max-width: 206px;
+	}
 	@media @desktop {
 		max-width: 206px;
 	}
@@ -55,6 +77,11 @@
 		@media @mobile {
 			width: 100%;
 			bottom: -13px;
+		}
+		@media @tablet {
+			left: -15%;
+			width: 546px;
+			height: 601px;
 		}
 		@media @desktop {
 			width: 546px;
@@ -93,6 +120,9 @@
 	@media @mobile {
 		display: none;
 	}
+	@media @tablet {
+		display: none;
+	}
 	&--start {
 		width: 31px;
 		height: 31px;
@@ -129,6 +159,9 @@
 	@media @mobile {
 		width: 100%;
 	}
+	@media @tablet {
+		width: 50%;
+	}
 	@media @desktop {
 		width: 50%;
 	}
@@ -138,6 +171,11 @@
 		
 		@media @mobile {
 			padding: 66.375% 6.25% 20.875% 6.25%;
+		}
+		@media @tablet {
+			width: 100%;
+			padding-right: 14%;
+			height: 64.09140369967356%;
 		}
 		@media @desktop {
 			width: 100%;
@@ -155,6 +193,11 @@
 			height: 100%;
 			padding: 118.625% 6.25% 24% 6.25%;
 		}
+		@media @tablet {
+			padding-top: 11.7647059%;
+			padding-right: 7%;
+			height: 35.91%;
+		}
 		@media @desktop {
 			padding-top: 11.7647059%;
 			padding-right: 7%;
@@ -163,9 +206,15 @@
 	}
 }
 .cons-info {
+	position: relative;
 	&__text2 {
-		@media @mobile {
-			
+		@media @tablet {
+			position: absolute;
+			bottom: 13%;
+			left: 0;
+			width: 100%;
+			padding-left: 15%;
+			padding-right: 14%;
 		}
 		@media @desktop {
 			position: absolute;
@@ -178,6 +227,12 @@
 	}
 	&__text3 {
 		color: #fff;
+		@media @tablet {
+			float: right;
+			max-width: 290px;
+			position: relative;
+			z-index: 2;
+		}
 		@media @desktop {
 			float: right;
 			max-width: 290px;
@@ -187,6 +242,9 @@
 
 .scr-consctructions-line {
 	@media @mobile {
+		display: none;
+	}
+	@media @tablet {
 		display: none;
 	}
 	line {
