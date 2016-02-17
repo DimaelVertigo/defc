@@ -94,7 +94,8 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 7%;
+	padding-left: 7%;
+	padding-right: 7%;
 	width: 100%;
 	position: absolute;
 	bottom: 5.9847661%;
@@ -111,10 +112,12 @@
 	}
 	&__line {
 		height: 1px;
+		margin-top: 1px;
 		background-color: #fff;
 		width: 20px;
 		flex: 1;
 		opacity: 0.2;
+		flex-shrink: 0;
 		@media @mobile {
 			display: none;
 		}

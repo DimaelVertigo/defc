@@ -6,8 +6,11 @@ var gulp          = require('gulp');
 		gutil         = require('gulp-util'),
 		autoprefixer  = require('gulp-autoprefixer'),
 		svgsprites    = require('gulp-svg-sprite'),
-    sourcemaps    = require('gulp-sourcemaps');
-
+    sourcemaps    = require('gulp-sourcemaps'),
+    imagemin      = require('gulp-tinypng'),
+    imageResize   = require('gulp-image-resize'),
+    concat        = require('gulp-concat'),
+    uglify        = require('gulp-uglify');
 
 /*==============================
 =           Watcher            =
@@ -109,6 +112,33 @@ gulp.task('svgspriteless', function() {
     .pipe(gulp.dest('./img/'));
 });
 
+//Image optimization
+
+gulp.task('tinypng', function() {
+  gulp.src('img/mini/*.{jpg,png}')
+    .pipe(imagemin('2dywIYbcYicKNU11BDeWwgwbkWptRk6g'))
+    .pipe(gulp.dest('img/ready/'));
+});
+
+gulp.task('resize', function () {
+  gulp.src('img/png/*.png')
+    .pipe(imageResize({ 
+      format : 'jpg',
+      filter: 'Catrom',
+      imageMagick: true
+    }))
+    .pipe(gulp.dest('img/mini/'));
+});
+
+/*==============================================================
+=            Concatination and minification sctipts            =
+==============================================================*/
+gulp.task('scripts', function() {
+  return gulp.src('js/*.js')
+    .pipe(concat('scripts.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('js/build/'));
+});
 
 
 gulp.task('default', ['watch']);

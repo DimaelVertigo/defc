@@ -25,7 +25,8 @@ body {
 	font-size: 1.4rem;
 	line-height: 22px;
 	color: #7b7f8b;
-	font-family: @ff-r;
+	font-family: 'Open Sans';
+	font-weight: 400;
 }
 * {
 	box-sizing: border-box;
@@ -194,7 +195,6 @@ html, body,
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
 	top: 20.125%;
 }
 
@@ -214,10 +214,8 @@ html, body,
 }
 
 .cbp-fbscroller > nav a.cbp-fbcurrent:after {
-	&::after {
 	  opacity: 1;
 	  transform: rotate(225deg);
-	}
 }
 
 /* background-attachment does the trick */

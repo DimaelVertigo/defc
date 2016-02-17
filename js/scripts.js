@@ -69,7 +69,7 @@ $(document).ready(function() {
 	});
 
 
-	new CBPGridGallery(document.getElementById('grid-gallery-top'));
+	// new CBPGridGallery(document.getElementById('grid-gallery-top'));
 	/*===============================
 	=            GALLERY            =
 	===============================*/
@@ -145,7 +145,7 @@ $(document).ready(function() {
 
 		consctructionsLine(1, 30, 20, 0, 234);
 		consctructionsLine(2, 8, 29, 43, 0);
-		consctructionsLine(3, 21, 31, 629, 0);
+		consctructionsLine(3, 21, 31, 650, 30);
 
 		lineLength(featuresLine1);
 		lineLength(featuresLine2);
@@ -173,7 +173,7 @@ $(document).ready(function() {
 
 			consctructionsLine(1, 30, 20, 0, 234);
 			consctructionsLine(2, 8, 29, 43, 0);
-			consctructionsLine(3, 21, 31, 629, 64);
+			consctructionsLine(3, 21, 31, 710, 40);
 
 			scrFeaturesLine(1, 101, -5, 14, 17);
 			scrFeaturesLine(2, -2, -1, 21, 15);
@@ -205,6 +205,10 @@ $(document).ready(function() {
 				aerodynamicsAnimation();
 				aeroMarker = false;
 			};
+		});
+
+		$(function() {
+			cbpFixedScrollLayout.init();
 		});
 	} else {
 		scrFeaturesAnimation();
@@ -530,9 +534,7 @@ $(document).ready(function() {
 
 	})();
 
-	$(function() {
-		cbpFixedScrollLayout.init();
-	});
+	
 
 	/*================================
 	=            CONTACTS TAB         =
@@ -542,6 +544,19 @@ $(document).ready(function() {
 		$('.contacts__list').toggleClass('active');
 		$('.contacts__arrow').toggleClass('active');
 	});
+
+
+	/*===========================
+	=            MAP            =
+	===========================*/
+	$('.scr-map iframe').css("pointer-events", "none");
+
+	$('.scr-map').click(function() {
+		$('.scr-map iframe').css("pointer-events", "auto");
+	});
 	
+	$(".scr-map").mouseleave(function() {
+		$('.scr-map iframe').css("pointer-events", "none");
+	});
 
 });

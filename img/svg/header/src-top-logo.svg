@@ -14,7 +14,7 @@
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
         <g id="main" sketch:type="MSArtboardGroup" transform="translate(-35.000000, -15.000000)">
             <g id="src-top-logo" sketch:type="MSLayerGroup" transform="translate(36.000000, 16.000000)">
-                <text id="DEF-C" opacity="0.8" sketch:type="MSTextLayer" font-family="Optotypo" font-size="14" font-weight="normal" letter-spacing="2.68000007" fill="#716373">
+                <text id="DEF-C" opacity="0.8" sketch:type="MSTextLayer" font-family="optotyporegular" font-size="14" font-weight="normal" letter-spacing="2.68000007" fill="#716373">
                     <tspan x="53" y="24">DEF-</tspan>
                     <tspan x="106.854" y="24">C</tspan>
                 </text>
