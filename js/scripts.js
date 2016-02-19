@@ -584,7 +584,7 @@ $(document).ready(function() {
 	=            AERO BURGER            =
 	===================================*/
 	function aeroBurger() {
-		 tlBurger
+		 tlBurgergit
 		 	.to('.aerodynamics-plane', 2, {
 		 		bottom: 40,
 		 		ease: Power0.easeIn
