@@ -16,17 +16,21 @@
 </head>
 <body>
 
-<div id="cbp-fbscroller" class="cbp-fbscroller">
-	<nav class="magnet-navigation">
-		<a href="#fbsection1" class="cbp-fbcurrent magnet-navigation__link"></a>
-		<a href="#fbsection2" class="magnet-navigation__link"></a>
-		<a href="#fbsection3" class="magnet-navigation__link"></a>
-		<a href="#fbsection4" class="magnet-navigation__link"></a>
-		<a href="#fbsection5" class="magnet-navigation__link"></a>
-		<a href="#fbsection6" class="magnet-navigation__link"></a>
-	</nav>
+<nav class="magnet-navigation">
+	<a href="#top" class="cbp-fbcurrent magnet-navigation__link"></a>
+	<a href="#consctructions" class="magnet-navigation__link"></a>
+	<a href="#features" class="magnet-navigation__link"></a>
+	<a href="#aerodynamics" class="magnet-navigation__link"></a>
+	<a href="#transporting" class="magnet-navigation__link"></a>
+	<a href="#specs" class="magnet-navigation__link"></a>
+	<a href="#gallery" class="magnet-navigation__link"></a>
+	<a href="#aboutus" class="magnet-navigation__link"></a>
+</nav>
 
-		<section class="site-header" id="fbsection1">
+<div id="cbp-fbscroller" class="cbp-fbscroller">
+	
+
+		<section class="site-header" id="fbsection1" data-section="top">
 
 			<div class="site-header__left">
 				<a href="index.html" class="header-logo">
@@ -322,7 +326,7 @@
 		</div>
 		
 		
-		<section class="scr-consctructions" id="fbsection2">
+		<section class="scr-consctructions" id="fbsection2" data-section="consctructions">
 			<div class="cons-sphere cons-sphere--start"></div>
 			<div class="scr-consctructions-left">
 				<div class="cons-info">
@@ -397,7 +401,7 @@
 		
 
 
-		<section class="scr-features" id="fbsection3">
+		<section class="scr-features" id="fbsection3" data-section="features">
 			<div class="scr-features-plane"></div>
 			<svg class="scr-features-line scr-line">
 				<g>
@@ -486,7 +490,7 @@
 		</section>
 
 
-		<section class="scr-aerodynamics" id="fbsection4">
+		<section class="scr-aerodynamics" id="fbsection4" data-section="aerodynamics">
 			<!-- <ul class="magnet-navigation">
 				<li class="magnet-navigation__item">
 					<a href="#" class="magnet-navigation__link">
@@ -649,7 +653,7 @@
 		</section>
 
 
-		<section class="scr-transporting"  id="fbsection5">
+		<section class="scr-transporting"  id="fbsection5" data-section="transporting">
 			
 			
 			<div class="transporting__plane">
@@ -671,7 +675,7 @@
 
 
 
-		<div class="scr-specs" id="#fbsection6">
+		<div class="scr-specs" id="#fbsection6" data-section="specs">
 
 			<div class="spec-tabs">
 				<div class="spec-tabs__name">
@@ -1498,7 +1502,7 @@
 		</div>
 
 
-		<div class="scr-gallery">
+		<div class="scr-gallery" data-section="gallery">
 			<div id="grid-gallery" class="grid-gallery">
 				<section class="grid-wrap">
 					<ul class="grid">
@@ -1605,7 +1609,7 @@
 		</div>
 
 
-		<section class="scr-aboutus">
+		<section class="scr-aboutus" data-section="aboutus">
 			<div class="about-column">
 				<section class="about__info">
 					<h2 class="about-column__title title">О компании</h2>
@@ -1734,6 +1738,9 @@
 	<script src="js/hammer.min.js"></script>
 	<script src="js/picturefill.js"></script>
 	<script src="js/owl.carousel.js"></script>
+
+	<script src="js/jquery.scroll_to.js"></script>
+	<script src="js/jquery.snapscroll.js"></script>
 
 	<script src="js/scripts.js"></script>
 	<!-- <script src="js/build/scripts.js"></script> -->
