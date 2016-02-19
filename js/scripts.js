@@ -606,6 +606,6 @@ $(document).ready(function() {
 		 	}, 'down')
 	};
 	
-	// test2
+	  $(".content").snapscroll();
 });
 
