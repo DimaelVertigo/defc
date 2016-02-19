@@ -17,6 +17,18 @@ $(document).ready(function() {
 		aeroMarker = true,
 		mq = window.matchMedia('(min-width: 767px)');
 		
+	/*==========================================
+	=            HEADER NAV ANCHORS            =
+	==========================================*/
+	$("a.header-navigation__link").click(function(e) { 
+		var elementClick = $(this).attr("href");
+		var destination = $(elementClick).offset().top;
+		$('html, body').animate({
+			scrollTop: destination 
+		}, 1100);
+		e.preventDefault();
+	});
+
 	/*====================================
 	=            SVG injector            =
 	====================================*/
@@ -112,8 +124,9 @@ $(document).ready(function() {
 	========================================*/
 	var tl = new TimelineLite(),
 			tlFeatures = new TimelineLite(),
-			tlAerodynamics = new TimelineLite();
-			tlConstructions = new TimelineLite();
+			tlAerodynamics = new TimelineLite(),
+			tlConstructions = new TimelineLite(),
+			tlBurger = new TimelineLite();
 
 	$('.ip__trigger').on('click', function() {
 		var $target = $(this).closest('.ip'),
@@ -535,11 +548,18 @@ $(document).ready(function() {
 	})();
 
 	
-
-	/*================================
-	=            CONTACTS TAB         =
-	================================*/
+	/*=======================================
+	=            ABOUT ACCORDION            =
+	=======================================*/
+	$('.about-column__arrow').on('click', function() {
+		$(this).siblings('.about-column__text--hidden').toggleClass('active');
+	});
 	
+	
+
+	/*==========================================
+	=            CONTACTS ACCORDION            =
+	==========================================*/
 	$('.contacts__head').on('click', function() {
 		$('.contacts__list').toggleClass('active');
 		$('.contacts__arrow').toggleClass('active');
@@ -559,4 +579,33 @@ $(document).ready(function() {
 		$('.scr-map iframe').css("pointer-events", "none");
 	});
 
+
+	/*===================================
+	=            AERO BURGER            =
+	===================================*/
+	function aeroBurger() {
+		 tlBurger
+		 	.to('.aerodynamics-plane', 2, {
+		 		bottom: 40,
+		 		ease: Power0.easeIn
+		 	}, "up")
+		 	.to('.aerodynamics-shadow', 2, {
+		 		autoAlpha: 0.3
+		 	}, 'up')
+		 	.to('.aerodynamics-waves', 2, {
+		 		top: -20
+		 	}, 'up')
+		 	.to('.aerodynamics-waves', 2, {
+		 		top: 68
+		 	}, 'down')
+		 	.to('.aerodynamics-plane', 2, {
+		 		bottom: -20
+		 	}, 'down')
+		 	.to('.aerodynamics-shadow', 2, {
+		 		autoAlpha: 1
+		 	}, 'down')
+	};
+	
+
 });
+
