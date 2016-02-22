@@ -266,10 +266,10 @@ $(document).ready(function() {
 
 	/*----------  Line coordinates ----------*/
 	function scrTopLine() {
-		var y1 = $('.interactive-menu').position().top + 6,
-			x1 = $('.interactive-menu__point--1').offset().left + 33,
-			y2 = $('.src-top-slide-1-popup').position().top + 32,
-			x2 = $('.src-top-slide-1-popup__point-wrap').offset().left + 6,
+		var y1 = $('.interactive-menu').position().top + 36,
+			x1 = $('.interactive-menu__point--1').offset().left - 4,
+			y2 = $('.src-top-slide-1-popup').position().top + 4,
+			x2 = $('.src-top-slide-1-popup__point-wrap').offset().left + 47,
 			line = $('.scr-top-line1__path');
 		line.attr('x1', x1);
 		line.attr('y1', y1);
