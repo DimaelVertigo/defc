@@ -255,6 +255,7 @@ h2.title {
   }
 }
 h3.title {
+  font-weight: 300;
   font-size: 3.8rem;
   line-height: 3.8rem;
 }
@@ -316,6 +317,10 @@ p {
           justify-content: center;
   height: 18px;
   margin: 6px 0;
+}
+.magnet-navigation__link.active {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .magnet-navigation__icon {
   width: 9px;
@@ -401,7 +406,7 @@ body,
   right: 2%;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+          transform: translateY(-50%);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -415,7 +420,6 @@ body,
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  top: 20.125%;
 }
 .magnet-navigation a {
   display: block;
@@ -491,13 +495,13 @@ body,
           transform: rotate(225deg);
 }
 .magnet-navigation a:after {
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
-.magnet-navigation a.cbp-fbcurrent:after {
+.magnet-navigation a.active:after {
   opacity: 1;
-  -webkit-transform: rotate(225deg);
-          transform: rotate(225deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 /* background-attachment does the trick */
 .cbp-fbscroller section {
@@ -528,6 +532,8 @@ body,
       -ms-flex-align: center;
           align-items: center;
   padding: 0 2%;
+  z-index: 2;
+  position: relative;
 }
 @media only screen and (min-width : 320px) and (max-width : 766px) {
   .site-header {
@@ -561,37 +567,23 @@ body,
   text-decoration: none;
   text-transform: uppercase;
 }
-.language-dropdown {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 1px solid #E2E2E2;
+.languages {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 33px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0 11px;
-  width: 57px;
+  position: relative;
 }
-.language-dropdown__current-lang {
-  width: 17px;
-  height: 12px;
+.languages__link {
+  display: block;
+  padding: 9px 12px;
+  color: #000;
+  line-height: 2.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
 }
-.language-dropdown__trigger {
-  width: 9px;
-  height: 5px;
-}
-.language-dropdown__list {
-  display: none;
-}
-.social {
-  margin-left: 9px;
+.languages__link.active {
+  border: 1px solid #E2E2E2;
 }
 .social__list {
   display: -webkit-box;
@@ -602,22 +594,47 @@ body,
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 132px;
+  height: 46px;
+  position: absolute;
+  z-index: 2;
+  bottom: 18px;
+  right: 17px;
 }
 .social__item:not(:last-child) {
   border-right: 1px solid #b2b2b2;
 }
 .social__link {
-  padding: 0 11px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
 }
 .social__icon--facebook {
+  margin-right: 14px;
   width: 9px;
   height: 16px;
 }
 .social__icon--twitter {
+  margin-left: 12px;
+  margin-right: 10px;
   width: 17px;
   height: 14px;
 }
 .social__icon--youtube {
+  margin-left: 13px;
   width: 17px;
   height: 13px;
 }
@@ -735,12 +752,12 @@ body,
 }
 @media only screen and (min-width: 767px) and (max-width: 1199px) {
   .scr-top {
-    height: calc(100% - 69px);
+    height: 100%;
   }
 }
 @media only screen and  (min-width: 1200px) {
   .scr-top {
-    height: calc(100% - 69px);
+    height: 100%;
   }
 }
 .main-logo {
@@ -878,25 +895,6 @@ body,
           justify-content: center;
   position: relative;
 }
-.interactive-menu__line {
-  height: 1px;
-  margin-top: 1px;
-  background-color: #fff;
-  width: 20px;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  opacity: 0.2;
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-}
-@media only screen and (min-width : 320px) and (max-width : 766px) {
-  .interactive-menu__line {
-    display: none;
-  }
-}
 .interactive-menu__description {
   position: absolute;
   width: 144px;
@@ -920,34 +918,6 @@ body,
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-.interactive-menu__description-icon {
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-}
-.interactive-menu__description-icon--1 {
-  width: 29px;
-  height: 29px;
-  fill: #fff;
-}
-.interactive-menu__description-icon--2 {
-  width: 26px;
-  height: 26px;
-}
-.interactive-menu__description-icon--3 {
-  width: 28px;
-  height: 28px;
-}
-.interactive-menu__description-icon--4 {
-  width: 21px;
-  height: 27px;
-}
-.interactive-menu__name {
-  text-transform: uppercase;
-  font-size: 1.0rem;
-  color: #fff;
-  text-align: center;
 }
 /*==========================================
 =            Screen top SLIDE 1            =

@@ -10,7 +10,8 @@ var gulp          = require('gulp');
     imagemin      = require('gulp-tinypng'),
     imageResize   = require('gulp-image-resize'),
     concat        = require('gulp-concat'),
-    uglify        = require('gulp-uglify');
+    uglify        = require('gulp-uglify'),
+    notify        = require('gulp-notify');
 
 /*==============================
 =           Watcher            =
@@ -30,6 +31,12 @@ gulp.task('less', function () {
   return gulp.src('./less/**/style.less')
     .pipe(sourcemaps.init())
     .pipe(less())
+    .on('error', notify.onError(function(err) {
+      return {
+        title: 'Styles',
+        message: err.message
+      };
+    }))
     .pipe(autoprefixer())
     .pipe(gulp.dest('./css'))
     .pipe(browserSync.stream());

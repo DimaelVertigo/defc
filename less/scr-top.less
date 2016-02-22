@@ -9,10 +9,12 @@
 		background-size: cover;
 	}
 	@media @tablet {
-		height: calc(~"100% - 69px");
+		// height: calc(~"100% - 69px");
+		height: 100%;
 	}
 	@media @desktop {
-		height: calc(~"100% - 69px");
+		// height: calc(~"100% - 69px");
+		height: 100%;
 	}
 }
 .main-logo {
@@ -110,18 +112,6 @@
 		justify-content: center;
 		position: relative;
 	}
-	&__line {
-		height: 1px;
-		margin-top: 1px;
-		background-color: #fff;
-		width: 20px;
-		flex: 1;
-		opacity: 0.2;
-		flex-shrink: 0;
-		@media @mobile {
-			display: none;
-		}
-	}
 	&__description {
 		position: absolute;
 		width: 144px;
@@ -132,32 +122,6 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
-	}
-	&__description-icon {
-		flex-shrink: 0;
-		&--1 {
-			width: 29px;
-			height: 29px;
-			fill: #fff;
-		}
-		&--2 {
-			width: 26px;
-			height: 26px;
-		}
-		&--3 {
-			width: 28px;
-			height: 28px;
-		}
-		&--4 {
-			width: 21px;
-			height: 27px;
-		}
-	}
-	&__name {
-		text-transform: uppercase;
-		font-size: 1.0rem;
-		color: #fff;
-		text-align: center;
 	}
 }
 

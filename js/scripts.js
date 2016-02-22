@@ -540,6 +540,7 @@ $(document).ready(function() {
   $('.magnet-navigation__link').on('click', function(event) {
   	event.preventDefault();
   	showSection($(this).attr('href'), true);
+  	// $(this).addClass('active').siblings().removeClass('active')
   });
   showSection(window.location.hash, false);
 
@@ -564,7 +565,7 @@ $(document).ready(function() {
   	$('.section').each(function() {
   		var 
   				$this = $(this),
-  				topEdge = $this.offset().top - 200,
+  				topEdge = $this.offset().top - 500,
   				bottomEdge = topEdge + $this.height(),
   				wScroll = $(window).scrollTop();
 
