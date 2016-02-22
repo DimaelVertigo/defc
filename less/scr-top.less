@@ -1,5 +1,4 @@
 .scr-top {
-	background: url(../img/background/scr-top.jpg) no-repeat;
 	width: 100%;
 	background-size: cover;
 	position: relative;
@@ -9,13 +8,41 @@
 		background-size: cover;
 	}
 	@media @tablet {
-		// height: calc(~"100% - 69px");
+		background: url(../img/background/scr-top.jpg) no-repeat;
 		height: 100%;
 	}
 	@media @desktop {
-		// height: calc(~"100% - 69px");
 		height: 100%;
+		background-image: linear-gradient(140deg, #5C698C 1%, #D0A9A9 100%);
 	}
+}
+.mask {
+	background-color: rgba(15,16,38,.37);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.top-plane {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: url(../img/background/plane.png) no-repeat;
+	width: 1226px;
+	height: 885px;
+	animation-name: MOVE-BG;
+  animation-duration: 300s;
+  animation-timing-function: cubic-bezier(0,1.02,.03,.88);
+  animation-iteration-count: infinite;
+}
+@keyframes MOVE-BG {
+   from {
+     transform: translate(30%, 30%);
+   }
+   to { 
+     transform: translateX(0);
+   }
 }
 .main-logo {
 	position: absolute;
@@ -96,11 +123,10 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-left: 7%;
-	padding-right: 7%;
 	width: 100%;
 	position: absolute;
-	bottom: 5.9847661%;
+	top: 57%;
+	left: 48%;
 	@media @mobile {
 		display: none;
 	}
@@ -141,7 +167,6 @@
 	left: 0;
 }
 .src-top-slide-1-popup {
-	
 	@media @mobile {
 		width: 100%;
 		height: 100%;
@@ -153,14 +178,14 @@
 	@media @tablet {
 		opacity: 0;
 		position: absolute;
-		top: 30%;
-		right: 28%;
+		top: 57%;
+		left: 48%;
 	}
 	@media @desktop {
 		opacity: 0;
 		position: absolute;
-		top: 30%;
-		right: 28%;
+		top: 80%;
+		left: 22.25%;
 	}
 	&__text {
 		font-size: 1.4rem;
@@ -189,7 +214,7 @@
 		}
 		@media @desktop {
 			position: absolute;
-			top: -97px;
+			top: 71px;
 			left: -193px;
 	    width: 388px;
 		}
@@ -236,13 +261,5 @@
 .src-top-slide-1 {
 	display: block;
 }
-.src-top-slide-2 {
-	background-color: rgba(0,0,0,.7);
-}
-.src-top-slide-3 {
-	background-color: rgba(255, 244, 68,.7);
-}
-.src-top-slide-4 {
-	background-color: rgba(0, 0, 255, .7);
-}
+
 
