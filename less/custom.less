@@ -183,7 +183,7 @@ html, body,
 
 /* The nav is fixed on the right side  and we center it by translating it 50% 
 (we don't know it's height so we can't use the negative margin trick) */
-.cbp-fbscroller > nav {
+.magnet-navigation {
 	position: fixed;
 	z-index: 3;
 	right: 2%;
@@ -198,22 +198,22 @@ html, body,
 	top: 20.125%;
 }
 
-.cbp-fbscroller > nav a {
+.magnet-navigation a {
 	display: block;
 	position: relative;
 	color: transparent;
 	.round-sphere(8px, 18px);
 }
 
-.cbp-fbscroller > nav a:after {
+.magnet-navigation a:after {
 	.transition();
 }
 
-.cbp-fbscroller > nav a:hover:after {
+.magnet-navigation a:hover:after {
 	// background: rgba(255,255,255,0.6);
 }
 
-.cbp-fbscroller > nav a.cbp-fbcurrent:after {
+.magnet-navigation a.cbp-fbcurrent:after {
 	  opacity: 1;
 	  transform: rotate(225deg);
 }
@@ -228,3 +228,5 @@ html, body,
 
 	overflow: hidden;
 }
+
+

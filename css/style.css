@@ -395,7 +395,7 @@ body,
 }
 /* The nav is fixed on the right side  and we center it by translating it 50% 
 (we don't know it's height so we can't use the negative margin trick) */
-.cbp-fbscroller > nav {
+.magnet-navigation {
   position: fixed;
   z-index: 3;
   right: 2%;
@@ -417,7 +417,7 @@ body,
           align-items: center;
   top: 20.125%;
 }
-.cbp-fbscroller > nav a {
+.magnet-navigation a {
   display: block;
   color: transparent;
   position: relative;
@@ -434,7 +434,7 @@ body,
       -ms-flex-pack: center;
           justify-content: center;
 }
-.cbp-fbscroller > nav a::before {
+.magnet-navigation a::before {
   display: block;
   content: '';
   width: 8px;
@@ -450,7 +450,7 @@ body,
       -ms-flex-negative: 0;
           flex-shrink: 0;
 }
-.cbp-fbscroller > nav a::after {
+.magnet-navigation a::after {
   opacity: 0;
   content: '';
   width: 18px;
@@ -479,22 +479,22 @@ body,
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-.cbp-fbscroller > nav a:hover::after,
-.cbp-fbscroller > nav a:focus::after {
+.magnet-navigation a:hover::after,
+.magnet-navigation a:focus::after {
   opacity: 1;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-.cbp-fbscroller > nav a.active::after {
+.magnet-navigation a.active::after {
   opacity: 1;
   -webkit-transform: rotate(225deg);
           transform: rotate(225deg);
 }
-.cbp-fbscroller > nav a:after {
+.magnet-navigation a:after {
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-.cbp-fbscroller > nav a.cbp-fbcurrent:after {
+.magnet-navigation a.cbp-fbcurrent:after {
   opacity: 1;
   -webkit-transform: rotate(225deg);
           transform: rotate(225deg);
