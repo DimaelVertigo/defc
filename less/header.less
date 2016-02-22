@@ -63,12 +63,18 @@
 }
 
 
-
 .social {
-	margin-left: 9px;
 	&__list {
 		display: flex;
 		align-items: center;
+		justify-content: center;
+		background-color: rgba(255,255,255,.1);
+		width: 132px;	
+		height: 46px;
+		position: absolute;
+		z-index: 2;
+		bottom: 18px;
+		right: 17px;
 	}
 	&__item {
 		&:not(:last-child) {
@@ -76,18 +82,24 @@
 		}
 	}
 	&__link {
-		padding: 0 11px;
+		display: flex;
+		align-items: center;
+		flex-shrink: 0;
 	}
 	&__icon {
 		&--facebook {
+			margin-right: 14px;
 			width: 9px;
 			height: 16px;
 		}
 		&--twitter {
+			margin-left: 12px;
+			margin-right: 10px;
 			width: 17px;
 			height: 14px;
 		}
 		&--youtube {
+			margin-left: 13px;
 			width: 17px;
 			height: 13px;
 		}
