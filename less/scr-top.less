@@ -8,13 +8,14 @@
 		background-size: cover;
 	}
 	@media @tablet {
-		background: url(../img/background/scr-top.jpg) no-repeat;
 		height: 100%;
+		background-image: linear-gradient(140deg, #5C698C 1%, #D0A9A9 100%);
 	}
 	@media @desktop {
 		height: 100%;
 		background-image: linear-gradient(140deg, #5C698C 1%, #D0A9A9 100%);
 	}
+
 }
 .mask {
 	background-color: rgba(15,16,38,.37);
@@ -23,18 +24,38 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
+	@media @mobile {
+		display: none;
+	}
 }
 .top-plane {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	background: url(../img/background/plane.png) no-repeat;
+	background: url(../img/background/scr-top/plane.png) no-repeat;
 	width: 1226px;
 	height: 885px;
 	animation-name: MOVE-BG;
   animation-duration: 300s;
   animation-timing-function: cubic-bezier(0,1.02,.03,.88);
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
+  @media @retina {
+  	background: url(../img/background/scr-top/plane-2x.png) no-repeat;
+  	background-size: 1226px;
+  	height: 885px;
+  }
+  @media @mobile {
+  	display: none;
+  }
+  @media only screen and (min-width : 2400px) {
+  	background: url(../img/background/scr-top/plane-xl.png) no-repeat;
+  	width: 2394px;
+  	height: 1726px;
+  	@media @retina {
+	  	background: url(../img/background/scr-top/plane-xl-2x.png) no-repeat;
+	  	background-size: 2394px 1726px;
+  	}
+  }
 }
 @keyframes MOVE-BG {
    from {
@@ -184,7 +205,7 @@
 	@media @desktop {
 		opacity: 0;
 		position: absolute;
-		top: 80%;
+		top: 70%;
 		left: 22.25%;
 	}
 	&__text {
@@ -207,24 +228,41 @@
 			}
 		}
 		@media @tablet {
-			position: absolute;
-			top: -97px;
-			left: -193px;
-	    width: 388px;
+			
 		}
 		@media @desktop {
 			position: absolute;
 			top: 71px;
 			left: -193px;
 	    width: 388px;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    flex-direction: column;
 		}
+	}
+	&__arrow {
+		width: 12px;
+		height: 6px;
+		animation-name: arrowMove;
+	  animation-duration: 1s;
+	  animation-timing-function: linear;
+	  animation-iteration-count: infinite;
+	  transform: translateY(0);
+	  @media @desktop {
+	  	margin-top: 34px;
+	  }
 	}
 }
 .src-top-slide1 {
 	&__point-wrap {
 	}
 }
-
+@keyframes arrowMove {
+	10% { transform: translateY(0) }
+	50% { transform: translateY(5px) }
+	100% { transform: translateY(0) }
+}
 /*==============================================
 =            SVG ANIMATION ELEMENTS            =
 ==============================================*/
