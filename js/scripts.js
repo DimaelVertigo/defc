@@ -216,6 +216,7 @@ $(document).ready(function() {
 			if (scrTop >= scrAerodynamicsPosition && aeroMarker) {
 				aerodynamicsAnimation();
 				aeroMarker = false;
+				aeroBurger();
 			};
 		});
 
@@ -556,28 +557,27 @@ $(document).ready(function() {
 	=            AERO BURGER            =
 	===================================*/
 	function aeroBurger() {
-		 tlBurgergit
+		 tlBurger
 		 	.to('.aerodynamics-plane', 2, {
-		 		bottom: 40,
+		 		bottom: 80,
 		 		ease: Power0.easeIn
 		 	}, "up")
 		 	.to('.aerodynamics-shadow', 2, {
 		 		autoAlpha: 0.3
 		 	}, 'up')
 		 	.to('.aerodynamics-waves', 2, {
-		 		top: -20
+		 		bottom: 155
 		 	}, 'up')
 		 	.to('.aerodynamics-waves', 2, {
-		 		top: 68
+		 		bottom: 85
 		 	}, 'down')
 		 	.to('.aerodynamics-plane', 2, {
-		 		bottom: -20
+		 		bottom: 63
 		 	}, 'down')
 		 	.to('.aerodynamics-shadow', 2, {
 		 		autoAlpha: 1
 		 	}, 'down')
 	};
-
 	
 
 
