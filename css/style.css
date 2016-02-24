@@ -130,20 +130,6 @@ table {
 =            FONTS            =
 =============================*/
 @font-face {
-  font-family: 'proxima_nova_rgregular';
-  src: url('../fonts/proximanova-reg-webfont.eot');
-  src: url('../fonts/proximanova-reg-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-reg-webfont.woff2') format('woff2'), url('../fonts/proximanova-reg-webfont.woff') format('woff'), url('../fonts/proximanova-reg-webfont.ttf') format('truetype'), url('../fonts/proximanova-reg-webfont.svg#proxima_nova_rgregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'proxima_nova_ltsemibold';
-  src: url('../fonts/proxima_nova_semibold-webfont.eot');
-  src: url('../fonts/proxima_nova_semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proxima_nova_semibold-webfont.woff2') format('woff2'), url('../fonts/proxima_nova_semibold-webfont.woff') format('woff'), url('../fonts/proxima_nova_semibold-webfont.ttf') format('truetype'), url('../fonts/proxima_nova_semibold-webfont.svg#proxima_nova_ltsemibold') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: 'optotyporegular';
   src: url('../fonts/optotypo-regular-webfont.ttf') format('truetype'), url('../fonts/optotypo-regular-webfont.svg#optotyporegular') format('svg');
   font-weight: normal;
@@ -166,6 +152,8 @@ table {
 /*=============================================================
 =            Media Queries            =
 =============================================================*/
+/* 24 inch iMac ----------- */
+/* 27 inch iMac ----------- */
 /*=============================================================
 =            iPhone 5 & 5S Media Queries            =
 =============================================================*/
@@ -732,22 +720,21 @@ body,
   cursor: pointer;
 }
 .burger.active::before {
-  top: 7px;
+  top: 10px;
 }
 .burger.active::after {
-  bottom: 7px;
+  bottom: 10px;
 }
 .scr-top {
-  background: url(../img/background/scr-top.jpg) no-repeat;
   width: 100%;
   background-size: cover;
   position: relative;
+  background-image: -webkit-linear-gradient(310deg, #5C698C 1%, #D0A9A9 100%);
+  background-image: linear-gradient(140deg, #5C698C 1%, #D0A9A9 100%);
 }
 @media only screen and (min-width : 320px) and (max-width : 766px) {
   .scr-top {
     height: 568px;
-    background: url(../img/background/scr-top-sm.jpg) no-repeat center top;
-    background-size: cover;
   }
 }
 @media only screen and (min-width: 767px) and (max-width: 1199px) {
@@ -758,6 +745,131 @@ body,
 @media only screen and  (min-width: 1200px) {
   .scr-top {
     height: 100%;
+  }
+}
+.mask {
+  background-color: rgba(15, 16, 38, 0.37);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.top-plane {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+@media only screen and (min-width : 320px) and (max-width : 766px) {
+  .top-plane {
+    background: url(../img/background/scr-top/plane-sm.png) no-repeat right bottom;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    top: 9.6875%;
+  }
+}
+@media only screen and (min-width : 320px) and (max-width : 766px) and only screen and (-webkit-min-device-pixel-ratio: 2),
+          only screen and (   min--moz-device-pixel-ratio: 2),
+          only screen and (        min-device-pixel-ratio: 2),
+          only screen and (                -webkit-min-device-pixel-ratio: 2),
+          only screen and (                min-resolution: 192dpi),
+          only screen and (                min-resolution: 2dppx) {
+  .top-plane {
+    background: url(../img/background/scr-top/plane-sm.png) no-repeat;
+    background-size: 320px 458px;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1199px) {
+  .top-plane {
+    background: url(../img/background/scr-top/plane.png) no-repeat;
+    width: 1226px;
+    height: 885px;
+    -webkit-animation-name: MOVE-BG;
+            animation-name: MOVE-BG;
+    -webkit-animation-duration: 300s;
+            animation-duration: 300s;
+    -webkit-animation-timing-function: cubic-bezier(0, 1.02, 0.03, 0.88);
+            animation-timing-function: cubic-bezier(0, 1.02, 0.03, 0.88);
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1199px) and only screen and (-webkit-min-device-pixel-ratio: 2),
+          only screen and (   min--moz-device-pixel-ratio: 2),
+          only screen and (        min-device-pixel-ratio: 2),
+          only screen and (                -webkit-min-device-pixel-ratio: 2),
+          only screen and (                min-resolution: 192dpi),
+          only screen and (                min-resolution: 2dppx) {
+  .top-plane {
+    background: url(../img/background/scr-top/plane-2x.png) no-repeat;
+    background-size: 1226px;
+    height: 885px;
+  }
+}
+@media only screen and  (min-width: 1200px) {
+  .top-plane {
+    background: url(../img/background/scr-top/plane.png) no-repeat;
+    width: 1226px;
+    height: 885px;
+    -webkit-animation-name: MOVE-BG;
+            animation-name: MOVE-BG;
+    -webkit-animation-duration: 300s;
+            animation-duration: 300s;
+    -webkit-animation-timing-function: cubic-bezier(0, 1.02, 0.03, 0.88);
+            animation-timing-function: cubic-bezier(0, 1.02, 0.03, 0.88);
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+  }
+}
+@media only screen and  (min-width: 1200px) and only screen and (-webkit-min-device-pixel-ratio: 2),
+          only screen and (   min--moz-device-pixel-ratio: 2),
+          only screen and (        min-device-pixel-ratio: 2),
+          only screen and (                -webkit-min-device-pixel-ratio: 2),
+          only screen and (                min-resolution: 192dpi),
+          only screen and (                min-resolution: 2dppx) {
+  .top-plane {
+    background: url(../img/background/scr-top/plane-2x.png) no-repeat;
+    background-size: 1226px;
+    height: 885px;
+  }
+}
+@media only screen and (min-width: 2400px) {
+  .top-plane {
+    background: url(../img/background/scr-top/plane-xl.png) no-repeat;
+    width: 2394px;
+    height: 1726px;
+  }
+}
+@media only screen and (min-width: 2400px) and only screen and (-webkit-min-device-pixel-ratio: 2),
+          only screen and (   min--moz-device-pixel-ratio: 2),
+          only screen and (        min-device-pixel-ratio: 2),
+          only screen and (                -webkit-min-device-pixel-ratio: 2),
+          only screen and (                min-resolution: 192dpi),
+          only screen and (                min-resolution: 2dppx) {
+  .top-plane {
+    background: url(../img/background/scr-top/plane-xl-2x.png) no-repeat;
+    background-size: 2394px 1726px;
+  }
+}
+@-webkit-keyframes MOVE-BG {
+  from {
+    -webkit-transform: translate(30%, 30%);
+            transform: translate(30%, 30%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes MOVE-BG {
+  from {
+    -webkit-transform: translate(30%, 30%);
+            transform: translate(30%, 30%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 .main-logo {
@@ -867,11 +979,10 @@ body,
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 7%;
-  padding-right: 7%;
   width: 100%;
   position: absolute;
-  bottom: 5.9847661%;
+  top: 57%;
+  left: 48%;
 }
 @media only screen and (min-width : 320px) and (max-width : 766px) {
   .interactive-menu {
@@ -961,16 +1072,16 @@ body,
   .src-top-slide-1-popup {
     opacity: 0;
     position: absolute;
-    top: 30%;
-    right: 28%;
+    top: 57%;
+    left: 48%;
   }
 }
 @media only screen and  (min-width: 1200px) {
   .src-top-slide-1-popup {
     opacity: 0;
     position: absolute;
-    top: 30%;
-    right: 28%;
+    top: 70%;
+    left: 22.25%;
   }
 }
 .src-top-slide-1-popup__text {
@@ -995,20 +1106,76 @@ body,
     left: 50%;
   }
 }
-@media only screen and (min-width: 767px) and (max-width: 1199px) {
-  .src-top-slide-1-popup__text {
-    position: absolute;
-    top: -97px;
-    left: -193px;
-    width: 388px;
-  }
-}
 @media only screen and  (min-width: 1200px) {
   .src-top-slide-1-popup__text {
     position: absolute;
-    top: -97px;
+    top: 71px;
     left: -193px;
     width: 388px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.src-top-slide-1-popup__arrow {
+  width: 12px;
+  height: 6px;
+  -webkit-animation-name: arrowMove;
+          animation-name: arrowMove;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+@media only screen and  (min-width: 1200px) {
+  .src-top-slide-1-popup__arrow {
+    margin-top: 34px;
+  }
+}
+@-webkit-keyframes arrowMove {
+  10% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes arrowMove {
+  10% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 /*==============================================
@@ -1047,15 +1214,6 @@ body,
 .src-top-slide-1 {
   display: block;
 }
-.src-top-slide-2 {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-.src-top-slide-3 {
-  background-color: rgba(255, 244, 68, 0.7);
-}
-.src-top-slide-4 {
-  background-color: rgba(0, 0, 255, 0.7);
-}
 .scr-consctructions {
   overflow: hidden;
   display: -webkit-box;
@@ -1065,34 +1223,6 @@ body,
   position: relative;
 }
 @media only screen and (min-width : 320px) and (max-width : 766px) {
-  .scr-consctructions {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 100%;
-    height: auto;
-  }
-}
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 568px)
-and (-webkit-device-pixel-ratio: 2) {
-  .scr-consctructions {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 100%;
-    height: auto;
-  }
-}
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 667px)
-and (-webkit-device-pixel-ratio: 2) {
   .scr-consctructions {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1122,6 +1252,8 @@ and (-webkit-device-pixel-ratio: 2) {
   background-image: -webkit-linear-gradient(243deg, #8E9780 0%, #C3CDB3 100%);
   background-image: linear-gradient(-153deg, #8E9780 0%, #C3CDB3 100%);
   position: relative;
+  overflow: hidden;
+  z-index: 2;
 }
 @media only screen and (min-width : 320px) and (max-width : 766px) {
   .scr-consctructions-left {
@@ -1142,6 +1274,11 @@ and (-webkit-device-pixel-ratio: 2) {
     width: 50%;
     padding: 9% 7%;
     height: 100%;
+  }
+  .scr-consctructions-left:hover .cons-plane,
+  .scr-consctructions-left:focus .cons-plane {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }
 .cons-info {
@@ -1165,6 +1302,8 @@ and (-webkit-device-pixel-ratio: 2) {
 ========================================================*/
 .cons-plane {
   position: absolute;
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
 }
 .cons-plane img {
   width: 100%;
@@ -1189,8 +1328,10 @@ and (-webkit-device-pixel-ratio: 2) {
 }
 @media only screen and  (min-width: 1200px) {
   .cons-plane--1 {
-    width: 546px;
-    height: 601px;
+    width: 156.75%;
+    height: 175.5%;
+    top: -17%;
+    left: -13%;
   }
 }
 .cons-plane--2 {
@@ -1215,7 +1356,8 @@ and (-webkit-device-pixel-ratio: 2) {
 @media only screen and (min-width : 320px) and (max-width : 766px) {
   .cons-plane--3 {
     width: 100%;
-    right: -3px;
+    width: 193.75%;
+    left: -32.1875%;
   }
 }
 @media only screen and (min-width: 767px) and (max-width: 1199px) {
@@ -1228,16 +1370,24 @@ and (-webkit-device-pixel-ratio: 2) {
 }
 @media only screen and  (min-width: 1200px) {
   .cons-plane--3 {
-    top: -30%;
+    bottom: 0;
     left: 0;
-    width: 468px;
-    height: 458px;
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 2400px) {
+  .cons-plane--3 {
+    bottom: -10%;
+    left: -10%;
+    width: 842px;
+    height: 590px;
   }
 }
 .cons-sphere {
   border-radius: 50%;
   border: 1px solid #fff;
   position: absolute;
+  z-index: 3;
 }
 @media only screen and (min-width : 320px) and (max-width : 766px) {
   .cons-sphere {
@@ -1254,7 +1404,6 @@ and (-webkit-device-pixel-ratio: 2) {
   height: 31px;
   top: 153px;
   left: 23.4375%;
-  z-index: 1;
 }
 .cons-sphere--1 {
   width: 430px;
@@ -1280,6 +1429,7 @@ and (-webkit-device-pixel-ratio: 2) {
 .scr-consctructions-right {
   height: 100%;
   position: relative;
+  z-index: 2;
 }
 @media only screen and (min-width : 320px) and (max-width : 766px) {
   .scr-consctructions-right {
@@ -1299,6 +1449,7 @@ and (-webkit-device-pixel-ratio: 2) {
 .scr-consctructions-right__top {
   background: #eff4fc;
   position: relative;
+  overflow: hidden;
 }
 @media only screen and (min-width : 320px) and (max-width : 766px) {
   .scr-consctructions-right__top {
@@ -1317,6 +1468,11 @@ and (-webkit-device-pixel-ratio: 2) {
     width: 100%;
     padding-right: 14%;
     height: 64.09140369967356%;
+  }
+  .scr-consctructions-right__top:hover .cons-plane,
+  .scr-consctructions-right__top:focus .cons-plane {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }
 .scr-consctructions-right__bottom {
@@ -1345,6 +1501,11 @@ and (-webkit-device-pixel-ratio: 2) {
     padding-top: 11.7647059%;
     padding-right: 7%;
     height: 35.91%;
+  }
+  .scr-consctructions-right__bottom:hover .cons-plane,
+  .scr-consctructions-right__bottom:focus .cons-plane {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }
 .cons-info {
@@ -1390,6 +1551,10 @@ and (-webkit-device-pixel-ratio: 2) {
     max-width: 290px;
   }
 }
+.scr-consctructions-line {
+  z-index: 500;
+  pointer-events: none;
+}
 @media only screen and (min-width : 320px) and (max-width : 766px) {
   .scr-consctructions-line {
     display: none;
@@ -1415,9 +1580,8 @@ and (-webkit-device-pixel-ratio: 2) {
 }
 .scr-features {
   width: 100%;
-  background: #767E7F;
-  background: rgba(118, 126, 127, 0.8);
   position: relative;
+  background: #767E7F;
 }
 @media only screen and (min-width : 320px) and (max-width : 766px) {
   .scr-features {
@@ -1448,17 +1612,76 @@ and (-webkit-device-pixel-ratio: 2) {
   }
 }
 .scr-features-plane {
-  background: url(../img/background/features-plane.png) no-repeat center;
   position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
-  height: 373px;
+}
+.scr-features-plane img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 @media only screen and (min-width : 320px) and (max-width : 766px) {
   .scr-features-plane {
-    background: url(../img/background/features-plane-sm.png) no-repeat left center;
+    background: url(../img/background/scr-features/plane-sm.png) no-repeat left center;
     height: 100%;
+    bottom: 0;
+    left: 0;
+  }
+}
+@media only screen and (min-width : 320px) and (max-width : 766px) and only screen and (-webkit-min-device-pixel-ratio: 2),
+          only screen and (   min--moz-device-pixel-ratio: 2),
+          only screen and (        min-device-pixel-ratio: 2),
+          only screen and (                -webkit-min-device-pixel-ratio: 2),
+          only screen and (                min-resolution: 192dpi),
+          only screen and (                min-resolution: 2dppx) {
+  .scr-features-plane {
+    background: url(../img/background/scr-features/plane-sm-2x.png) no-repeat left center;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1199px) {
+  .scr-features-plane {
+    background: url(../img/background/scr-features/plane-lg.png) no-repeat;
+    width: 86.375%;
+    height: 43.25%;
+    background-size: cover;
+    left: 50%;
+    bottom: -16.5625%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1199px) and only screen and (-webkit-min-device-pixel-ratio: 2),
+          only screen and (   min--moz-device-pixel-ratio: 2),
+          only screen and (        min-device-pixel-ratio: 2),
+          only screen and (                -webkit-min-device-pixel-ratio: 2),
+          only screen and (                min-resolution: 192dpi),
+          only screen and (                min-resolution: 2dppx) {
+  .scr-features-plane {
+    background: url(../img/background/scr-features/plane-lg-2x.png) no-repeat;
+  }
+}
+@media only screen and  (min-width: 1200px) {
+  .scr-features-plane {
+    background: url(../img/background/scr-features/plane-lg.png) no-repeat;
+    width: 86.375%;
+    height: 43.25%;
+    background-size: cover;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: 0;
+  }
+}
+@media only screen and  (min-width: 1200px) and only screen and (-webkit-min-device-pixel-ratio: 2),
+          only screen and (   min--moz-device-pixel-ratio: 2),
+          only screen and (        min-device-pixel-ratio: 2),
+          only screen and (                -webkit-min-device-pixel-ratio: 2),
+          only screen and (                min-resolution: 192dpi),
+          only screen and (                min-resolution: 2dppx) {
+  .scr-features-plane {
+    background: url(../img/background/scr-features/plane-lg-2x.png) no-repeat;
   }
 }
 @media only screen and (min-width : 320px) and (max-width : 766px) {
@@ -1897,6 +2120,9 @@ and (-webkit-device-pixel-ratio: 2) {
     height: 100%;
   }
 }
+.aerodynamics-plane {
+  z-index: 2;
+}
 @media only screen and (min-width : 320px) and (max-width : 766px) {
   .aerodynamics-plane {
     background: url(../img/background/aerodynamics-plane-sm.png) center bottom no-repeat;
@@ -1920,16 +2146,27 @@ and (-webkit-device-pixel-ratio: 2) {
 }
 @media only screen and  (min-width: 1200px) {
   .aerodynamics-plane {
-    background: url(../img/background/aerodynamics-plane.png) no-repeat;
+    background: url(../img/background/scr-aerodynamics/plane-lg.png) no-repeat;
     position: absolute;
     bottom: -20px;
-    left: calc(50% - 759.5px);
-    width: 1519px;
-    height: 517px;
+    left: calc(50% - 731.5px);
+    width: 1463px;
+    height: 455px;
+    bottom: 63px;
   }
+}
+.aerodynamics-shadow {
+  background: url(../img/background/scr-aerodynamics/shadow.png) no-repeat;
+  width: 1519px;
+  height: 501px;
+  position: absolute;
+  z-index: 1;
+  left: calc(50% - 759.5px);
+  bottom: -20px;
 }
 .aerodynamics-waves {
   position: absolute;
+  z-index: 3;
 }
 @media only screen and (min-width: 767px) and (max-width: 1199px) {
   .aerodynamics-waves {
@@ -1943,7 +2180,7 @@ and (-webkit-device-pixel-ratio: 2) {
   .aerodynamics-waves {
     width: 814px;
     height: 357px;
-    top: 68px;
+    bottom: 85px;
     left: 17.941032%;
   }
 }
@@ -1978,13 +2215,13 @@ and (-webkit-device-pixel-ratio: 2) {
 }
 @media only screen and (min-width: 767px) and (max-width: 1199px) {
   .aerodynamics-point--1 {
-    top: 175px;
+    top: 10.9375%;
     left: 49.3125%;
   }
 }
 @media only screen and  (min-width: 1200px) {
   .aerodynamics-point--1 {
-    top: 175px;
+    top: 10.9375%;
     left: 49.3125%;
   }
 }
@@ -1997,12 +2234,14 @@ and (-webkit-device-pixel-ratio: 2) {
 @media only screen and (min-width: 767px) and (max-width: 1199px) {
   .aerodynamics-point--2 {
     top: 259px;
+    top: 16.1875%;
     left: 65.125%;
   }
 }
 @media only screen and  (min-width: 1200px) {
   .aerodynamics-point--2 {
     top: 259px;
+    top: 16.1875%;
     left: 65.125%;
   }
 }
@@ -2015,12 +2254,14 @@ and (-webkit-device-pixel-ratio: 2) {
 @media only screen and (min-width: 767px) and (max-width: 1199px) {
   .aerodynamics-point--3 {
     top: 408px;
+    top: 25.5%;
     left: 16.6875%;
   }
 }
 @media only screen and  (min-width: 1200px) {
   .aerodynamics-point--3 {
     top: 408px;
+    top: 25.5%;
     left: 16.6875%;
   }
 }
@@ -2033,12 +2274,14 @@ and (-webkit-device-pixel-ratio: 2) {
 @media only screen and (min-width: 767px) and (max-width: 1199px) {
   .aerodynamics-point--4 {
     top: 333px;
+    top: 20.8125%;
     left: 44.0625%;
   }
 }
 @media only screen and  (min-width: 1200px) {
   .aerodynamics-point--4 {
     top: 333px;
+    top: 20.8125%;
     left: 44.0625%;
   }
 }
@@ -2051,12 +2294,14 @@ and (-webkit-device-pixel-ratio: 2) {
 @media only screen and (min-width: 767px) and (max-width: 1199px) {
   .aerodynamics-point--5 {
     top: 401px;
+    top: 25.0625%;
     left: 68.625%;
   }
 }
 @media only screen and  (min-width: 1200px) {
   .aerodynamics-point--5 {
     top: 401px;
+    top: 25.0625%;
     left: 68.625%;
   }
 }
@@ -3238,6 +3483,11 @@ and (-webkit-device-pixel-ratio: 2) {
 .about-column__video {
   margin-top: 51px;
   position: relative;
+}
+@media only screen and  (min-width: 1200px) {
+  .about-column__video {
+    width: 550px;
+  }
 }
 .about-column__cover {
   width: 100%;

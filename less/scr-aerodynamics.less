@@ -14,7 +14,7 @@
 	}
 }
 .aerodynamics-plane {
-	
+	z-index: 2;
 	@media @mobile {
 		background: url(../img/background/aerodynamics-plane-sm.png)  center bottom no-repeat;
 		background-size: cover;
@@ -33,17 +33,27 @@
 		height: 517px;
 	}
 	@media @desktop {
-		background: url(../img/background/aerodynamics-plane.png) no-repeat;
+		background: url(../img/background/scr-aerodynamics/plane-lg.png) no-repeat;
 		position: absolute;
 		bottom: -20px;
-		left: calc(~"50% - 759.5px");
-		width: 1519px;
-		height: 517px;
+		left: calc(~"50% - 731.5px");
+		width: 1463px;
+		height: 455px;
+		bottom: 63px;
 	}
+}
+.aerodynamics-shadow {
+	background: url(../img/background/scr-aerodynamics/shadow.png) no-repeat;
+	width: 1519px;
+	height: 501px;
+	position: absolute;
+	z-index: 1;
+	left: calc(~"50% - 759.5px");
+	bottom: -20px;
 }
 .aerodynamics-waves {
 	position: absolute;
-	
+	z-index: 3;
 	@media @tablet {
 		width: 814px;
 		height: 357px;
@@ -53,7 +63,7 @@
 	@media @desktop {
 		width: 814px;
 		height: 357px;
-		top: 68px;
+		bottom: 85px;
 		left: 17.941032%;
 	}
 	&--small {
@@ -72,7 +82,6 @@
 		}
 	}
 }
-
 .aerodynamics-point {
 	position: absolute;
 	&--1 {
@@ -81,11 +90,11 @@
 			left: 43.1875%;
 		}
 		@media @tablet {
-			top: 175px;
+			top: 10.9375%;
 			left: 49.3125%;
 		}
 		@media @desktop {
-			top: 175px;
+			top: 10.9375%;
 			left: 49.3125%;
 		}
 	}
@@ -96,10 +105,12 @@
 		}
 		@media @tablet {
 			top: 259px;
+			top: 16.1875%;
 			left: 65.125%;
 		}
 		@media @desktop {
 			top: 259px;
+			top: 16.1875%;
 			left: 65.125%;
 		}
 	}
@@ -110,10 +121,12 @@
 		}
 		@media @tablet {
 			top: 408px;
+			top: 25.5%;
 	    left: 16.6875%;
 		}
 		@media @desktop {
 			top: 408px;
+			top: 25.5%;
 	    left: 16.6875%;
 		}
 	}
@@ -124,10 +137,12 @@
 		}
 		@media @tablet {
 			top: 333px;
+			top: 20.8125%;
 			left: 44.0625%;
 		}
 		@media @desktop {
 			top: 333px;
+			top: 20.8125%;
 			left: 44.0625%;
 		}
 	}
@@ -138,10 +153,12 @@
 		}
 		@media @tablet {
 			top: 401px;
+			top: 25.0625%;
 	    left: 68.625%;
 		}
 		@media @desktop {
 			top: 401px;
+			top: 25.0625%;
 	    left: 68.625%;
 		}
 	}
