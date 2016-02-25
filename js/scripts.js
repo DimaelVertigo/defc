@@ -157,7 +157,7 @@ $(document).ready(function() {
 
 		consctructionsLine(1, 30, 20, 0, 234);
 		consctructionsLine(2, 8, 29, 43, 0);
-		consctructionsLine(3, 21, 31, 650, 30);
+		consctructionsLine(3, 21, 31, 0, 30);
 
 		lineLength(featuresLine1);
 		lineLength(featuresLine2);
@@ -581,7 +581,21 @@ $(document).ready(function() {
 	
 
 
+	paceOptions = {
+	  // Disable the 'elements' source
+	  elements: false,
 
+	  // Only show the progress on regular and ajax-y page navigation,
+	  // not every request
+	  restartOnRequestAfter: false
+	};
+
+
+	$('#fullpage').fullpage({
+	          sectionsColor: ['#f00', '#4BBFC3', '#7BAABE', 'whitesmoke', '#000'],
+	        scrollBar: true,
+	        normalScrollElements: '.fp-auto-height'
+	    });
 	
 
 });
