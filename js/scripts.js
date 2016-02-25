@@ -157,7 +157,7 @@ $(document).ready(function() {
 
 		consctructionsLine(1, 30, 20, 0, 234);
 		consctructionsLine(2, 8, 29, 43, 0);
-		consctructionsLine(3, 21, 31, 650, 30);
+		consctructionsLine(3, 21, 31, 0, 30);
 
 		lineLength(featuresLine1);
 		lineLength(featuresLine2);
@@ -200,7 +200,7 @@ $(document).ready(function() {
 
 		/*----------  on scroll  ----------*/
 		$(window).on('scroll', function() {
-			var scrTop = $(window).scrollTop() + 500,
+			var scrTop = $(window).scrollTop() + 200,
 				scrConsctructionsPosition = $('.scr-consctructions').offset().top;
 			scrFeaturesPosition = $('.scr-features').offset().top;
 			scrAerodynamicsPosition = $('.scr-aerodynamics').offset().top;
@@ -220,57 +220,57 @@ $(document).ready(function() {
 			};
 		});
 
-		// /*==========================================
-		// =            Sections scrolling            =
-		// ==========================================*/
-	 //  $(".cbp-fbscroller").snapscroll();
+		/*==========================================
+		=            Sections scrolling            =
+		==========================================*/
+	  $(".cbp-fbscroller").snapscroll();
 
-	 //    /*===========================================
-	 //    =            Sections navigation            =
-	 //    ===========================================*/
-	 //    $('.magnet-navigation__link').on('click', function(event) {
-	 //    	event.preventDefault();
-	 //    	showSection($(this).attr('href'), true);
-	 //    	$(this).addClass('active').siblings().removeClass('active')
-	 //    });
-	 //    showSection(window.location.hash, false);
+	    /*===========================================
+	    =            Sections navigation            =
+	    ===========================================*/
+	    $('.magnet-navigation__link').on('click', function(event) {
+	    	event.preventDefault();
+	    	showSection($(this).attr('href'), true);
+	    	$(this).addClass('active').siblings().removeClass('active')
+	    });
+	    showSection(window.location.hash, false);
 
-	 //    $(window).scroll(function(){
-	 //    	checkSection();
-	 //    });
+	    $(window).scroll(function(){
+	    	checkSection();
+	    });
 
-	 //    function showSection(section, isAnimate) {
-	 //    	var 
-	 //    			direction = section.replace(/#/,''),
-	 //    			reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-	 //    			reqSectionPos = reqSection.offset().top;
+	    function showSection(section, isAnimate) {
+	    	var 
+	    			direction = section.replace(/#/,''),
+	    			reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+	    			reqSectionPos = reqSection.offset().top;
 
-	 //  		if (isAnimate) {
-	 //  			$('body, html').animate({scrollTop: reqSectionPos}, 500);
-	 //  		} else {
-	 //  			$('body, html').scrollTop(reqSectionPos);
-	 //  		}
-	 //    };
+	  		if (isAnimate) {
+	  			$('body, html').animate({scrollTop: reqSectionPos}, 500);
+	  		} else {
+	  			$('body, html').scrollTop(reqSectionPos);
+	  		}
+	    };
 
-	 //    function checkSection() {
-	 //    	$('.section').each(function() {
-	 //    		var 
-	 //    				$this = $(this),
-	 //    				topEdge = $this.offset().top - 200,
-	 //    				bottomEdge = topEdge + $this.height(),
-	 //    				wScroll = $(window).scrollTop();
+	    function checkSection() {
+	    	$('.section').each(function() {
+	    		var 
+	    				$this = $(this),
+	    				topEdge = $this.offset().top - 500,
+	    				bottomEdge = topEdge + $this.height(),
+	    				wScroll = $(window).scrollTop();
 
-	 //    				if (topEdge < wScroll && bottomEdge > wScroll) {
-	 //    					var 
-	 //    							currentId = $this.data('section'),
-	 //    							reqLink = $('.magnet-navigation__link').filter('[href="#' + currentId + '"]');
+	    				if (topEdge < wScroll && bottomEdge > wScroll) {
+	    					var 
+	    							currentId = $this.data('section'),
+	    							reqLink = $('.magnet-navigation__link').filter('[href="#' + currentId + '"]');
 
-	 //    					reqLink.closest('.magnet-navigation__link').addClass('active').siblings().removeClass('active');
+	    					reqLink.closest('.magnet-navigation__link').addClass('active').siblings().removeClass('active');
 
-	 //    					window.location.hash = currentId;
-	 //    				}
-	 //    	});
-	 //    };
+	    					window.location.hash = currentId;
+	    				}
+	    	});
+	    };
 		  
 	} else {
 		scrFeaturesAnimation();
@@ -580,9 +580,7 @@ $(document).ready(function() {
 	};
 	
 
-// no yet fullpage
 
-	
 
 });
 
