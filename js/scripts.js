@@ -580,7 +580,7 @@ $(document).ready(function() {
 	};
 	
 
-
+// no yet fullpage
 
 	
 
