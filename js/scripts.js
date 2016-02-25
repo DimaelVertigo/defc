@@ -147,6 +147,18 @@ $(document).ready(function() {
 
 
 	if (mq.matches) {
+
+		/*=======================================
+		=            SCROLL SECTIONS            =
+		=======================================*/
+		// $('#fullpage').fullpage({
+	 //    anchors:['top', 'consctructions', 'features', 'aerodynamics', 'transporting', 'specs', 'gallery', 'aboutus'],
+	 //    scrollOverflow: true
+	 //  });
+
+	  /*==================================
+	  =            Lines draw            =
+	  ==================================*/
 		lineLength(topLine);
 		scrTopLine();
 		scrTopLineAnimate();
@@ -531,13 +543,6 @@ $(document).ready(function() {
 
 
 	
-
-
-	$('#fullpage').fullpage({
-	          sectionsColor: ['#f00', '#4BBFC3', '#7BAABE', 'whitesmoke', '#000'],
-	        scrollBar: true,
-	        normalScrollElements: '.fp-auto-height'
-	    });
 	
 
 });
