@@ -55,7 +55,7 @@ $(document).ready(function() {
 		$('.spec-details').eq(tabIndex).fadeIn();
 
 		if (mq.matches) {
-
+			$(this).addClass('spec-tabs__item--active').siblings('.spec-tabs__item').removeClass('spec-tabs__item--active');
 		} else {
 			/*----------  accordeon  ----------*/
 
@@ -147,7 +147,7 @@ $(document).ready(function() {
 	/*=====================================
 	=            SPHERE CENTER            =
 	=====================================*/
-	// $('.cons-sphere--start')
+	// $('.cons-sphere--start').
 	
 	
 
@@ -336,7 +336,7 @@ $(document).ready(function() {
 		line.attr('y1', y1);
 		line.attr('x2', x2);
 		line.attr('y2', y2);
-		console.log('x1=' + x1,'y1=' + y1,'x2=' + x2,'y2=' + y2);
+		// console.log('x1=' + x1,'y1=' + y1,'x2=' + x2,'y2=' + y2);
 	};
 
 	function scrConsctructionsAnimation() {
