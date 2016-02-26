@@ -147,37 +147,74 @@ $(document).ready(function() {
 
 
 	if (mq.matches) {
-		lineLength(topLine);
-		scrTopLine();
-		scrTopLineAnimate();
 
-		lineLength(consctructionsLine1);
-		lineLength(consctructionsLine2);
-		lineLength(consctructionsLine3);
+		/*=======================================
+		=            SCROLL SECTIONS            =
+		=======================================*/
+		$('#fullpage').fullpage({
+			anchors: ['top', 'consctructions', 'features', 'aerodynamics', 'transporting', 'specs', 'gallery', 'aboutus'],
+			scrollOverflow: true,
 
-		consctructionsLine(1, 30, 20, 0, 234);
-		consctructionsLine(2, 8, 29, 43, 0);
-		consctructionsLine(3, 21, 31, 0, 30);
+			'afterLoad': function(anchorLink, index){
+				lineLength(topLine);
+				scrTopLine();
+				scrTopLineAnimate();
+			},
 
-		lineLength(featuresLine1);
-		lineLength(featuresLine2);
-		lineLength(featuresLine3);
-		lineLength(featuresLine4);
+			'onLeave': function(index, nextIndex, direction) {
+				if (index == 1 && direction == 'down') {
 
-		scrFeaturesLine(1, 101, -5, 14, 17);
-		scrFeaturesLine(2, -2, -1, 21, 15);
-		scrFeaturesLine(3, -3, 21, 17, 1);
-		scrFeaturesLine(4, 101, 26, 13, -2);
+					lineLength(consctructionsLine1);
+					lineLength(consctructionsLine2);
+					lineLength(consctructionsLine3);
+					consctructionsLine(1, 0, 0, 0, 0);
+					consctructionsLine(2, 0, 0, 0, 0);
+					consctructionsLine(3, 0, 0, 0, 0);
+					scrConsctructionsAnimation();
 
-		lineLength(aerodynamicsLine1);
-		lineLength(aerodynamicsLine2);
-		lineLength(aerodynamicsLine3);
-		lineLength(aerodynamicsLine4);
+				} else if (index == 2 && direction == 'down') {
 
-		aerodynamicsLine(1, 1, 3, 17, -6, 3, 16);
-		aerodynamicsLine(2, 1, 2, 13, 24, 1, -9);
-		aerodynamicsLine(3, 2, 4, 13, -9, 7, 18);
-		aerodynamicsLine(4, 2, 5, 22, 11, 0, 0);
+					lineLength(featuresLine1);
+					lineLength(featuresLine2);
+					lineLength(featuresLine3);
+					lineLength(featuresLine4);
+
+					scrFeaturesLine(1, 101, -5, 14, 17);
+					scrFeaturesLine(2, -2, -1, 21, 15);
+					scrFeaturesLine(3, -3, 21, 17, 1);
+					scrFeaturesLine(4, 101, 26, 13, -2);
+
+					scrFeaturesAnimation();
+
+				} else if (index == 3 && direction == 'down') {
+
+					lineLength(aerodynamicsLine1);
+					lineLength(aerodynamicsLine2);
+					lineLength(aerodynamicsLine3);
+					lineLength(aerodynamicsLine4);
+
+					aerodynamicsLine(1, 1, 3, 17, -6, 3, 16);
+					aerodynamicsLine(2, 1, 2, 13, 24, 1, -9);
+					aerodynamicsLine(3, 2, 4, 13, -9, 7, 18);
+					aerodynamicsLine(4, 2, 5, 22, 11, 0, 0);
+
+					aerodynamicsAnimation();
+					aeroBurger();
+				}
+			}
+		});
+
+		
+
+	  /*==================================
+	  =            Lines draw            =
+	  ==================================*/
+		
+		
+
+		
+
+		
 
 		/*----------  resize  ----------*/
 		$(window).resize(function() {
@@ -219,58 +256,6 @@ $(document).ready(function() {
 				aeroBurger();
 			};
 		});
-
-		/*==========================================
-		=            Sections scrolling            =
-		==========================================*/
-	  $(".cbp-fbscroller").snapscroll();
-
-	    /*===========================================
-	    =            Sections navigation            =
-	    ===========================================*/
-	    $('.magnet-navigation__link').on('click', function(event) {
-	    	event.preventDefault();
-	    	showSection($(this).attr('href'), true);
-	    	$(this).addClass('active').siblings().removeClass('active')
-	    });
-	    showSection(window.location.hash, false);
-
-	    $(window).scroll(function(){
-	    	checkSection();
-	    });
-
-	    function showSection(section, isAnimate) {
-	    	var 
-	    			direction = section.replace(/#/,''),
-	    			reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-	    			reqSectionPos = reqSection.offset().top;
-
-	  		if (isAnimate) {
-	  			$('body, html').animate({scrollTop: reqSectionPos}, 500);
-	  		} else {
-	  			$('body, html').scrollTop(reqSectionPos);
-	  		}
-	    };
-
-	    function checkSection() {
-	    	$('.section').each(function() {
-	    		var 
-	    				$this = $(this),
-	    				topEdge = $this.offset().top - 500,
-	    				bottomEdge = topEdge + $this.height(),
-	    				wScroll = $(window).scrollTop();
-
-	    				if (topEdge < wScroll && bottomEdge > wScroll) {
-	    					var 
-	    							currentId = $this.data('section'),
-	    							reqLink = $('.magnet-navigation__link').filter('[href="#' + currentId + '"]');
-
-	    					reqLink.closest('.magnet-navigation__link').addClass('active').siblings().removeClass('active');
-
-	    					window.location.hash = currentId;
-	    				}
-	    	});
-	    };
 		  
 	} else {
 		scrFeaturesAnimation();
@@ -348,14 +333,15 @@ $(document).ready(function() {
 
 	function consctructionsLine(target, y1Skew, x1Skew, y2Skew, x2Skew) {
 		var y1 = $('.cons-sphere--start').position().top + y1Skew,
-			x1 = $('.cons-sphere--start').offset().left + x1Skew,
-			y2 = $('.cons-sphere--' + target).position().top + y2Skew,
-			x2 = $('.cons-sphere--' + target).offset().left + x2Skew,
-			line = $('.scr-consctructions-line' + target + '__path');
+				x1 = $('.cons-sphere--start').offset().left + x1Skew,
+				y2 = $('.cons-sphere--' + target).position().top + y2Skew,
+				x2 = $('.cons-sphere--' + target).offset().left + x2Skew,
+				line = $('.scr-consctructions-line' + target + '__path');
 		line.attr('x1', x1);
 		line.attr('y1', y1);
 		line.attr('x2', x2);
 		line.attr('y2', y2);
+		console.log('x1=' + x1,'y1=' + y1,'x2=' + x2,'y2=' + y2);
 	};
 
 	function scrConsctructionsAnimation() {
