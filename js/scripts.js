@@ -144,7 +144,12 @@ $(document).ready(function() {
 
 	});
 
-
+	/*=====================================
+	=            SPHERE CENTER            =
+	=====================================*/
+	// $('.cons-sphere--start')
+	
+	
 
 	if (mq.matches) {
 
@@ -167,9 +172,11 @@ $(document).ready(function() {
 					lineLength(consctructionsLine1);
 					lineLength(consctructionsLine2);
 					lineLength(consctructionsLine3);
+
 					consctructionsLine(1, 0, 0, 0, 0);
 					consctructionsLine(2, 0, 0, 0, 0);
 					consctructionsLine(3, 0, 0, 0, 0);
+
 					scrConsctructionsAnimation();
 
 				} else if (index == 2 && direction == 'down') {
@@ -203,18 +210,6 @@ $(document).ready(function() {
 				}
 			}
 		});
-
-		
-
-	  /*==================================
-	  =            Lines draw            =
-	  ==================================*/
-		
-		
-
-		
-
-		
 
 		/*----------  resize  ----------*/
 		$(window).resize(function() {
