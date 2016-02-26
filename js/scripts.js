@@ -151,10 +151,10 @@ $(document).ready(function() {
 		/*=======================================
 		=            SCROLL SECTIONS            =
 		=======================================*/
-		// $('#fullpage').fullpage({
-	 //    anchors:['top', 'consctructions', 'features', 'aerodynamics', 'transporting', 'specs', 'gallery', 'aboutus'],
-	 //    scrollOverflow: true
-	 //  });
+		$('#fullpage').fullpage({
+	    anchors:['top', 'consctructions', 'features', 'aerodynamics', 'transporting', 'specs', 'gallery', 'aboutus'],
+	    scrollOverflow: true
+	  });
 
 	  /*==================================
 	  =            Lines draw            =
