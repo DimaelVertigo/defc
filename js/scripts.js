@@ -34,6 +34,32 @@ $(document).ready(function() {
 		====================================*/
 		SVGInjector(document.getElementById('inject-me'));
 
+		/*===============================
+		=            GALLERY            =
+		===============================*/
+		if (mq.matches) {
+			new CBPGridGallery(document.getElementById('grid-gallery'));
+			
+		} else {
+			$('.owl-carousel-gallery').owlCarousel({
+			    loop:true,
+			    margin:0,
+			    nav:false,
+			    dots:true,
+			    responsive:{
+			        320:{
+			            items:1
+			        },
+			        600:{
+			            items:1
+			        },
+			        1000:{
+			            items:1
+			        }
+			    }
+			})
+		};
+
 		/*=====================================
 		=            Tab-accordion            =
 		=====================================*/
@@ -88,31 +114,7 @@ $(document).ready(function() {
 		});
 		
 		
-		/*===============================
-		=            GALLERY            =
-		===============================*/
-		if (mq.matches) {
-			new CBPGridGallery(document.getElementById('grid-gallery'));
-			
-		} else {
-			$('.owl-carousel-gallery').owlCarousel({
-			    loop:true,
-			    margin:0,
-			    nav:false,
-			    dots:true,
-			    responsive:{
-			        320:{
-			            items:1
-			        },
-			        600:{
-			            items:1
-			        },
-			        1000:{
-			            items:1
-			        }
-			    }
-			})
-		};
+		
 
 		/*=========================================
 		=            PLAY VIDEO BUTTON            =
@@ -482,7 +484,7 @@ $(document).ready(function() {
 						consctructionsLine(3, consStart, consStart, consFinish3, consFinish3);
 
 						scrConsctructionsAnimation();
-						
+
 					} else if (index == 3) {
 						lineLength(featuresLine1);
 						lineLength(featuresLine2);
@@ -607,6 +609,8 @@ Pace.on('done', function() {
 	$('.preloader').fadeOut();
 	$('#fullpage').fadeIn();
 	$('.magnet-navigation').fadeIn();
+
+	
 
 });
 
