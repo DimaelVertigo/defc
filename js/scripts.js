@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 
 	var topLine = $('.scr-top-line1__path'),
@@ -147,9 +148,26 @@ $(document).ready(function() {
 	/*=====================================
 	=            SPHERE CENTER            =
 	=====================================*/
-	// $('.cons-sphere--start').
+	var 
+	// consSphere = 
 	
-	
+			consStart = ($('.cons-sphere--start')[0].clientWidth + 2) / 2,
+			consFinish1 = ($('.cons-sphere--1')[0].clientWidth + 2) / 2,
+			consFinish2 = ($('.cons-sphere--2')[0].clientWidth + 2) / 2,
+			consFinish3 = ($('.cons-sphere--3')[0].clientWidth + 2) / 2,
+
+			consA1 = ($('.cons-sphere--start')[0].clientWidth + 2) / 2,
+			consA2 = ($('.cons-sphere--start')[0].clientWidth + 2) / 2,
+			consA3 = ($('.cons-sphere--start')[0].clientWidth + 2) / 2,
+			consA4 = ($('.cons-sphere--start')[0].clientWidth + 2) / 2,
+			conB1 = ($('.cons-sphere--1')[0].clientWidth + 2) / 2,
+			conB2 = ($('.cons-sphere--2')[0].clientWidth + 2) / 2,
+			conB3 = ($('.cons-sphere--3')[0].clientWidth + 2) / 2,
+			conB3 = ($('.cons-sphere--3')[0].clientWidth + 2) / 2;
+
+			function calcCenter(width) {
+				return (width + 2) / 2;
+			};
 
 	if (mq.matches) {
 
@@ -173,9 +191,9 @@ $(document).ready(function() {
 					lineLength(consctructionsLine2);
 					lineLength(consctructionsLine3);
 
-					consctructionsLine(1, 0, 0, 0, 0);
-					consctructionsLine(2, 0, 0, 0, 0);
-					consctructionsLine(3, 0, 0, 0, 0);
+					consctructionsLine(1, consStart, consStart, consFinish1, consFinish1);
+					consctructionsLine(2, consStart, consStart, consFinish2, consFinish2);
+					consctructionsLine(3, consStart, consStart, consFinish3, consFinish3);
 
 					scrConsctructionsAnimation();
 
@@ -375,6 +393,7 @@ $(document).ready(function() {
 		line.attr('x2', x2);
 		line.attr('y2', y2);
 	};
+
 	function scrFeaturesMobileLine(target, y1Skew, x1Skew, y2Skew, x2Skew) {
 		var y1 = $('.scr-features-points__point--' + target).position().top + y1Skew,
 			x1 = $('.scr-features-points__point--' + target).offset().left + x1Skew,
