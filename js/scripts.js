@@ -74,12 +74,9 @@ $(document).ready(function() {
 				$(this).find('.spec-details').hide();
 				$(this).siblings('.spec-tabs__item').find('.spec-details').hide();
 			} else {
-				// $(this).append($('.spec-details').eq(tabIndex));
 				$(this).toggleClass('spec-tabs__item--active');
-				
 			}
 		};
-
 	});
 
 	/*==============================
@@ -89,7 +86,6 @@ $(document).ready(function() {
 		$(this).toggleClass('active');
 		$('.header-navigation-mobile__list').toggleClass('active');
 	});
-
 
 	/*===============================
 	=            GALLERY            =
@@ -120,7 +116,6 @@ $(document).ready(function() {
 	/*=========================================
 	=            PLAY VIDEO BUTTON            =
 	=========================================*/
-
 	$('.about-column__play').on('click', function() {
 		$("#about-video")[0].src += "&autoplay=1";
 		$('.about-column__cover').fadeOut();
@@ -135,23 +130,6 @@ $(document).ready(function() {
 			tlAerodynamics = new TimelineLite(),
 			tlConstructions = new TimelineLite(),
 			tlBurger = new TimelineLite();
-
-	$('.ip__trigger').on('click', function() {
-		var $target = $(this).closest('.ip'),
-			ipIndex = $target.index();
-
-		$target.find('.ip__icon--hidden').removeClass('ip__icon--hidden').addClass('ip__icon--active');
-		$target.siblings('.ip').find('.ip__icon--active').removeClass('ip__icon--active').addClass('ip__icon--hidden');
-		$('.src-top-slide').eq(ipIndex).fadeIn().siblings('.src-top-slide').fadeOut();
-
-		if (ipIndex === 0) {
-			scrTopLineAnimate();
-			tl.restart();
-		} else if (ipIndex === 2) {
-			$('.src-top-slide-2').fadeIn();
-		};
-
-	});
 
 	/*----------  calculate center of spheres  ----------*/
 		var
