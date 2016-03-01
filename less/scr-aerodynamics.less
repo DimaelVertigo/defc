@@ -16,21 +16,22 @@
 .aerodynamics-plane {
 	z-index: 2;
 	@media @mobile {
-		background: url(../img/background/aerodynamics-plane-sm.png)  center bottom no-repeat;
-		background-size: cover;
+		background: url(../img/background/scr-aerodynamics/plane-sm.png) no-repeat center bottom;
+		background-size: contain;
 		width: 100%;
-		height: 370px;
+		height: 100%;
 		position: absolute;
 		bottom: 0;
-		z-index: 100;
 		left: 0;
 	}
 	@media @tablet {
-		background: url(../img/background/aerodynamics-plane.png) center no-repeat;
+		background: url(../img/background/scr-aerodynamics/plane-lg.png) no-repeat;
 		position: absolute;
 		bottom: -20px;
-		width: 100%;
-		height: 517px;
+		left: calc(~"50% - 731.5px");
+		width: 1463px;
+		height: 455px;
+		bottom: 63px;
 	}
 	@media @desktop {
 		background: url(../img/background/scr-aerodynamics/plane-lg.png) no-repeat;
@@ -50,40 +51,38 @@
 	z-index: 1;
 	left: calc(~"50% - 759.5px");
 	bottom: -20px;
+	@media @mobile {
+		display: none;
+	}
 }
 .aerodynamics-waves {
 	position: absolute;
 	z-index: 3;
-	@media @tablet {
-		width: 814px;
-		height: 357px;
-		top: 68px;
-		left: 3%;
-	}
-	@media @desktop {
-		width: 814px;
-		height: 357px;
-		bottom: 85px;
-		left: 17.941032%;
-	}
-	&--small {
+	&--large {
 		@media @mobile {
-			width: 100%;
-			height: 100%;
-			top: -24px;
+			display: none;
+		}
+		@media @tablet {
+			width: 814px;
+			height: 357px;
+			bottom: 85px;
 			left: 50%;
 			transform: translateX(-50%);
 		}
-		@media @tablet {
-			display: none;
-		}
 		@media @desktop {
-			display: none;
+			width: 814px;
+			height: 357px;
+			bottom: 85px;
+			left: 50%;
+			transform: translateX(-50%);
 		}
 	}
 }
+
 .aerodynamics-point {
 	position: absolute;
+	display: flex;
+	z-index: 2;
 	&--1 {
 		@media @mobile {
 			top: 125px;
@@ -162,7 +161,13 @@
 	    left: 68.625%;
 		}
 	}
+	&::before {
+		content: '';
+		.spectre-round(#343845, 200%);
+	}
+
 	&__icon {
+		position: relative;
 		&--big {
 			@media @mobile {
 				width: 14px;
