@@ -17,26 +17,21 @@ $(document).ready(function() {
 			$aerodynamicsLine4 = $('.scr-aerodynamics4__path');
 			/*----------  sphere nodes  ----------*/
 			$consStart = $('.cons-sphere--start');
-
 			$consFinish1 = $('.cons-sphere--1');
 			$consFinish2 = $('.cons-sphere--2');
 			$consFinish3 = $('.cons-sphere--3');
-
 			$featureStart1 = $('.scr-features-points__point--1');
 			$featureStart2 = $('.scr-features-points__point--2');
 			$featureStart3 = $('.scr-features-points__point--3');
 			$featureStart4 = $('.scr-features-points__point--4');
-
 			$featureFinish1 = $('.scr-features-list__item--1');
 			$featureFinish2 = $('.scr-features-list__item--2');
 			$featureFinish3 = $('.scr-features-list__item--3');
 			$featureFinish4 = $('.scr-features-list__item--4');
-
 			$aeroStart1 = $('.aerodynamics-point--1');
 			$aeroStart2 = $('.aerodynamics-point--1');
 			$aeroStart3 = $('.aerodynamics-point--3');
 			$aeroStart4 = $('.aerodynamics-point--3');
-
 			$aeroFinish1 = $('.aerodynamics-point--3');
 			$aeroFinish2 = $('.aerodynamics-point--2');
 			$aeroFinish3 = $('.aerodynamics-point--4');
@@ -227,27 +222,6 @@ $(document).ready(function() {
 			aerodynamicsLine(4, 2, 5, 22, 11, 0, 0);
 		});
 
-		/*----------  if scroll  ----------*/
-		$(window).on('scroll', function() {
-			var scrTop = $(window).scrollTop() + 200,
-				scrConsctructionsPosition = $('.scr-consctructions').offset().top;
-			scrFeaturesPosition = $('.scr-features').offset().top;
-			scrAerodynamicsPosition = $('.scr-aerodynamics').offset().top;
-
-			if (scrTop >= scrConsctructionsPosition && consctructionsMarker) {
-				scrConsctructionsAnimation();
-				consctructionsMarker = false;
-			};
-			if (scrTop >= scrFeaturesPosition && featuresMarker) {
-				scrFeaturesAnimation();
-				featuresMarker = false;
-			};
-			if (scrTop >= scrAerodynamicsPosition && aeroMarker) {
-				aerodynamicsAnimation();
-				aeroMarker = false;
-				aeroBurger();
-			};
-		});
 	
 	/*----------  mobile  ----------*/
 	} else {
