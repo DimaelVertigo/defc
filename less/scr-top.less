@@ -8,7 +8,6 @@
 	}
 	@media @tablet {
 		height: 100%;
-		
 	}
 	@media @desktop {
 		height: 100%;
@@ -39,8 +38,9 @@
   }
   @media @tablet {
 		background: url(../img/background/scr-top/plane.png) no-repeat;
-		width: 1226px;
-		height: 885px;
+		width: 817.33px;
+		height: 590px;
+		background-size: cover;
 		animation-name: MOVE-BG;
 	  animation-duration: 300s;
 	  animation-timing-function: cubic-bezier(0,1.02,.03,.88);
@@ -59,20 +59,11 @@
 	  animation-duration: 300s;
 	  animation-timing-function: cubic-bezier(0,1.02,.03,.88);
 	  animation-iteration-count: 1;
-	  @media @retina {
-	  	background: url(../img/background/scr-top/plane-2x.png) no-repeat;
-	  	background-size: 1226px;
-	  	height: 885px;
-	  }
   }
   @media only screen and (min-width : 2400px) {
   	background: url(../img/background/scr-top/plane-xl.png) no-repeat;
   	width: 2394px;
   	height: 1726px;
-  	@media @retina {
-	  	background: url(../img/background/scr-top/plane-xl-2x.png) no-repeat;
-	  	background-size: 2394px 1726px;
-  	}
   }
 }
 @keyframes MOVE-BG {
@@ -217,8 +208,8 @@
 	@media @tablet {
 		opacity: 0;
 		position: absolute;
-		top: 57%;
-		left: 48%;
+		top: 70%;
+		left: 22.25%;
 	}
 	@media @desktop {
 		opacity: 0;
@@ -246,7 +237,14 @@
 			}
 		}
 		@media @tablet {
-			
+			position: absolute;
+			top: 71px;
+			left: -193px;
+	    width: 388px;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    flex-direction: column;
 		}
 		@media @desktop {
 			position: absolute;
@@ -267,6 +265,9 @@
 	  animation-timing-function: linear;
 	  animation-iteration-count: infinite;
 	  transform: translateY(0);
+	  @media @tablet {
+	  	margin-top: 34px;
+	  }
 	  @media @desktop {
 	  	margin-top: 34px;
 	  }
