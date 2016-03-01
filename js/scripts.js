@@ -15,17 +15,55 @@ $(document).ready(function() {
 			$aerodynamicsLine2 = $('.scr-aerodynamics2__path');
 			$aerodynamicsLine3 = $('.scr-aerodynamics3__path');
 			$aerodynamicsLine4 = $('.scr-aerodynamics4__path');
+			/*----------  sphere nodes  ----------*/
+			$consStart = $('.cons-sphere--start');
+			$consFinish1 = $('.cons-sphere--1');
+			$consFinish2 = $('.cons-sphere--2');
+			$consFinish3 = $('.cons-sphere--3');
+
+			$featureStart1 = $('.scr-features-points__point--1');
+			$featureStart2 = $('.scr-features-points__point--2');
+			$featureStart3 = $('.scr-features-points__point--3');
+			$featureStart4 = $('.scr-features-points__point--4');
+
+			$featureFinish1 = $('.scr-features-list__item--1');
+			$featureFinish2 = $('.scr-features-list__item--2');
+			$featureFinish3 = $('.scr-features-list__item--3');
+			$featureFinish4 = $('.scr-features-list__item--4');
 			/*----------  flags  ----------*/
 			consctructionsMarker = true,
 			featuresMarker = true,
 			aeroMarker = true,
 			/*----------  media query  ----------*/
 			mq = window.matchMedia('(min-width: 767px)');
-			/*----------  sphere nodes  ----------*/
-			$consStart = $('.cons-sphere--start');
-			$consSphere1 = $('.cons-sphere--1');
-			$consSphere2 = $('.cons-sphere--2');
-			$consSphere3 = $('.cons-sphere--3');
+			/*----------  timelines for animation  ----------*/
+			tl = new TimelineLite(),
+			tlFeatures = new TimelineLite(),
+			tlAerodynamics = new TimelineLite(),
+			tlConstructions = new TimelineLite(),
+			tlBurger = new TimelineLite();
+
+	/*----------  calculate center of spheres  ----------*/
+	var
+			consA1 = calcCenter($consStart);
+			consB1 = calcCenter($consFinish1);
+			consB2 = calcCenter($consFinish2);
+			consB3 = calcCenter($consFinish3);
+
+			featureA1 = calcCenter($featureStart1);
+			featureA2 = calcCenter($featureStart2);
+			featureA3 = calcCenter($featureStart3);
+			featureA4 = calcCenter($featureStart4);
+
+			featureB1 = calcCenter($featureFinish1);
+			featureB2 = calcCenter($featureFinish2);
+			featureB3 = calcCenter($featureFinish3);
+			featureB4 = calcCenter($featureFinish4);
+
+		function calcCenter(sphere) {
+			var center = (sphere[0].clientWidth + 2) / 2
+			return center;
+		};
 		
 	/*==========================================
 	=            HEADER NAV ANCHORS            =
@@ -122,26 +160,7 @@ $(document).ready(function() {
 		$(this).fadeOut();
 	});
 
-	/*========================================
-	=            INTERACTIVE MENU            =
-	========================================*/
-	var tl = new TimelineLite(),
-			tlFeatures = new TimelineLite(),
-			tlAerodynamics = new TimelineLite(),
-			tlConstructions = new TimelineLite(),
-			tlBurger = new TimelineLite();
-
-	/*----------  calculate center of spheres  ----------*/
-		var
-				consA1 = calcCenter($consStart);
-				consB1 = calcCenter($consSphere1);
-				consB2 = calcCenter($consSphere2);
-				consB3 = calcCenter($consSphere3);
-
-			function calcCenter(sphere) {
-				var center = (sphere[0].clientWidth + 2) / 2
-				return center;
-			};
+	
 
 	/*---------- desktop  ----------*/
 	if (mq.matches) {
@@ -179,10 +198,10 @@ $(document).ready(function() {
 					lineLength($featuresLine3);
 					lineLength($featuresLine4);
 
-					scrFeaturesLine(1, 101, -5, 14, 17);
-					scrFeaturesLine(2, -2, -1, 21, 15);
-					scrFeaturesLine(3, -3, 21, 17, 1);
-					scrFeaturesLine(4, 101, 26, 13, -2);
+					scrFeaturesLine(1, featureA1 + 100, featureA1, featureB1, featureB1);
+					scrFeaturesLine(2, featureA2, featureA2, featureB2, featureB2);
+					scrFeaturesLine(3, featureA3, featureA3, featureB3, featureB3);
+					scrFeaturesLine(4, featureA4 + 100, featureA4, featureB4, featureB1);
 
 					scrFeaturesAnimation();
 
@@ -357,6 +376,7 @@ $(document).ready(function() {
 	/*==========================================
 	=            SCR FEATURES LINES            =
 	==========================================*/
+	
 	function scrFeaturesLine(target, y1Skew, x1Skew, y2Skew, x2Skew) {
 		var y1 = $('.scr-features-points').position().top + y1Skew,
 			x1 = $('.scr-features-points__point--' + target).offset().left + x1Skew,
