@@ -169,7 +169,6 @@ $(document).ready(function() {
 		$('.about-column__cover').fadeOut();
 		$(this).fadeOut();
 	});
-
 	
 
 	/*---------- desktop  ----------*/
@@ -203,24 +202,45 @@ $(document).ready(function() {
 		$(window).resize(function() {
 			scrTopLine();
 
-			consctructionsLine(1, 30, 20, 0, 234);
-			consctructionsLine(2, 8, 29, 43, 0);
-			consctructionsLine(3, 21, 31, 710, 40);
+			consctructionsLine(1, consA1, consA1, consB1, consB1);
+			consctructionsLine(2, consA1, consA1, consB2, consB2);
+			consctructionsLine(3, consA1, consA1, consB3, consB3);
 
-			scrFeaturesLine(1, 101, -5, 14, 17);
-			scrFeaturesLine(2, -2, -1, 21, 15);
-			scrFeaturesLine(3, -3, 21, 17, 1);
-			scrFeaturesLine(4, 101, 26, 13, -2);
+			scrFeaturesLine(1, featureA1 + 100, featureA1, featureB1, featureB1);
+			scrFeaturesLine(2, featureA2, featureA2, featureB2, featureB2);
+			scrFeaturesLine(3, featureA3, featureA3, featureB3, featureB3);
+			scrFeaturesLine(4, featureA4 + 100, featureA4, featureB4, featureB1);
 
-			aerodynamicsLine(1, 1, 3, 17, -6, 3, 16);
-			aerodynamicsLine(2, 1, 2, 13, 24, 1, -9);
-			aerodynamicsLine(3, 2, 4, 13, -9, 7, 18);
-			aerodynamicsLine(4, 2, 5, 22, 11, 0, 0);
+			aerodynamicsLine(1, 1, 3, aeroA1, aeroA1, aeroB1, aeroB1);
+			aerodynamicsLine(2, 1, 2, aeroA1, aeroA1, aeroB2, aeroB2);
+			aerodynamicsLine(3, 2, 4, aeroA2, aeroA2, aeroB3, aeroB3);
+			aerodynamicsLine(4, 2, 5, aeroA2, aeroA2, aeroB4, aeroB4);
 		});
 
 	
 	/*----------  mobile  ----------*/
 	} else {
+		scrFeaturesLine(1, featureA1 + 235, featureA1, featureB1 + 181, featureB1);
+		scrFeaturesLine(2, featureA2 + 373, featureA2, featureB2 + 366, featureB2);
+		scrFeaturesLine(3, featureA3 + 606, featureA3, featureB3 + 618, featureB3);
+		scrFeaturesLine(4, featureA4 + 758, featureA4, featureB4 + 802, featureB1);
+
+		aerodynamicsLine(1, 1, 3, aeroA1, aeroA1, aeroB1, aeroB1);
+		aerodynamicsLine(2, 1, 2, aeroA1, aeroA1, aeroB2, aeroB2);
+		aerodynamicsLine(3, 2, 4, aeroA2, aeroA2, aeroB3, aeroB3);
+		aerodynamicsLine(4, 2, 5, aeroA2, aeroA2, aeroB4, aeroB4);
+
+		$(window).resize(function() {
+			scrFeaturesLine(1, featureA1 + 235, featureA1, featureB1 + 181, featureB1);
+			scrFeaturesLine(2, featureA2 + 373, featureA2, featureB2 + 366, featureB2);
+			scrFeaturesLine(3, featureA3 + 606, featureA3, featureB3 + 618, featureB3);
+			scrFeaturesLine(4, featureA4 + 758, featureA4, featureB4 + 802, featureB1);
+
+			aerodynamicsLine(1, 1, 3, aeroA1, aeroA1, aeroB1, aeroB1);
+			aerodynamicsLine(2, 1, 2, aeroA1, aeroA1, aeroB2, aeroB2);
+			aerodynamicsLine(3, 2, 4, aeroA2, aeroA2, aeroB3, aeroB3);
+			aerodynamicsLine(4, 2, 5, aeroA2, aeroA2, aeroB4, aeroB4);
+		});
 		// scrFeaturesAnimation();
 		
 		// lineLength($featuresLine1);
