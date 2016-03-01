@@ -17,6 +17,7 @@ $(document).ready(function() {
 			$aerodynamicsLine4 = $('.scr-aerodynamics4__path');
 			/*----------  sphere nodes  ----------*/
 			$consStart = $('.cons-sphere--start');
+
 			$consFinish1 = $('.cons-sphere--1');
 			$consFinish2 = $('.cons-sphere--2');
 			$consFinish3 = $('.cons-sphere--3');
@@ -30,6 +31,16 @@ $(document).ready(function() {
 			$featureFinish2 = $('.scr-features-list__item--2');
 			$featureFinish3 = $('.scr-features-list__item--3');
 			$featureFinish4 = $('.scr-features-list__item--4');
+
+			$aeroStart1 = $('.aerodynamics-point--1');
+			$aeroStart2 = $('.aerodynamics-point--1');
+			$aeroStart3 = $('.aerodynamics-point--3');
+			$aeroStart4 = $('.aerodynamics-point--3');
+
+			$aeroFinish1 = $('.aerodynamics-point--3');
+			$aeroFinish2 = $('.aerodynamics-point--2');
+			$aeroFinish3 = $('.aerodynamics-point--4');
+			$aeroFinish4 = $('.aerodynamics-point--5');
 			/*----------  flags  ----------*/
 			consctructionsMarker = true,
 			featuresMarker = true,
@@ -59,6 +70,14 @@ $(document).ready(function() {
 			featureB2 = calcCenter($featureFinish2);
 			featureB3 = calcCenter($featureFinish3);
 			featureB4 = calcCenter($featureFinish4);
+
+			aeroA1 = calcCenter($aeroStart1);
+			aeroA2 = calcCenter($aeroStart3);
+			
+			aeroB1 = calcCenter($aeroFinish1);
+			aeroB2 = calcCenter($aeroFinish2);
+			aeroB3 = calcCenter($aeroFinish3);
+			aeroB4 = calcCenter($aeroFinish4);
 
 		function calcCenter(sphere) {
 			var center = (sphere[0].clientWidth + 2) / 2
@@ -180,45 +199,11 @@ $(document).ready(function() {
 
 			'onLeave': function(index, nextIndex, direction) {
 				if (index == 1 && direction == 'down') {
-
-					lineLength($consctructionsLine1);
-					lineLength($consctructionsLine2);
-					lineLength($consctructionsLine3);
-
-					consctructionsLine(1, consA1, consA1, consB1, consB1);
-					consctructionsLine(2, consA1, consA1, consB2, consB2);
-					consctructionsLine(3, consA1, consA1, consB3, consB3);
-
-					scrConsctructionsAnimation();
-
+					consctuctionsAutomation();
 				} else if (index == 2 && direction == 'down') {
-
-					lineLength($featuresLine1);
-					lineLength($featuresLine2);
-					lineLength($featuresLine3);
-					lineLength($featuresLine4);
-
-					scrFeaturesLine(1, featureA1 + 100, featureA1, featureB1, featureB1);
-					scrFeaturesLine(2, featureA2, featureA2, featureB2, featureB2);
-					scrFeaturesLine(3, featureA3, featureA3, featureB3, featureB3);
-					scrFeaturesLine(4, featureA4 + 100, featureA4, featureB4, featureB1);
-
-					scrFeaturesAnimation();
-
+						featuresAutomation();
 				} else if (index == 3 && direction == 'down') {
-
-					lineLength($aerodynamicsLine1);
-					lineLength($aerodynamicsLine2);
-					lineLength($aerodynamicsLine3);
-					lineLength($aerodynamicsLine4);
-
-					aerodynamicsLine(1, 1, 3, 17, -6, 3, 16);
-					aerodynamicsLine(2, 1, 2, 13, 24, 1, -9);
-					aerodynamicsLine(3, 2, 4, 13, -9, 7, 18);
-					aerodynamicsLine(4, 2, 5, 22, 11, 0, 0);
-
-					aerodynamicsAnimation();
-					aeroBurger();
+						aerodynamicsAutomation();
 				}
 			}
 		});
@@ -338,6 +323,18 @@ $(document).ready(function() {
 	/*===============================================
 	=            CONSTRUCTIONS ANIMATION            =
 	===============================================*/
+	function consctuctionsAutomation() {
+	  lineLength($consctructionsLine1);
+	  lineLength($consctructionsLine2);
+	  lineLength($consctructionsLine3);
+
+	  consctructionsLine(1, consA1, consA1, consB1, consB1);
+	  consctructionsLine(2, consA1, consA1, consB2, consB2);
+	  consctructionsLine(3, consA1, consA1, consB3, consB3);
+
+	  scrConsctructionsAnimation();
+	};
+
 	function consctructionsLine(target, y1Skew, x1Skew, y2Skew, x2Skew) {
 		var y1 = $('.cons-sphere--start').position().top + y1Skew,
 				x1 = $('.cons-sphere--start').offset().left + x1Skew,
@@ -376,7 +373,20 @@ $(document).ready(function() {
 	/*==========================================
 	=            SCR FEATURES LINES            =
 	==========================================*/
-	
+	function featuresAutomation() {
+		lineLength($featuresLine1);
+		lineLength($featuresLine2);
+		lineLength($featuresLine3);
+		lineLength($featuresLine4);
+
+		scrFeaturesLine(1, featureA1 + 100, featureA1, featureB1, featureB1);
+		scrFeaturesLine(2, featureA2, featureA2, featureB2, featureB2);
+		scrFeaturesLine(3, featureA3, featureA3, featureB3, featureB3);
+		scrFeaturesLine(4, featureA4 + 100, featureA4, featureB4, featureB1);
+
+		scrFeaturesAnimation();
+	};
+
 	function scrFeaturesLine(target, y1Skew, x1Skew, y2Skew, x2Skew) {
 		var y1 = $('.scr-features-points').position().top + y1Skew,
 			x1 = $('.scr-features-points__point--' + target).offset().left + x1Skew,
@@ -452,6 +462,21 @@ $(document).ready(function() {
 	/*==============================================
 	=            AERODYNAMICS ANIMATION            =
 	==============================================*/
+	function aerodynamicsAutomation() {
+		lineLength($aerodynamicsLine1);
+		lineLength($aerodynamicsLine2);
+		lineLength($aerodynamicsLine3);
+		lineLength($aerodynamicsLine4);
+
+		aerodynamicsLine(1, 1, 3, aeroA1, aeroA1, aeroB1, aeroB1);
+		aerodynamicsLine(2, 1, 2, aeroA1, aeroA1, aeroB2, aeroB2);
+		aerodynamicsLine(3, 2, 4, aeroA2, aeroA2, aeroB3, aeroB3);
+		aerodynamicsLine(4, 2, 5, aeroA2, aeroA2, aeroB4, aeroB4);
+
+		aerodynamicsAnimation();
+		aeroBurger();
+	};
+
 	function aerodynamicsAnimation() {
 		tlAerodynamics
 			.to('.aerodynamics-point__info--1', 0.5, {
