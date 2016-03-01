@@ -36,10 +36,6 @@ $(document).ready(function() {
 			$aeroFinish2 = $('.aerodynamics-point--2');
 			$aeroFinish3 = $('.aerodynamics-point--4');
 			$aeroFinish4 = $('.aerodynamics-point--5');
-			/*----------  flags  ----------*/
-			consctructionsMarker = true,
-			featuresMarker = true,
-			aeroMarker = true,
 			/*----------  media query  ----------*/
 			mq = window.matchMedia('(min-width: 767px)');
 			/*----------  timelines for animation  ----------*/
@@ -225,29 +221,29 @@ $(document).ready(function() {
 	
 	/*----------  mobile  ----------*/
 	} else {
-		scrFeaturesAnimation();
+		// scrFeaturesAnimation();
 		
-		lineLength($featuresLine1);
-		lineLength($featuresLine2);
-		lineLength($featuresLine3);
-		lineLength($featuresLine4);
+		// lineLength($featuresLine1);
+		// lineLength($featuresLine2);
+		// lineLength($featuresLine3);
+		// lineLength($featuresLine4);
 
-		scrFeaturesMobileLine(1, 0, 9, 8, 2);
-		scrFeaturesMobileLine(2, 4, 12, 4, -1);
-		scrFeaturesMobileLine(3, 5, 12, 2, -1);
-		scrFeaturesMobileLine(4, 10, 11, 0, -1);
+		// scrFeaturesMobileLine(1, 0, 9, 8, 2);
+		// scrFeaturesMobileLine(2, 4, 12, 4, -1);
+		// scrFeaturesMobileLine(3, 5, 12, 2, -1);
+		// scrFeaturesMobileLine(4, 10, 11, 0, -1);
 
-		aerodynamicsAnimation();
+		// aerodynamicsAnimation();
 
-		lineLength($aerodynamicsLine1);
-		lineLength($aerodynamicsLine2);
-		lineLength($aerodynamicsLine3);
-		lineLength($aerodynamicsLine4);
+		// lineLength($aerodynamicsLine1);
+		// lineLength($aerodynamicsLine2);
+		// lineLength($aerodynamicsLine3);
+		// lineLength($aerodynamicsLine4);
 
-		aerodynamicsLine(1, 1, 3, 17, 0, 3, 9);
-		aerodynamicsLine(2, 1, 2, 17, 16, -1, 0);
-		aerodynamicsLine(3, 2, 4, 52, -44, 6, 15);
-		aerodynamicsLine(4, 2, 5, 52, 0, -1, 5);
+		// aerodynamicsLine(1, 1, 3, 17, 0, 3, 9);
+		// aerodynamicsLine(2, 1, 2, 17, 16, -1, 0);
+		// aerodynamicsLine(3, 2, 4, 52, -44, 6, 15);
+		// aerodynamicsLine(4, 2, 5, 52, 0, -1, 5);
 	};
 
 	/*=========================================================
