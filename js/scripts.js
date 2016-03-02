@@ -241,29 +241,6 @@ $(document).ready(function() {
 			aerodynamicsLine(3, 2, 4, aeroA2, aeroA2, aeroB3, aeroB3);
 			aerodynamicsLine(4, 2, 5, aeroA2, aeroA2, aeroB4, aeroB4);
 		});
-		// scrFeaturesAnimation();
-		
-		// lineLength($featuresLine1);
-		// lineLength($featuresLine2);
-		// lineLength($featuresLine3);
-		// lineLength($featuresLine4);
-
-		// scrFeaturesMobileLine(1, 0, 9, 8, 2);
-		// scrFeaturesMobileLine(2, 4, 12, 4, -1);
-		// scrFeaturesMobileLine(3, 5, 12, 2, -1);
-		// scrFeaturesMobileLine(4, 10, 11, 0, -1);
-
-		// aerodynamicsAnimation();
-
-		// lineLength($aerodynamicsLine1);
-		// lineLength($aerodynamicsLine2);
-		// lineLength($aerodynamicsLine3);
-		// lineLength($aerodynamicsLine4);
-
-		// aerodynamicsLine(1, 1, 3, 17, 0, 3, 9);
-		// aerodynamicsLine(2, 1, 2, 17, 16, -1, 0);
-		// aerodynamicsLine(3, 2, 4, 52, -44, 6, 15);
-		// aerodynamicsLine(4, 2, 5, 52, 0, -1, 5);
 	};
 
 	/*=========================================================
@@ -281,7 +258,7 @@ $(document).ready(function() {
 		return Math.sqrt((x2 -= x1) * x2 + (y2 -= y1) * y2);
 	};
 
-
+	
 	/*----------  Line coordinates ----------*/
 	function scrTopLine() {
 		var y1 = $('.interactive-menu').position().top + 36,
@@ -307,7 +284,7 @@ $(document).ready(function() {
 			.to('.src-top-slide-1-popup', 0.5, {
 				autoAlpha: 1,
 				scale: 1
-			}, '-=0.30');
+			});
 	};
 
 	/*===============================================
@@ -583,14 +560,16 @@ $(document).ready(function() {
 	
 
 
-	// paceOptions = {
-	//   ajax: true,
-	//   document: true,
-	//   eventLag: false
-	// };
+	paceOptions = {
+	  ajax: true,
+	  document: true,
+	  eventLag: true
+	};
 
-	// Pace.on('done', function() {
-	//   $('#preloader').delay(500).fadeOut(800);
-	// });
+	
+
+	Pace.on('done', function() {
+	  $('.preloader').delay(2500).slideUp(800);
+	});
 });
 
