@@ -91,15 +91,13 @@ p {
 		font-size: 1rem;
 	}
 }
-
+#fullpage {
+	// display: none;
+}
 /*=========================================
 =            Magnet navigation            =
 =========================================*/
 .magnet-navigation {
-	position: absolute;
-	top: 25px;
-	right: 2%;
-	z-index: 5;
 	@media @mobile {
 		display: none !important;
 	}
@@ -185,6 +183,7 @@ html, body,
 	height: 100%; 
 }
 
+
 /* The nav is fixed on the right side  and we center it by translating it 50% 
 (we don't know it's height so we can't use the negative margin trick) */
 .magnet-navigation {
@@ -196,8 +195,15 @@ html, body,
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	// animation: magnet-navigation 1s linear 1s;
+	// animation-fill-mode:forwards;
+	// right: -2%;
+	// display: none;
 }
-
+@keyframes magnet-navigation {
+	from { right: -2%; }
+	to { right: 2%; }
+}
 .magnet-navigation a {
 	display: block;
 	position: relative;

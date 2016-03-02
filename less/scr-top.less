@@ -23,8 +23,11 @@
 }
 .top-plane {
 	position: absolute;
+	transform: translateZ(0);
+	transform: translate(30%, 30%);
 	bottom: 0;
 	right: 0;
+	will-change: transform;
   @media @mobile {
   	background: url(../img/background/scr-top/plane-sm.png) no-repeat right bottom;
   	width: 100%;
@@ -41,10 +44,10 @@
 		width: 817.33px;
 		height: 590px;
 		background-size: cover;
-		animation-name: MOVE-BG;
-	  animation-duration: 300s;
-	  animation-timing-function: cubic-bezier(0,1.02,.03,.88);
-	  animation-iteration-count: 1;
+		// animation-name: MOVE-BG;
+	 //  animation-duration: 300s;
+	 //  animation-timing-function: cubic-bezier(0,1.02,.03,.88);
+	 //  animation-iteration-count: 1;
 	  @media @retina {
 	  	background: url(../img/background/scr-top/plane-2x.png) no-repeat;
 	  	background-size: 1226px;
@@ -56,9 +59,11 @@
 		width: 1226px;
 		height: 885px;
 		animation-name: MOVE-BG;
-	  animation-duration: 300s;
-	  animation-timing-function: cubic-bezier(0,1.02,.03,.88);
+	  animation-duration: 30s;
+	  animation-timing-function: ease;
 	  animation-iteration-count: 1;
+	  animation-delay: 3s;
+	  animation-fill-mode: forwards;
   }
   @media only screen and (min-width : 2400px) {
   	background: url(../img/background/scr-top/plane-xl.png) no-repeat;
@@ -71,7 +76,7 @@
      transform: translate(30%, 30%);
    }
    to { 
-     transform: translateX(0);
+     transform: translate(0, 0);
    }
 }
 .main-logo {

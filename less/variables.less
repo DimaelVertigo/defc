@@ -195,6 +195,18 @@ and (-webkit-device-pixel-ratio: 2)";
     }
   }
 }
+.spectre-round(@background, @size) {
+  display: block;
+  background-color: @background;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: @size;
+  height: @size;
+}
 /*======================================================
 =            Turn Off Number Input Spinners            =
 ======================================================*/

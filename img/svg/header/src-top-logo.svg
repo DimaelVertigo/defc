@@ -15,8 +15,7 @@
         <g id="main" sketch:type="MSArtboardGroup" transform="translate(-35.000000, -15.000000)">
             <g id="src-top-logo" sketch:type="MSLayerGroup" transform="translate(36.000000, 16.000000)">
                 <text id="DEF-C" opacity="0.8" sketch:type="MSTextLayer" font-family="optotyporegular" font-size="14" font-weight="normal" letter-spacing="2.68000007" fill="#716373">
-                    <tspan x="53" y="24">DEF-</tspan>
-                    <tspan x="106.854" y="24">C</tspan>
+                    <tspan x="53" y="24">DEF-C</tspan>
                 </text>
                 <g id="Oval-2-+-Oval-4">
                     <g id="Oval-2">

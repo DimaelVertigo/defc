@@ -11,7 +11,9 @@ var gulp          = require('gulp');
     imageResize   = require('gulp-image-resize'),
     concat        = require('gulp-concat'),
     uglify        = require('gulp-uglify'),
-    notify        = require('gulp-notify');
+    notify        = require('gulp-notify'),
+    sftp          = require('gulp-sftp'),
+    eslint        = require('gulp-eslint');
 
 /*==============================
 =           Watcher            =
@@ -19,7 +21,7 @@ var gulp          = require('gulp');
 gulp.task('watch', ['less'], function() {
   browserSync.init({ server: "./" });
   gulp.watch("./less/**/*.less", ['less']);
-  gulp.watch("./js/**/*.js", ['js']);
+  gulp.watch("./js/scripts.js", ['js']);
   gulp.watch("img/svg/**/*.svg", ['svgsprites']);
   gulp.watch("*.html").on('change', browserSync.reload);
 });
@@ -85,7 +87,10 @@ gulp.task('svgsprites', function() {
         }
       }
     }))
-		.pipe(gulp.dest('./img/sprite'));
+		.pipe(gulp.dest('./img/sprite'))
+    .pipe(notify({
+      message: 'SVG-sprite ready'
+    }));
 });
 
 gulp.task('svgspriteless', function() {
@@ -134,18 +139,69 @@ gulp.task('resize', function () {
       filter: 'Catrom',
       imageMagick: true
     }))
-    .pipe(gulp.dest('img/mini/'));
+    .pipe(gulp.dest('img/mini/'))
+    .pipe(notify({
+      message: 'Finished otimize images'
+    }));
 });
 
 /*==============================================================
 =            Concatination and minification sctipts            =
 ==============================================================*/
 gulp.task('scripts', function() {
-  return gulp.src('js/*.js')
-    .pipe(concat('scripts.js'))
+  return gulp.src(
+    [
+    './js/plugins/plugins/pace.js',
+    './js/plugins/TweenMax.min.js',
+    './js/plugins/svg-injector.min.js',
+    './js/plugins/modernizr.custom.js',
+    './js/plugins/imagesloaded.pkgd.min.js',
+    './js/plugins/masonry.pkgd.min.js',
+    './js/plugins/classie.js',
+    './js/plugins/cbpGridGallery.js',
+    './js/plugins/jquery.easing.min.js',
+    './js/plugins/waypoints.min.js',
+    './js/plugins/jquery.debouncedresize.js',
+    './js/plugins/hammer.min.js',
+    './js/plugins/picturefill.js',
+    './js/plugins/owl.carousel.js',
+    './js/plugins/jquery.slimscroll.js',
+    './js/plugins/jquery.fullPage.js'
+    ])
+    .pipe(concat('plugins.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('js/build/'));
+    .pipe(gulp.dest('./js/'))
+    .pipe(notify({
+      title: 'JavaScript',
+      message: 'Finished minifying scripts'
+    }));
 });
+
+/*============================
+=            SFTP            =
+============================*/
+// gulp.task('sftp', function () {
+//   return gulp.src('src/*')
+//     .pipe(sftp({
+//       host: 'ftp.heartbeat.agency',
+//       user: 'defc@heartbeat.agency',
+//       pass: 'S#aq9.ya1r3F',
+//       port: '21',
+//       remotePath: '/public_html/heartbeat.agency/defc/'
+//     }));
+// });
+
+/*===============================
+=            ES Lint            =
+===============================*/
+gulp.task('lint', function () {
+  return gulp.src(['**/*.js','!node_modules/**'])
+      .pipe(eslint())
+      .pipe(eslint.format())
+      .pipe(eslint.failAfterError());
+});
+
+
 
 
 gulp.task('default', ['watch']);
