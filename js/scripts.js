@@ -1,4 +1,13 @@
+	paceOptions = {
+	  ajax: true,
+	  document: true,
+	  eventLag: true
+	};
 
+	Pace.on('done', function() {
+	  $('.preloader').delay(2500).slideUp(800);
+	});
+	
 $(document).ready(function() {
 
 	var 
@@ -179,7 +188,8 @@ $(document).ready(function() {
 		=======================================*/
 		$('#fullpage').fullpage({
 			anchors: ['top', 'consctructions', 'features', 'aerodynamics', 'transporting', 'specs', 'gallery', 'aboutus'],
-			scrollOverflow: true,
+			'scrollOverflow': true,
+			menu: '.magnet-navigation',
 
 			'afterLoad': function(anchorLink, index){
 				lineLength($topLine);
@@ -559,17 +569,8 @@ $(document).ready(function() {
 	};
 	
 
-
-	paceOptions = {
-	  ajax: true,
-	  document: true,
-	  eventLag: true
-	};
-
 	
 
-	Pace.on('done', function() {
-	  $('.preloader').delay(2500).slideUp(800);
-	});
+	
 });
 
