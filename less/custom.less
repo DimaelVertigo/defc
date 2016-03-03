@@ -94,41 +94,6 @@ p {
 #fullpage {
 	// display: none;
 }
-/*=========================================
-=            Magnet navigation            =
-=========================================*/
-.magnet-navigation {
-	@media @mobile {
-		display: none !important;
-	}
-	@media @tablet {
-		display: none !important;
-	}
-	&__link {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 18px;
-		margin: 6px 0;
-		&.active {
-			transform: rotate(-45deg);
-		}
-	}
-	&__icon {
-		width: 9px;
-		height: 9px;
-		fill: #fff;
-		stroke: #fff;
-		&--dark {
-			fill: #868D99;
-			stroke: #868D99;
-		}
-		&--gradient {
-			stroke: none;
-		}
-	}
-	
-}
 
 /*===================================================
 =            Interactive point template            =
@@ -156,7 +121,7 @@ p {
 		.transition();
 		&--hidden {
 			opacity: 0;
-		transform: rotate(-45deg);
+		  transform: rotate(-45deg);
 
 		}
 		&--active {
@@ -186,6 +151,9 @@ html, body,
 
 /* The nav is fixed on the right side  and we center it by translating it 50% 
 (we don't know it's height so we can't use the negative margin trick) */
+/*=========================================
+=            Magnet navigation            =
+=========================================*/
 .magnet-navigation {
 	position: fixed;
 	z-index: 3;
@@ -199,29 +167,43 @@ html, body,
 	// animation-fill-mode:forwards;
 	// right: -2%;
 	// display: none;
+	@media @mobile {
+		display: none !important;
+	}
+	@media @tablet {
+		display: none !important;
+	}
+	li {
+		a {
+			display: block;
+			position: relative;
+			color: transparent;
+			.round-sphere(8px, 18px);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 18px;
+			margin: 6px 0;
+			&:after {
+				border: 1px solid transparent;
+			}
+		}
+	}
+	li.active {
+		a {
+			&::after {
+				.transition(.5s);
+				opacity: 1;
+				transform: rotate(225deg);
+				border-right-color: #fff;
+				border-left-color: #fff;
+			}
+		}
+	}
 }
 @keyframes magnet-navigation {
 	from { right: -2%; }
 	to { right: 2%; }
-}
-.magnet-navigation a {
-	display: block;
-	position: relative;
-	color: transparent;
-	.round-sphere(8px, 18px);
-}
-
-.magnet-navigation a:after {
-	.transition(.5s);
-}
-
-.magnet-navigation a:hover:after {
-	// background: rgba(255,255,255,0.6);
-}
-
-.magnet-navigation a.active:after {
-	  opacity: 1;
-	  transform: rotate(180deg);
 }
 
 /* background-attachment does the trick */
