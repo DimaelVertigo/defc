@@ -52,7 +52,9 @@ $(document).ready(function() {
 			tlFeatures = new TimelineLite(),
 			tlAerodynamics = new TimelineLite(),
 			tlConstructions = new TimelineLite(),
-			tlBurger = new TimelineLite();
+			tlBurger = new TimelineLite(),
+			/*----------  magnet menu element  ----------*/
+			$magnetItem = $('.magnet-navigation li');
 
 	/*----------  calculate center of spheres  ----------*/
 	var
@@ -197,17 +199,30 @@ $(document).ready(function() {
 				scrTopLineAnimate();
 			},
 
+			'afterLoad': function(anchorLink, index) {
+			}, 
+
 			'onLeave': function(index, nextIndex, direction) {
-				if (index == 1 && direction == 'down') {
-					consctuctionsAutomation();
-				} else if (index == 2 && direction == 'down') {
-						featuresAutomation();
-				} else if (index == 3 && direction == 'down') {
-						aerodynamicsAutomation();
-				}
+				if (nextIndex == 2 || nextIndex == 6 || nextIndex == 8) {
+					$magnetItem.addClass('gray')
+				} else {
+					$magnetItem.removeClass('gray')
+				};
+				if (nextIndex == 4) {
+					$magnetItem.addClass('gradient')
+				} else {
+					$magnetItem.removeClass('gradient')
+				};
 			}
 		});
-
+		function menuColorInvertor() {
+			var $menuItem = $('.magnet-navigation li');
+			if ( $menuItem.hasClass('gradient') ) {
+				$menuItem.removeClass('gradient')
+			} else {
+				$menuItem.addClass('gradient')
+			}
+		}
 		/*---------- if resize  ----------*/
 		$(window).resize(function() {
 			scrTopLine();
