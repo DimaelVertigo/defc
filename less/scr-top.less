@@ -81,6 +81,8 @@
 }
 .main-logo {
 	position: absolute;
+	z-index: 5;
+	will-change: transform, opacity;
 	@media @mobile {
 		top: 20.2%;
 		left: 50%;
@@ -93,20 +95,16 @@
 	@media @desktop {
 		top: 43%;
 		left: calc(~"50% - 321px");
+		height: 97px;
 	}
-	&__icon {
-		@media @mobile {
-			width: 274px;
-			height: 10px;
-		}
-		@media @tablet {
-			width: 642px;
-			height: 50px;
-		}
-		@media @desktop {
-			width: 642px;
-			height: 50px;
-		}
+	&__text {
+		color: #fff;
+		font-family: @ff-or;
+		text-transform: uppercase;
+		width: 100%;
+		text-align: center;
+		font-size: 4.2rem;
+		letter-spacing: 3.36rem;
 	}
 	&::before,
 	&::after {
@@ -123,13 +121,13 @@
 			width: 45px;
 		}
 		@media @tablet {
-			top: -30px;
-	    right: 196px;
+			top: -42px;
+			right: 228px;
 	    width: 101px;
 		}
 		@media @desktop {
-			top: -30px;
-	    right: 196px;
+			top: -42px;
+			right: 228px;
 	    width: 101px;
 		}
 	}
@@ -140,17 +138,18 @@
 			left: 17.1875%;
 		}
 		@media @tablet {
-			bottom: -24px;
-	    left: 69px;
+			bottom: 32px;
+			left: 63px;
 	    width: 94px;
 		}
 	  @media @desktop {
-		  bottom: -24px;
-	    left: 69px;
-	    width: 94px;
+		  bottom: 32px;
+		  left: 63px;
+	    width: 101px;
 	  }
 	}
 }
+
 /*========================================
 =            Interactive menu            =
 ========================================*/
@@ -244,7 +243,7 @@
 		@media @tablet {
 			position: absolute;
 			top: 71px;
-			left: -193px;
+			left: -172px;
 	    width: 388px;
 	    display: flex;
 	    justify-content: center;
@@ -254,7 +253,7 @@
 		@media @desktop {
 			position: absolute;
 			top: 71px;
-			left: -193px;
+			left: -172px;
 	    width: 388px;
 	    display: flex;
 	    justify-content: center;
@@ -303,11 +302,12 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+	opacity: .3;
 	@media @mobile {
 		display: none;
 	}
 	&__path {
-		z-index: 50;
+		z-index: 5;
 	}
 }
 
@@ -325,3 +325,42 @@
 }
 
 
+.typed-cursor {
+	opacity: 1;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-webkit-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-moz-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
